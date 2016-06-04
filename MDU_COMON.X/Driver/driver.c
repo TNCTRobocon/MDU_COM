@@ -9,7 +9,7 @@
 
 
 bool driver_setup(){
-
+    
     //クロック確認
 #if !defined(IS_SLIM)
     while (OSCCONbits.LOCK != 1);//PLL Lock

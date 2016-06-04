@@ -18,11 +18,13 @@
         <itemPath>Setting/p30F4012.h</itemPath>
         <itemPath>Setting/types.h</itemPath>
         <itemPath>Setting/vardef.h</itemPath>
+        <itemPath>Setting/configuration.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="System" projectFiles="true">
         <itemPath>Driver/io.h</itemPath>
         <itemPath>Task/system.h</itemPath>
         <itemPath>Task/task.h</itemPath>
+        <itemPath>Task/motor.h</itemPath>
       </logicalFolder>
       <itemPath>Helper/print.h</itemPath>
     </logicalFolder>
@@ -40,17 +42,17 @@
         <itemPath>Driver/ports.c</itemPath>
         <itemPath>Driver/pwm.c</itemPath>
         <itemPath>Driver/uart.c</itemPath>
-        <itemPath>Task/motor.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="Setting" projectFiles="true">
         <itemPath>Setting/configuration.c</itemPath>
+        <itemPath>main.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="System" projectFiles="true">
         <itemPath>Driver/io.c</itemPath>
         <itemPath>Task/system.c</itemPath>
         <itemPath>Task/task.c</itemPath>
+        <itemPath>Task/motor.c</itemPath>
       </logicalFolder>
-      <itemPath>Helper/print.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -59,7 +61,6 @@
     </logicalFolder>
     <itemPath>../echo_test.txt</itemPath>
     <itemPath>../sel.txt</itemPath>
-    <itemPath>main.c</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>..</Elem>
