@@ -11,7 +11,7 @@ int main(){
     driver_setup(); 
     task_setup();
     for (;;){
-        process();
+        process_old();
     }
     __asm("reset");//初期化
     return 0;//決してここまで来ない

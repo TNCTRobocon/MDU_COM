@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Driver/driver.c Driver/eeprom.c Driver/encoder.c Driver/ports.c Driver/pwm.c Driver/uart.c Setting/configuration.c main.c Driver/io.c Task/system.c Task/task.c Task/motor.c Driver/timer.c
+SOURCEFILES_QUOTED_IF_SPACED=Driver/driver.c Driver/eeprom.c Driver/encoder.c Driver/ports.c Driver/pwm.c Driver/uart.c Setting/configuration.c main.c Driver/io.c Task/system.c Task/task.c Task/motor.c Driver/timer.c ../message.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Driver/driver.o ${OBJECTDIR}/Driver/eeprom.o ${OBJECTDIR}/Driver/encoder.o ${OBJECTDIR}/Driver/ports.o ${OBJECTDIR}/Driver/pwm.o ${OBJECTDIR}/Driver/uart.o ${OBJECTDIR}/Setting/configuration.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Driver/io.o ${OBJECTDIR}/Task/system.o ${OBJECTDIR}/Task/task.o ${OBJECTDIR}/Task/motor.o ${OBJECTDIR}/Driver/timer.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/Driver/driver.o.d ${OBJECTDIR}/Driver/eeprom.o.d ${OBJECTDIR}/Driver/encoder.o.d ${OBJECTDIR}/Driver/ports.o.d ${OBJECTDIR}/Driver/pwm.o.d ${OBJECTDIR}/Driver/uart.o.d ${OBJECTDIR}/Setting/configuration.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/Driver/io.o.d ${OBJECTDIR}/Task/system.o.d ${OBJECTDIR}/Task/task.o.d ${OBJECTDIR}/Task/motor.o.d ${OBJECTDIR}/Driver/timer.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Driver/driver.o ${OBJECTDIR}/Driver/eeprom.o ${OBJECTDIR}/Driver/encoder.o ${OBJECTDIR}/Driver/ports.o ${OBJECTDIR}/Driver/pwm.o ${OBJECTDIR}/Driver/uart.o ${OBJECTDIR}/Setting/configuration.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Driver/io.o ${OBJECTDIR}/Task/system.o ${OBJECTDIR}/Task/task.o ${OBJECTDIR}/Task/motor.o ${OBJECTDIR}/Driver/timer.o ${OBJECTDIR}/_ext/1472/message.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/Driver/driver.o.d ${OBJECTDIR}/Driver/eeprom.o.d ${OBJECTDIR}/Driver/encoder.o.d ${OBJECTDIR}/Driver/ports.o.d ${OBJECTDIR}/Driver/pwm.o.d ${OBJECTDIR}/Driver/uart.o.d ${OBJECTDIR}/Setting/configuration.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/Driver/io.o.d ${OBJECTDIR}/Task/system.o.d ${OBJECTDIR}/Task/task.o.d ${OBJECTDIR}/Task/motor.o.d ${OBJECTDIR}/Driver/timer.o.d ${OBJECTDIR}/_ext/1472/message.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Driver/driver.o ${OBJECTDIR}/Driver/eeprom.o ${OBJECTDIR}/Driver/encoder.o ${OBJECTDIR}/Driver/ports.o ${OBJECTDIR}/Driver/pwm.o ${OBJECTDIR}/Driver/uart.o ${OBJECTDIR}/Setting/configuration.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Driver/io.o ${OBJECTDIR}/Task/system.o ${OBJECTDIR}/Task/task.o ${OBJECTDIR}/Task/motor.o ${OBJECTDIR}/Driver/timer.o
+OBJECTFILES=${OBJECTDIR}/Driver/driver.o ${OBJECTDIR}/Driver/eeprom.o ${OBJECTDIR}/Driver/encoder.o ${OBJECTDIR}/Driver/ports.o ${OBJECTDIR}/Driver/pwm.o ${OBJECTDIR}/Driver/uart.o ${OBJECTDIR}/Setting/configuration.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Driver/io.o ${OBJECTDIR}/Task/system.o ${OBJECTDIR}/Task/task.o ${OBJECTDIR}/Task/motor.o ${OBJECTDIR}/Driver/timer.o ${OBJECTDIR}/_ext/1472/message.o
 
 # Source Files
-SOURCEFILES=Driver/driver.c Driver/eeprom.c Driver/encoder.c Driver/ports.c Driver/pwm.c Driver/uart.c Setting/configuration.c main.c Driver/io.c Task/system.c Task/task.c Task/motor.c Driver/timer.c
+SOURCEFILES=Driver/driver.c Driver/eeprom.c Driver/encoder.c Driver/ports.c Driver/pwm.c Driver/uart.c Setting/configuration.c main.c Driver/io.c Task/system.c Task/task.c Task/motor.c Driver/timer.c ../message.c
 
 
 CFLAGS=
@@ -179,6 +179,13 @@ ${OBJECTDIR}/Driver/timer.o: Driver/timer.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  Driver/timer.c  -o ${OBJECTDIR}/Driver/timer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Driver/timer.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/Driver/timer.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/_ext/1472/message.o: ../message.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/message.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/message.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../message.c  -o ${OBJECTDIR}/_ext/1472/message.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/message.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/message.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/Driver/driver.o: Driver/driver.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/Driver" 
@@ -270,6 +277,13 @@ ${OBJECTDIR}/Driver/timer.o: Driver/timer.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/Driver/timer.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  Driver/timer.c  -o ${OBJECTDIR}/Driver/timer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Driver/timer.o.d"        -g -omf=elf -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/Driver/timer.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1472/message.o: ../message.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/message.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/message.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../message.c  -o ${OBJECTDIR}/_ext/1472/message.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/message.o.d"        -g -omf=elf -no-legacy-libc  $(COMPARISON_BUILD)  -O1 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/message.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

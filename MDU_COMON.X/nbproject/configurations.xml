@@ -26,6 +26,7 @@
         <itemPath>Task/system.h</itemPath>
         <itemPath>Task/task.h</itemPath>
         <itemPath>Task/motor.h</itemPath>
+        <itemPath>../message.h</itemPath>
       </logicalFolder>
       <itemPath>Helper/print.h</itemPath>
     </logicalFolder>
@@ -54,6 +55,7 @@
         <itemPath>Task/system.c</itemPath>
         <itemPath>Task/task.c</itemPath>
         <itemPath>Task/motor.c</itemPath>
+        <itemPath>../message.c</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -64,9 +66,6 @@
     <itemPath>../echo_test.txt</itemPath>
     <itemPath>../sel.txt</itemPath>
   </logicalFolder>
-  <sourceRootList>
-    <Elem>..</Elem>
-  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="simulator" type="2">

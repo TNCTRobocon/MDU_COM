@@ -12,7 +12,7 @@
 
 void task_setup();
 
-void process();
+void process_old();
 
 void transmit_init();
 
