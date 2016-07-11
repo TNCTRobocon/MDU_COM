@@ -17,7 +17,7 @@ bool driver_setup(){
     //周辺機器(優先度高)
     ports_setup();
     //システム(優先度高)
-    eeprom_setup();
+   //eeprom_setup();
     //周辺機器
     pwm_setup();
     encoder_setup();
@@ -25,9 +25,7 @@ bool driver_setup(){
     uart_setup();
     
     
-    pwm_shutdown(false);
-    
-    
+    pwm_shutdown(false); 
     return false;
 }
 

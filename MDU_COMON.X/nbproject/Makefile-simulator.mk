@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Driver/driver.c Driver/eeprom.c Driver/encoder.c Driver/ports.c Driver/pwm.c Driver/uart.c Setting/configuration.c Driver/io.c Task/system.c Task/task.c main.c Task/motor.c
+SOURCEFILES_QUOTED_IF_SPACED=Driver/driver.c Driver/eeprom.c Driver/encoder.c Driver/ports.c Driver/pwm.c Driver/uart.c Setting/configuration.c main.c Driver/io.c Task/system.c Task/task.c Task/motor.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Driver/driver.o ${OBJECTDIR}/Driver/eeprom.o ${OBJECTDIR}/Driver/encoder.o ${OBJECTDIR}/Driver/ports.o ${OBJECTDIR}/Driver/pwm.o ${OBJECTDIR}/Driver/uart.o ${OBJECTDIR}/Setting/configuration.o ${OBJECTDIR}/Driver/io.o ${OBJECTDIR}/Task/system.o ${OBJECTDIR}/Task/task.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Task/motor.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/Driver/driver.o.d ${OBJECTDIR}/Driver/eeprom.o.d ${OBJECTDIR}/Driver/encoder.o.d ${OBJECTDIR}/Driver/ports.o.d ${OBJECTDIR}/Driver/pwm.o.d ${OBJECTDIR}/Driver/uart.o.d ${OBJECTDIR}/Setting/configuration.o.d ${OBJECTDIR}/Driver/io.o.d ${OBJECTDIR}/Task/system.o.d ${OBJECTDIR}/Task/task.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/Task/motor.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Driver/driver.o ${OBJECTDIR}/Driver/eeprom.o ${OBJECTDIR}/Driver/encoder.o ${OBJECTDIR}/Driver/ports.o ${OBJECTDIR}/Driver/pwm.o ${OBJECTDIR}/Driver/uart.o ${OBJECTDIR}/Setting/configuration.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Driver/io.o ${OBJECTDIR}/Task/system.o ${OBJECTDIR}/Task/task.o ${OBJECTDIR}/Task/motor.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/Driver/driver.o.d ${OBJECTDIR}/Driver/eeprom.o.d ${OBJECTDIR}/Driver/encoder.o.d ${OBJECTDIR}/Driver/ports.o.d ${OBJECTDIR}/Driver/pwm.o.d ${OBJECTDIR}/Driver/uart.o.d ${OBJECTDIR}/Setting/configuration.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/Driver/io.o.d ${OBJECTDIR}/Task/system.o.d ${OBJECTDIR}/Task/task.o.d ${OBJECTDIR}/Task/motor.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Driver/driver.o ${OBJECTDIR}/Driver/eeprom.o ${OBJECTDIR}/Driver/encoder.o ${OBJECTDIR}/Driver/ports.o ${OBJECTDIR}/Driver/pwm.o ${OBJECTDIR}/Driver/uart.o ${OBJECTDIR}/Setting/configuration.o ${OBJECTDIR}/Driver/io.o ${OBJECTDIR}/Task/system.o ${OBJECTDIR}/Task/task.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Task/motor.o
+OBJECTFILES=${OBJECTDIR}/Driver/driver.o ${OBJECTDIR}/Driver/eeprom.o ${OBJECTDIR}/Driver/encoder.o ${OBJECTDIR}/Driver/ports.o ${OBJECTDIR}/Driver/pwm.o ${OBJECTDIR}/Driver/uart.o ${OBJECTDIR}/Setting/configuration.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Driver/io.o ${OBJECTDIR}/Task/system.o ${OBJECTDIR}/Task/task.o ${OBJECTDIR}/Task/motor.o
 
 # Source Files
-SOURCEFILES=Driver/driver.c Driver/eeprom.c Driver/encoder.c Driver/ports.c Driver/pwm.c Driver/uart.c Setting/configuration.c Driver/io.c Task/system.c Task/task.c main.c Task/motor.c
+SOURCEFILES=Driver/driver.c Driver/eeprom.c Driver/encoder.c Driver/ports.c Driver/pwm.c Driver/uart.c Setting/configuration.c main.c Driver/io.c Task/system.c Task/task.c Task/motor.c
 
 
 CFLAGS=
@@ -137,6 +137,13 @@ ${OBJECTDIR}/Setting/configuration.o: Setting/configuration.c  nbproject/Makefil
 	${MP_CC} $(MP_EXTRA_CC_PRE)  Setting/configuration.c  -o ${OBJECTDIR}/Setting/configuration.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Setting/configuration.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DIS_SLIM   $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/Setting/configuration.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DIS_SLIM   $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 ${OBJECTDIR}/Driver/io.o: Driver/io.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/Driver" 
 	@${RM} ${OBJECTDIR}/Driver/io.o.d 
@@ -157,13 +164,6 @@ ${OBJECTDIR}/Task/task.o: Task/task.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/Task/task.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  Task/task.c  -o ${OBJECTDIR}/Task/task.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Task/task.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DIS_SLIM   $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/Task/task.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DIS_SLIM   $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/Task/motor.o: Task/motor.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/Task" 
@@ -222,6 +222,13 @@ ${OBJECTDIR}/Setting/configuration.o: Setting/configuration.c  nbproject/Makefil
 	${MP_CC} $(MP_EXTRA_CC_PRE)  Setting/configuration.c  -o ${OBJECTDIR}/Setting/configuration.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Setting/configuration.o.d"        -g -omf=elf -DIS_SLIM   $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/Setting/configuration.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"        -g -omf=elf -DIS_SLIM   $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 ${OBJECTDIR}/Driver/io.o: Driver/io.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/Driver" 
 	@${RM} ${OBJECTDIR}/Driver/io.o.d 
@@ -242,13 +249,6 @@ ${OBJECTDIR}/Task/task.o: Task/task.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/Task/task.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  Task/task.c  -o ${OBJECTDIR}/Task/task.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Task/task.o.d"        -g -omf=elf -DIS_SLIM   $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/Task/task.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"        -g -omf=elf -DIS_SLIM   $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/Task/motor.o: Task/motor.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/Task" 

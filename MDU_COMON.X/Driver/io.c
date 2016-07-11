@@ -174,7 +174,7 @@ int io_set(int argc, char** argv) {
 
 int option_test(int argc, char** argv) {
     char buf[8];
-    itoa(buf, encoder_value(), 10);
+    itoa(buf, encoder_raw(), 10);
     uart_putl(buf);
     return 0;
 }

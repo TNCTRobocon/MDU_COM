@@ -31,7 +31,6 @@ void system_setup() {
         //quick[i]=NULL;
     }
     //system_mode=OnlySystemMode;
-    //uart_stop();
 
     system_add(basic_select, "sel", OptionSystem);
     system_add(basic_reset, "reboot", OptionSystem);

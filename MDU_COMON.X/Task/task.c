@@ -7,10 +7,6 @@
 #include "system.h"
 
 
-
-#define forever() for(;;)
-
-
 void task_setup() {
     system_setup();
     io_setup();
@@ -32,11 +28,8 @@ void transmit_init() {
 void transmit() {
     char line[CMD_LENGTH];
     if (uart_have('\r')) {
-        uart_gets(line, LINE_SIZE);
+        uart_gets(line, CMD_LENGTH);
         system_decode(line);
     }
-
-
-
 }
 

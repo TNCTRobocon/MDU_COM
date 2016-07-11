@@ -3,6 +3,8 @@
 
 const int16_t pos=0x7fff;
 
+static int32_t speed=0;
+
 void encoder_setup(){
     
     //QEI Wake up
@@ -33,7 +35,7 @@ void encoder_setup(){
     
 }
 
-inline int16_t encoder_value(){
+inline int16_t encoder_raw(){
     //int16_t sub=pos-POSCNT;
     //POSCN T=pos;
     return POSCNT;
