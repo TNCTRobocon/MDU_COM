@@ -11,10 +11,15 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-    
+#include<stdint.h>
+#include<stdbool.h> 
+
+//タイマ2とタイマ3による32bitタイマ
 void timer_setup();
-void timer_period(uint16_t period);
-void timer_enable(bool);
+void timer_period(uint32_t period);
+void timer_enable(bool check);
+
+//int16_t timer_check();
 
 #ifdef	__cplusplus
 }

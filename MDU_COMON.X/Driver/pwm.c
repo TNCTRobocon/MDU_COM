@@ -87,7 +87,7 @@ inline void pwm_dt_direct(uint16_t dt, triple_t dir) {
 }
 
 inline void pwm_dt(Q16_t dt, triple_t dir) {
-    Q16_t temp = ((uint32_t) dt * pwm_period) >> 16;
+    Q16_t temp = ((uint32_t) dt * pwm_period) >> 15;
     pwm_dt_direct(temp, dir);
 }
 

@@ -5,7 +5,7 @@
 #include "encoder.h"
 #include "uart.h"
 #include "eeprom.h"
-
+#include "timer.h"
 
 
 bool driver_setup(){
@@ -21,7 +21,7 @@ bool driver_setup(){
     //周辺機器
     pwm_setup();
     encoder_setup();
-    
+    timer_setup();
     uart_setup();
     
     

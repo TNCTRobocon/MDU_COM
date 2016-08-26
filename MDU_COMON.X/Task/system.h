@@ -40,5 +40,6 @@ int basic_repeat(int,char**);
 int option_mode(int,char**);
 
 int motor_dt(int,char**);
+int motor_control(int,char**);
 
 #endif	/* SYSTEM_H */

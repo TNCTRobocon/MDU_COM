@@ -2,8 +2,7 @@
 #include "p30F4012.h"
 
 const int16_t pos=0x7fff;
-
-static int32_t speed=0;
+static int16_t rate=0;
 
 void encoder_setup(){
     
@@ -37,11 +36,22 @@ void encoder_setup(){
 
 inline int16_t encoder_raw(){
     //int16_t sub=pos-POSCNT;
-    //POSCN T=pos;
+    //POSCNT=pos;
+    //poss=POSCNT;
     return POSCNT;
+}
+
+inline int16_t encoder_speed_raw(){
+    return (rate);  
 }
 
 inline void encoder_direction(bool dir){
     //set direction
     QEICONbits.SWPAB=dir;
+}
+
+void _ISR _T3Interrupt(){
+    rate=POSCNT-pos;
+    POSCNT=pos;
+    IFS0bits.T3IF=false;
 }

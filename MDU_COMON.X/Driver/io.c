@@ -33,10 +33,10 @@ void io_setup() {
     system_insert(io_set, "set");
     system_insert(option_test, "test");
     system_insert(motor_dt, "dt");
+    system_insert(motor_control,"mc");
 }
-
 int io_get(int argc, char** argv) {
-    //最初の要素を削除
+    //最初の要素を削除;
     char* cmp = argv[1];
     char buf[32];
     bool split_fag = false;
@@ -173,8 +173,8 @@ int io_set(int argc, char** argv) {
 }
 
 int option_test(int argc, char** argv) {
-    char buf[8];
-    itoa(buf, encoder_raw(), 10);
+        char buf[8];
+    itoa(buf, encoder_speed_raw(), 10);
     uart_putl(buf);
     return 0;
 }
@@ -182,10 +182,18 @@ int option_test(int argc, char** argv) {
 int motor_dt(int argc, char** argv) {
     if (argc == 0) {
         pwm_shutdown(true);
+        get_main(false,0,false,0);
     } else {
         pwm_shutdown(false);
         float dt = atof(argv[1]);
+        get_main(true,ConvertQ15(dt),false,0);
         pwm_dts(ConvertQ15(dt));
     }
+    return 0;
+}
+
+int motor_control(int argc, char** argv){
+        int32_t speed=atoi(argv[1]);
+        get_main(false,0,true,speed);
     return 0;
 }
