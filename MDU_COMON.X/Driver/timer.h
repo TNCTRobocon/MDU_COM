@@ -19,7 +19,7 @@ void timer_setup();
 void timer_period(uint32_t period);
 void timer_enable(bool check);
 
-//int16_t timer_check();
+int16_t timer_check();
 
 #ifdef	__cplusplus
 }

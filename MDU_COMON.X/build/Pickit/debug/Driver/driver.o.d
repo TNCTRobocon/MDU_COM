@@ -9,4 +9,5 @@ Driver/../Setting/types.h  \
  Driver/../Setting/../Helper/dsp_helper.h  \
 Driver/encoder.h  \
 Driver/uart.h  \
- Driver/eeprom.h 
+ Driver/eeprom.h  \
+Driver/timer.h 

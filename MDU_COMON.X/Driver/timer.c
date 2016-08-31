@@ -1,3 +1,7 @@
+
+//現在は未使用
+
+
 #include "timer.h"
 #include "p30F4012.h"
 
@@ -42,6 +46,6 @@ void timer_enable(bool check){
     }
 }
 
-/*int16_t timer_check(){
+int16_t timer_check(){
     return flag;
-}*/
+}

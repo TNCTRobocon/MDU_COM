@@ -14,6 +14,9 @@ void encoder_setup();
 
 inline int16_t encoder_raw();
 inline int16_t encoder_speed_raw();//差分
+inline int16_t encoder_spin_raw();//r/sec
+
+int16_t timer_flag();
 inline void encoder_direction(bool);
 
 

@@ -1,7 +1,7 @@
 #include "../Setting/configuration.h"
 #include "pwm.h"
 //デフォルト値
-#define PWM_PERIOD  (0xFFFF)
+#define PWM_PERIOD  (0x063E)//031E)//現在約25kHz
 #define PWM_DT_MAX      (0.95)
 #define PWM_DT_MIN      (0.15)
 
@@ -54,6 +54,9 @@ void pwm_setup() {
     PDC2 = 0;
     PDC3 = 0; //stopping
 
+    IFS2bits.PWMIF=false;
+     IPC9bits.PWMIP=6;
+     IEC2bits.PWMIE=true;
     //wake up
     PTCONbits.PTEN = true;
     ST_PIN = false;

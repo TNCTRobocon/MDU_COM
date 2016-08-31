@@ -174,7 +174,7 @@ int io_set(int argc, char** argv) {
 
 int option_test(int argc, char** argv) {
         char buf[8];
-    itoa(buf, encoder_speed_raw(), 10);
+    itoa(buf,encoder_speed_raw(), 10);
     uart_putl(buf);
     return 0;
 }
@@ -186,14 +186,21 @@ int motor_dt(int argc, char** argv) {
     } else {
         pwm_shutdown(false);
         float dt = atof(argv[1]);
-        get_main(true,ConvertQ15(dt),false,0);
+        get_main(ConvertQ15(dt),0);
         pwm_dts(ConvertQ15(dt));
     }
     return 0;
 }
 
 int motor_control(int argc, char** argv){
-        int32_t speed=atoi(argv[1]);
-        get_main(false,0,true,speed);
+    int32_t speed=atoi(argv[1]);
+    if(speed == 0){
+        //pwm_shutdown(true);
+        pwm_dts(ConvertQ15(0));
+        get_main(0,speed);
+    } else {
+        //pwm_shutdown(false);
+        get_main(0,speed);
+    }
     return 0;
 }

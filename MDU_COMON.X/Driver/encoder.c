@@ -4,6 +4,9 @@
 const int16_t pos=0x7fff;
 static int16_t rate=0;
 
+static int flag=0;
+static int16_t spin=400; 
+
 void encoder_setup(){
     
     //QEI Wake up
@@ -42,7 +45,11 @@ inline int16_t encoder_raw(){
 }
 
 inline int16_t encoder_speed_raw(){
-    return (rate);  
+    return (rate);//パルス/kHz
+}
+
+inline int16_t encoder_spin_raw(){
+    return(rate/spin);//r/kHz
 }
 
 inline void encoder_direction(bool dir){
@@ -50,8 +57,22 @@ inline void encoder_direction(bool dir){
     QEICONbits.SWPAB=dir;
 }
 
-void _ISR _T3Interrupt(){
-    rate=POSCNT-pos;
-    POSCNT=pos;
-    IFS0bits.T3IF=false;
+int16_t timer_flag(){
+    return flag;
+}
+
+void _ISR _PWMInterrupt(){
+    static uint16_t cnt;
+
+    if(cnt==1200/*12/*(++cnt & 0xFF)==0x01*/){//現在1kHz?
+     flag=1;
+     LATEbits.LATE2=flag;
+     rate=POSCNT-pos;
+     POSCNT=pos;
+     cnt=0;
+    }else{
+        flag=0;
+    }
+    cnt++;
+    IFS2bits.PWMIF=false;
 }
