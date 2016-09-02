@@ -5,17 +5,17 @@
 #include "timer.h"
 #include "p30F4012.h"
 
-static uint32_t p,x=0;
+static uint32_t p=0;
 static int16_t flag=0;
-const static uint32_t period_default=250000;//us
+const static uint32_t period_default=100000;//us
 
 
 void timer_setup(){
     SRbits.IPL=0;
     
-    IPC1bits.T3IP=6;
+    /*IPC1bits.T3IP=6;
     IFS0bits.T3IF=false;
-    IEC0bits.T3IE=true;
+    IEC0bits.T3IE=true;*/
     
     T2CONbits.TON=0;
     T2CONbits.TSIDL=0;
@@ -29,9 +29,9 @@ void timer_setup(){
     TMR3=0;
     TMR3HLD=0;
     
-    timer_period(period_default);//割り込みの周期 単位はμs(下限:2us)
+    /*timer_period(period_default);//割り込みの周期 単位はμs(下限:2us)
     PR2=0x0000FFFF & p;
-    PR3=p>>16;
+    PR3=p>>16;*/
     
 }
 

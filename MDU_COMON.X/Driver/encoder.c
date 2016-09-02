@@ -3,9 +3,10 @@
 
 const int16_t pos=0x7fff;
 static int16_t rate=0;
-
 static int flag=0;
 static int16_t spin=400; 
+static uint16_t period=1200;//現在100ms(10Hz)_
+static uint32_t ev_period=2000000;
 
 void encoder_setup(){
     
@@ -40,7 +41,6 @@ void encoder_setup(){
 inline int16_t encoder_raw(){
     //int16_t sub=pos-POSCNT;
     //POSCNT=pos;
-    //poss=POSCNT;
     return POSCNT;
 }
 
@@ -57,16 +57,19 @@ inline void encoder_direction(bool dir){
     QEICONbits.SWPAB=dir;
 }
 
+void encoder_period(uint16_t e_period){//ms
+    ev_period=20000*(uint32_t)e_period;
+    period=12*e_period;
+}
+
 int16_t timer_flag(){
     return flag;
 }
 
 void _ISR _PWMInterrupt(){
-    static uint16_t cnt;
-
-    if(cnt==1200/*12/*(++cnt & 0xFF)==0x01*/){//現在1kHz?
+static uint16_t cnt;
+    if(cnt==period/*(++cnt & 0xFF)==0x01*/){
      flag=1;
-     LATEbits.LATE2=flag;
      rate=POSCNT-pos;
      POSCNT=pos;
      cnt=0;
@@ -75,4 +78,8 @@ void _ISR _PWMInterrupt(){
     }
     cnt++;
     IFS2bits.PWMIF=false;
+}
+
+uint32_t get_encoder_period(){
+    return ev_period;
 }

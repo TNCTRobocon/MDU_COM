@@ -21,7 +21,7 @@ bool driver_setup(){
     //周辺機器
     pwm_setup();
     encoder_setup();
-    //timer_setup();
+    timer_setup();
     uart_setup();
     
     

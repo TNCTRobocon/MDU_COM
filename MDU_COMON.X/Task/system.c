@@ -18,7 +18,7 @@ typedef struct {
 
 static system_item_t table[SYSTEM_SIZE]; //実体
 //static system_item_t*   quick[SYSTEM_SIZE];//管理用の領域
-//TODO あとで二分探索   
+//TODO あとで二分探索
 
 static SystemMode_t system_mode;
 static char system_log[CMD_LENGTH]; //RE用の過去の命令の記録
@@ -41,7 +41,7 @@ void system_setup() {
     system_insert(basic_repeat, "repeat");
     //lip code
     system_change(SystemModeSeleceted);
-    uart_puts("wake up on debag mode [Don't Multi conection.]\r");
+    //uart_puts("wake up on debag mode [Don't Multi conection.]\r");
     //system_mode=SystemModeListen;
 }
 

@@ -7,20 +7,20 @@
  
 
 void get_main(Q15_t,int32_t);//通信で送られてくるdtとspeedをmainに持ってくる
-
+void set_main(float);
 static Q15_t dt=ConvertQ15(0);//dtモードで送られるdt比(ここではp制御モードとdtモードの区別用)
 static int32_t speed=0;//p制御モードでの回転数の理想値
-
 float p=0.001;//要調整(のちに通信で受け取るようになる)
 
 int main(){
     
     Q15_t px=0;
-    Q15_t py=0;
+     Q15_t py=0;
     
     driver_setup();
     task_setup();
     
+    timer_enable(true);
     for (;;){
         
         process_old();
@@ -74,3 +74,6 @@ void get_main(Q15_t dt_get,int32_t speed_true){
         speed=speed_true;
 }
 
+void set_main(float pc){
+    p=pc;
+}

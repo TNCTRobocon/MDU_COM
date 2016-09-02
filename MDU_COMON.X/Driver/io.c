@@ -18,13 +18,14 @@ const char cmp_pwm_min[] = "pwm.min"; //border
 const char cmp_pwm_period[] = "pwm.period"; //border
 const char cmp_pwm_dt[]="pwm.dt";//read only
 
+const char cmp_mc_p[]="p";
 
 //オプション
 const char cmp_help[] = "help";
 //Help時用　グループ分け ここにあるとヘルプに表示される。
 const char *group_get[] = {cmp_port_encode, cmp_port_idx, cmp_addr_value, cmp_addr_ofset,
-                           cmp_pwm_max,cmp_pwm_min,cmp_pwm_period,cmp_pwm_dt};
-const char *group_set[] = {cmp_addr_ofset,cmp_pwm_max,cmp_pwm_min,cmp_pwm_period};
+                           cmp_pwm_max,cmp_pwm_min,cmp_pwm_period,cmp_pwm_dt,cmp_mc_p};
+const char *group_set[] = {cmp_addr_ofset,cmp_pwm_max,cmp_pwm_min,cmp_pwm_period,cmp_mc_p};
 
 
 void io_setup() {
@@ -34,6 +35,8 @@ void io_setup() {
     system_insert(option_test, "test");
     system_insert(motor_dt, "dt");
     system_insert(motor_control,"mc");
+    system_insert(interval_timer,"ev");
+    system_insert(period_encoder,"period");
 }
 int io_get(int argc, char** argv) {
     //最初の要素を削除;
@@ -160,6 +163,8 @@ int io_set(int argc, char** argv) {
                 set_pwm_min(atof(var)*UINT16_MAX);
             }else if (!strcmp(name,cmp_pwm_period)){
                 set_pwm_period(atoi(var));
+            }else if(!strcmp(name,cmp_mc_p)){
+                set_main(atof(var));
             }else {
                 uart_bufs("?");
             }
@@ -204,3 +209,32 @@ int motor_control(int argc, char** argv){
     }
     return 0;
 }
+
+int interval_timer(int argc, char** argv){
+    char buf[8];
+    uint32_t a;
+    uint32_t period=get_encoder_period();//us(20*x)
+    //timer_enable(true);
+    while(uart_depth() == 0){
+        itoa(buf,encoder_speed_raw(), 10);
+        uart_putl(buf);
+        do {
+        a=0x0000FFFF&TMR2;
+        uint32_t c=TMR3HLD;
+        a=a+(c<<16);
+      }
+      while(a<period && uart_depth() == 0);
+      TMR2=0;
+      TMR3=0;
+      TMR3HLD=0;
+    }
+    //timer_enable(false);
+    return 0;
+}
+
+int period_encoder(int argc, char** argv){
+    uint16_t e_period = atoi(argv[1]);
+    encoder_period(e_period);
+    return 0;
+}
+
