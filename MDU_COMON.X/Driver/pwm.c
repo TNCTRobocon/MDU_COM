@@ -5,6 +5,8 @@
 #define PWM_DT_MAX      (0.95)
 #define PWM_DT_MIN      (0.15)
 
+
+
 static uint16_t pwm_period = PWM_PERIOD;
 //Q16 Formatで生で保存
 static Q16_t pwm_max = UINT16_MAX*PWM_DT_MAX;
@@ -15,6 +17,12 @@ static Q16_t pwm_min_raw=(uint32_t)(UINT16_MAX*PWM_DT_MIN*PWM_PERIOD)>>16;
 //内部関数群
 inline uint16_t dt_limit(uint16_t); //dt比をdt_max～dt_min,0の間の値に設定する
 
+const int16_t poss=0x7fff;
+static int16_t rate=0;
+static int flag=0;
+static uint16_t pid_period=1200;//現在100ms(10Hz)
+
+ uint32_t hz=0; 
 void pwm_setup() {
 
     //initialize module
@@ -139,4 +147,59 @@ inline Q16_t  get_pwm_dt(){
 
 inline void pwm_shutdown(bool fag) {
     ST_PIN = !fag;
+}
+
+
+
+int16_t timer_flag(){
+    return flag;
+}
+
+void pwm_pid_period(uint16_t period){
+    pid_period=period;
+}
+
+int16_t pid_rate(){
+    return rate;
+}
+
+
+void _ISR _PWMInterrupt(){
+static uint16_t cnt;
+    if(cnt==pid_period/*(++cnt & 0xFF)==0x01*/){
+     flag=1;
+     rate=POSCNT-poss;
+     POSCNT=poss;
+     cnt=0;
+    }else{
+        flag=0;
+    }
+    cnt++;
+    IFS2bits.PWMIF=false;
+}
+
+void set_event(event_t func){
+    if(func == NULL){
+        
+    }else{
+        func();
+    }    
+}
+
+void _ISR _CNInterrupt(){
+       hz=0x0000FFFF&TMR4;
+       uint32_t c=TMR5HLD;
+       hz=hz+(c<<16);
+       hz=hz/20;
+       //float cn_period=1000/(float)hz;
+       pid_period=1000000/hz;//20000*cn_period;
+    TMR4=0;
+    TMR5=0;
+    TMR5HLD=0;
+    IFS0bits.CNIF=false;
+}
+
+void get_mc_period(uint32_t *Hz,uint16_t *P){
+     *Hz=hz;
+     *P=pid_period;
 }

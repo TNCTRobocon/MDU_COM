@@ -5,6 +5,7 @@
  * Created on 2016/04/04, 16:37
  */
 
+
 #ifndef SYSTEM_H
 #define	SYSTEM_H
 #include "../Setting/types.h"
@@ -14,6 +15,12 @@
 #define SYSTEM_NO_LOG (100)//記録を取らない
 #define SYSTEM_INPUT_ERROR (-2)//入力が不正
 #define SYSTEM_FORMAT_ERROR (-3)//入力形式が不正
+
+
+#define Pwm_min (-0.95)
+#define Pwm_max (0.95)
+#define Dt_min (-95)
+#define Dt_max (95)
 
 extern int system_address_ofset;
 
@@ -41,7 +48,10 @@ int option_mode(int,char**);
 
 int motor_dt(int,char**);
 int motor_control(int,char**);
-int interval_timer(int,char**);
+int motor_control_period(int,char**);
+int interval_timer_mc(int,char**);
+int interval_timer_mcp(int,char**);
 int period_encoder(int,char**);
 
+float dt_map(float);
 #endif	/* SYSTEM_H */

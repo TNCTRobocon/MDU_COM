@@ -1,0 +1,315 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F1822 ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"9 C:\Users\TERU\MPLABXProjects\MDC-Again2.X\i2c.c
+[v _i2c_init i2c_init `(v  1 e 0 0 ]
+"24
+[v _i2c_isr i2c_isr `T(v  1 e 0 0 ]
+"33 C:\Users\TERU\MPLABXProjects\MDC-Again2.X\main.c
+[v _main main `(v  1 e 0 0 ]
+"53
+[v _isr isr `II(v  1 e 0 0 ]
+"15 C:\Users\TERU\MPLABXProjects\MDC-Again2.X\pwm.c
+[v _motor_init motor_init `(v  1 e 0 0 ]
+"22
+[v _tmr_init tmr_init `(v  1 e 0 0 ]
+"36
+[v _pwm_init pwm_init `(v  1 e 0 0 ]
+"80
+[v _insert_dt insert_dt `T(v  1 s 0 insert_dt ]
+"85
+[v _pwm_dt pwm_dt `(v  1 e 0 0 ]
+"124
+[v _tmr_cycle tmr_cycle `T(v  1 e 0 0 ]
+"129
+[v _tmr_dt tmr_dt `T(v  1 e 0 0 ]
+"134
+[v _isr_tmr isr_tmr `T(v  1 e 0 0 ]
+"337 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic12f1822.h
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+[s S29 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"360
+[s S38 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S43 . 1 `S29 1 . 1 0 `S38 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES43  1 e 1 @11 ]
+[s S74 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"720
+[u S83 . 1 `S74 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES83  1 e 1 @17 ]
+"803
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+"1032
+[v _PR2 PR2 `VEuc  1 e 1 @27 ]
+[s S296 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 T2OUTPS0 1 0 :1:3 
+`uc 1 T2OUTPS1 1 0 :1:4 
+`uc 1 T2OUTPS2 1 0 :1:5 
+`uc 1 T2OUTPS3 1 0 :1:6 
+]
+"1072
+[s S304 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 T2OUTPS 1 0 :4:3 
+]
+[u S308 . 1 `S296 1 . 1 0 `S304 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES308  1 e 1 @28 ]
+[s S160 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"1228
+[u S167 . 1 `S160 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES167  1 e 1 @140 ]
+[s S214 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1385
+[s S223 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S228 . 1 `S214 1 . 1 0 `S223 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES228  1 e 1 @149 ]
+"1609
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+[s S197 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+]
+"1953
+[u S204 . 1 `S197 1 . 1 0 ]
+[v _LATAbits LATAbits `VES204  1 e 1 @268 ]
+[s S266 . 1 `uc 1 CCP1SEL 1 0 :1:0 
+`uc 1 P1BSEL 1 0 :1:1 
+`uc 1 TXCKSEL 1 0 :1:2 
+`uc 1 T1GSEL 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 SSSEL 1 0 :1:5 
+`uc 1 SDOSEL 1 0 :1:6 
+`uc 1 RXDTSEL 1 0 :1:7 
+]
+"2464
+[s S275 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SS1SEL 1 0 :1:5 
+`uc 1 SDO1SEL 1 0 :1:6 
+]
+[u S279 . 1 `S266 1 . 1 0 `S275 1 . 1 0 ]
+[v _APFCONbits APFCONbits `VES279  1 e 1 @285 ]
+[s S177 . 1 `uc 1 ANSA0 1 0 :1:0 
+`uc 1 ANSA1 1 0 :1:1 
+`uc 1 ANSA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ANSA4 1 0 :1:4 
+]
+"2595
+[s S183 . 1 `uc 1 ANSELA 1 0 :5:0 
+]
+[u S185 . 1 `S177 1 . 1 0 `S183 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES185  1 e 1 @396 ]
+"3179
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"3216
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+"3290
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
+"3415
+[v _SSPCON SSPCON `VEuc  1 e 1 @533 ]
+"3614
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @534 ]
+"3735
+[v _SSPCON3 SSPCON3 `VEuc  1 e 1 @535 ]
+"3857
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @657 ]
+[s S325 . 1 `uc 1 CCP1M0 1 0 :1:0 
+`uc 1 CCP1M1 1 0 :1:1 
+`uc 1 CCP1M2 1 0 :1:2 
+`uc 1 CCP1M3 1 0 :1:3 
+`uc 1 DC1B0 1 0 :1:4 
+`uc 1 DC1B1 1 0 :1:5 
+`uc 1 P1M0 1 0 :1:6 
+`uc 1 P1M1 1 0 :1:7 
+]
+"3917
+[s S334 . 1 `uc 1 CCP1M 1 0 :4:0 
+`uc 1 DC1B 1 0 :2:4 
+`uc 1 P1M 1 0 :2:6 
+]
+[u S338 . 1 `S325 1 . 1 0 `S334 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES338  1 e 1 @659 ]
+[s S355 . 1 `uc 1 STR1A 1 0 :1:0 
+`uc 1 STR1B 1 0 :1:1 
+`uc 1 STR1C 1 0 :1:2 
+`uc 1 STR1D 1 0 :1:3 
+`uc 1 STR1SYNC 1 0 :1:4 
+]
+"4220
+[u S361 . 1 `S355 1 . 1 0 ]
+[v _PSTR1CONbits PSTR1CONbits `VES361  1 e 1 @662 ]
+"5106
+[v _CKP CKP `VEb  1 e 0 @4268 ]
+"5190
+[v _D_nA D_nA `VEb  1 e 0 @4261 ]
+"5210
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"5436
+[v _R_nW R_nW `VEb  1 e 0 @4258 ]
+"5512
+[v _SSP1IE SSP1IE `VEb  1 e 0 @1163 ]
+"5514
+[v _SSP1IF SSP1IF `VEb  1 e 0 @139 ]
+"5634
+[v _TRISA0 TRISA0 `VEb  1 e 0 @1120 ]
+"5644
+[v _TRISA5 TRISA5 `VEb  1 e 0 @1125 ]
+"5 C:\Users\TERU\MPLABXProjects\MDC-Again2.X\i2c.c
+[v _i2c_data i2c_data `c  1 s 1 i2c_data ]
+"30 C:\Users\TERU\MPLABXProjects\MDC-Again2.X\main.c
+[v _address address `DCCuc  1 e 1 0 ]
+"4 C:\Users\TERU\MPLABXProjects\MDC-Again2.X\pwm.c
+[v _dt_min dt_min `DCCui  1 s 2 dt_min ]
+"6
+[v _ton ton `uc  1 s 1 ton ]
+"7
+[v _toff toff `uc  1 s 1 toff ]
+[s S148 . 1 `uc 1 dir 1 0 :1:0 
+`uc 1 ldir 1 0 :1:1 
+`uc 1 fag 1 0 :1:2 
+]
+"13
+[v _w w `S148  1 s 1 w ]
+"33 C:\Users\TERU\MPLABXProjects\MDC-Again2.X\main.c
+[v _main main `(v  1 e 0 0 ]
+{
+"50
+} 0
+"129 C:\Users\TERU\MPLABXProjects\MDC-Again2.X\pwm.c
+[v _tmr_dt tmr_dt `T(v  1 e 0 0 ]
+{
+[v tmr_dt@dt dt `uc  1 a 1 wreg ]
+[v tmr_dt@dt dt `uc  1 a 1 wreg ]
+[v tmr_dt@cycle cycle `uc  1 p 1 4 ]
+[v tmr_dt@dt dt `uc  1 a 1 10 ]
+"131
+} 0
+"124
+[v _tmr_cycle tmr_cycle `T(v  1 e 0 0 ]
+{
+[v tmr_cycle@on on `uc  1 a 1 wreg ]
+[v tmr_cycle@on on `uc  1 a 1 wreg ]
+[v tmr_cycle@cycle cycle `uc  1 p 1 7 ]
+[v tmr_cycle@on on `uc  1 a 1 3 ]
+"127
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 0 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 3 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 5 ]
+"53
+} 0
+"15 C:\Users\TERU\MPLABXProjects\MDC-Again2.X\pwm.c
+[v _motor_init motor_init `(v  1 e 0 0 ]
+{
+"20
+} 0
+"22
+[v _tmr_init tmr_init `(v  1 e 0 0 ]
+{
+"34
+} 0
+"36
+[v _pwm_init pwm_init `(v  1 e 0 0 ]
+{
+"78
+} 0
+"85
+[v _pwm_dt pwm_dt `(v  1 e 0 0 ]
+{
+"86
+[v pwm_dt@abs abs `ui  1 a 2 6 ]
+"85
+[v pwm_dt@dt dt `i  1 p 2 0 ]
+"122
+} 0
+"80
+[v _insert_dt insert_dt `T(v  1 s 0 insert_dt ]
+{
+[v insert_dt@var var `ui  1 p 2 3 ]
+"83
+} 0
+"9 C:\Users\TERU\MPLABXProjects\MDC-Again2.X\i2c.c
+[v _i2c_init i2c_init `(v  1 e 0 0 ]
+{
+[v i2c_init@address address `uc  1 a 1 wreg ]
+[v i2c_init@address address `uc  1 a 1 wreg ]
+"11
+[v i2c_init@address address `uc  1 a 1 3 ]
+"21
+} 0
+"53 C:\Users\TERU\MPLABXProjects\MDC-Again2.X\main.c
+[v _isr isr `II(v  1 e 0 0 ]
+{
+"66
+} 0
+"134 C:\Users\TERU\MPLABXProjects\MDC-Again2.X\pwm.c
+[v _isr_tmr isr_tmr `T(v  1 e 0 0 ]
+{
+"144
+} 0
+"24 C:\Users\TERU\MPLABXProjects\MDC-Again2.X\i2c.c
+[v _i2c_isr i2c_isr `T(v  1 e 0 0 ]
+{
+"25
+[v i2c_isr@dammy dammy `uc  1 a 1 1 ]
+"37
+} 0

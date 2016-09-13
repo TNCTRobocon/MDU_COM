@@ -6,4 +6,6 @@ Driver/driver.h  \
 Task/task.h  \
 Driver/uart.h  \
  Driver/../Setting/types.h  \
-Driver/../Setting/../Helper/dsp_helper.h 
+Driver/../Setting/../Helper/dsp_helper.h  \
+ Application/motor.h  \
+Application/../Setting/types.h 

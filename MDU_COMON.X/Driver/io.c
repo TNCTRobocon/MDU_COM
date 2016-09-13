@@ -18,14 +18,17 @@ const char cmp_pwm_min[] = "pwm.min"; //border
 const char cmp_pwm_period[] = "pwm.period"; //border
 const char cmp_pwm_dt[]="pwm.dt";//read only
 
+const char cmp_mc_period[]="mc.period";
 const char cmp_mc_p[]="p";
+const char cmp_mc_i[]="i";
+const char cmp_mc_d[]="d";
 
 //オプション
 const char cmp_help[] = "help";
 //Help時用　グループ分け ここにあるとヘルプに表示される。
 const char *group_get[] = {cmp_port_encode, cmp_port_idx, cmp_addr_value, cmp_addr_ofset,
-                           cmp_pwm_max,cmp_pwm_min,cmp_pwm_period,cmp_pwm_dt,cmp_mc_p};
-const char *group_set[] = {cmp_addr_ofset,cmp_pwm_max,cmp_pwm_min,cmp_pwm_period,cmp_mc_p};
+                           cmp_pwm_max,cmp_pwm_min,cmp_pwm_period,cmp_pwm_dt,cmp_mc_p,cmp_mc_i,cmp_mc_d,cmp_mc_period};
+const char *group_set[] = {cmp_addr_ofset,cmp_pwm_max,cmp_pwm_min,cmp_pwm_period,cmp_mc_p,cmp_mc_i,cmp_mc_d};
 
 
 void io_setup() {
@@ -35,7 +38,9 @@ void io_setup() {
     system_insert(option_test, "test");
     system_insert(motor_dt, "dt");
     system_insert(motor_control,"mc");
-    system_insert(interval_timer,"ev");
+    system_insert(motor_control_period,"mcp");
+    system_insert(interval_timer_mc,"ev");
+    system_insert(interval_timer_mcp,"evp");
     system_insert(period_encoder,"period");
 }
 int io_get(int argc, char** argv) {
@@ -120,6 +125,20 @@ int io_get(int argc, char** argv) {
                 uart_bufs("pwm.dt:");
                 itoa(buf,var,10);
                 uart_bufs(buf);
+            }else if (!strcmp(cmp,cmp_mc_period)){
+                mcp_enable(true);
+                uint32_t hz_get;
+                uint16_t period_get;
+                get_mc_period(&hz_get,&period_get);
+                int var =period_get;
+                uart_bufs("mc.period:0x");
+                itoa(buf,var,10);
+                uart_bufs(buf);
+                uart_bufs("(");
+                var =hz_get;
+                itoa(buf,var,10);
+                uart_bufs(buf);
+                 uart_bufs("us?)");
             }else{
                 uart_bufs("?");
             }
@@ -164,7 +183,11 @@ int io_set(int argc, char** argv) {
             }else if (!strcmp(name,cmp_pwm_period)){
                 set_pwm_period(atoi(var));
             }else if(!strcmp(name,cmp_mc_p)){
-                set_main(atof(var));
+                set_p(atof(var));
+            }else if(!strcmp(name,cmp_mc_i)){
+                set_i(atof(var));
+            }else if(!strcmp(name,cmp_mc_d)){
+                set_d(atof(var));
             }else {
                 uart_bufs("?");
             }
@@ -185,32 +208,33 @@ int option_test(int argc, char** argv) {
 }
 
 int motor_dt(int argc, char** argv) {
+    mcp_enable(false);
     if (argc == 0) {
         pwm_shutdown(true);
-        get_main(false,0,false,0);
     } else {
         pwm_shutdown(false);
         float dt = atof(argv[1]);
-        get_main(ConvertQ15(dt),0);
-        pwm_dts(ConvertQ15(dt));
+        set_motor_dt((int)dt);
+        pwm_dts(ConvertQ15(dt_map(dt)));
     }
     return 0;
 }
 
 int motor_control(int argc, char** argv){
+    mcp_enable(false);
     int32_t speed=atoi(argv[1]);
-    if(speed == 0){
-        //pwm_shutdown(true);
-        pwm_dts(ConvertQ15(0));
-        get_main(0,speed);
-    } else {
-        //pwm_shutdown(false);
-        get_main(0,speed);
-    }
+        set_motor_speed(speed);
     return 0;
 }
 
-int interval_timer(int argc, char** argv){
+int motor_control_period(int argc, char** argv){
+    mcp_enable(true);
+    int32_t speed=atoi(argv[1]);
+        set_motor_speed(speed);
+}
+
+
+int interval_timer_mc(int argc, char** argv){
     char buf[8];
     uint32_t a;
     uint32_t period=get_encoder_period();//us(20*x)
@@ -231,10 +255,40 @@ int interval_timer(int argc, char** argv){
     //timer_enable(false);
     return 0;
 }
-
+int interval_timer_mcp(int argc, char** argv){
+    char buf[8];
+    uint32_t a;
+    uint32_t period;//us(20*x)
+    //timer_enable(true);
+    get_mc_period(&a,&period);
+    while(uart_depth() == 0){
+        itoa(buf,encoder_speed_raw(), 10);
+        uart_putl(buf);
+        do {
+        a=0x0000FFFF&TMR2;
+        uint32_t c=TMR3HLD;
+        a=a+(c<<16);
+      }
+      while(a<period && uart_depth() == 0);
+      TMR2=0;
+      TMR3=0;
+      TMR3HLD=0;
+      get_mc_period(&a,&period);
+    }
+    //timer_enable(false);
+    return 0;
+}
 int period_encoder(int argc, char** argv){
     uint16_t e_period = atoi(argv[1]);
     encoder_period(e_period);
     return 0;
 }
 
+float dt_map(float n_dt){
+    if(n_dt<Dt_min){
+        n_dt=Dt_min;
+    }else if(n_dt>Dt_max){
+        n_dt=Dt_max;
+    }
+    return((n_dt-Dt_max)*(Pwm_max-Pwm_min)/(Dt_max-Dt_min)+Pwm_max);
+}

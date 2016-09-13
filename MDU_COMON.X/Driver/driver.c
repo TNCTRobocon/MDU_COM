@@ -20,10 +20,10 @@ bool driver_setup(){
    //eeprom_setup();
     //周辺機器
     pwm_setup();
+    counter_setup();
     encoder_setup();
     timer_setup();
     uart_setup();
-    
     
     pwm_shutdown(false); 
     return false;

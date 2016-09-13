@@ -1,0 +1,14 @@
+_insert_dt: CODE, 223 0 25
+_main: CODE, 198 0 25
+_clk_init: CODE, 288 0 10
+_address: STRCODE, 514 0 1
+__initialization: CODE, 18 0 6
+_isr: CODE, 4 0 13
+_motor_init: CODE, 515 0 3
+_i2c_isr: CODE, 248 0 22
+_pwm_dt: CODE, 27 0 132
+_pwm_init: CODE, 159 0 39
+_i2c_init: CODE, 270 0 18
+_i2c_get: CODE, 520 0 2
+_dt_min: STRCODE, 512 0 2
+Total: 298

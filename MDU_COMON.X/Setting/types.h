@@ -1,5 +1,4 @@
-/* 
- * File:   types.h
+ /* File:   types.h
  * Author: TERU
  *
  * Created on 2016/03/24, 22:16
@@ -19,6 +18,8 @@ typedef int8_t triple_t;
 #define plus ((int8_t)+1)
 #define zero ((int8_t)0)
 #define minus ((int8_t)-1)
+
+typedef unsigned short Q8_8_t;
 
 typedef int16_t count_t; //個数表記用
 #define nullptr NULL

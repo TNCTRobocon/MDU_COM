@@ -2,11 +2,9 @@
 #include "p30F4012.h"
 
 const int16_t pos=0x7fff;
-static int16_t rate=0;
-static int flag=0;
 static int16_t spin=400; 
-static uint16_t period=1200;//現在100ms(10Hz)_
 static uint32_t ev_period=2000000;
+static uint16_t period=1200;//現在100ms(10Hz)
 
 void encoder_setup(){
     
@@ -37,6 +35,33 @@ void encoder_setup(){
     IEC2bits.QEIIE=false;
     
 }
+void counter_setup(){
+    
+    IEC0bits.CNIE=false;
+    CNEN1bits.CN6IE=true;
+    IFS0bits.CNIF=false;
+    //IEC0bits.CNIE=true;
+    IPC3bits.CNIP=5;
+ 
+ 
+    T4CONbits.TON=false;
+    T4CONbits.TSIDL=false;
+    T4CONbits.TGATE=false;
+    T4CONbits.TCKPS0=false;
+    T4CONbits.TCKPS1=false;
+    T4CONbits.T32=true;
+    T4CONbits.TCS=false;
+    
+    TMR4=0;
+    TMR5=0;
+    TMR5HLD=0;
+ 
+}
+
+void mcp_enable(bool check){
+    IEC0bits.CNIE= check;
+    T4CONbits.TON=check;
+}
 
 inline int16_t encoder_raw(){
     //int16_t sub=pos-POSCNT;
@@ -45,11 +70,11 @@ inline int16_t encoder_raw(){
 }
 
 inline int16_t encoder_speed_raw(){
-    return (rate);//パルス/kHz
+    return (pid_rate());//パルス/kHz
 }
 
 inline int16_t encoder_spin_raw(){
-    return(rate/spin);//r/kHz
+    return(pid_rate()/spin);//r/kHz
 }
 
 inline void encoder_direction(bool dir){
@@ -60,24 +85,7 @@ inline void encoder_direction(bool dir){
 void encoder_period(uint16_t e_period){//ms
     ev_period=20000*(uint32_t)e_period;
     period=12*e_period;
-}
-
-int16_t timer_flag(){
-    return flag;
-}
-
-void _ISR _PWMInterrupt(){
-static uint16_t cnt;
-    if(cnt==period/*(++cnt & 0xFF)==0x01*/){
-     flag=1;
-     rate=POSCNT-pos;
-     POSCNT=pos;
-     cnt=0;
-    }else{
-        flag=0;
-    }
-    cnt++;
-    IFS2bits.PWMIF=false;
+   pwm_pid_period(period);
 }
 
 uint32_t get_encoder_period(){

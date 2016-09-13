@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/writer/production\MDC-Again2_Version1.0_.X.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>2048</length>
+      <used>304</used>
+      <free>1744</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>128</length>
+      <used>25</used>
+      <free>103</free>
+    </memory>
+  </executable>
+</project>
