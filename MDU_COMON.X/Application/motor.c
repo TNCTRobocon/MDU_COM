@@ -25,40 +25,41 @@ void motor(){
            //speed(理想の回転数)と
            //p(p制御のためのちょうどいい値)は本体から送る
            float x=e*p+se*i;
-           float mv=0;//p制御の操作量
+           Q15_t mv=0;//p制御の操作量
            
-           if(x>-95 && x<95){
-           mv=x;
-           }else if(x<-95){
-           mv=-95;
-           }else if(x>95){
-           mv=95;
+           if(x>-0.95 && x<0.95){
+           mv=ConvertQ15(x);
+           }else if(x<-0.95){
+           mv=ConvertQ15(-0.95);
+           }else if(x>0.95){
+           mv=ConvertQ15(0.95);
            }
            
            
            
             if(speed==0){
                ps=ps+mv;
+               pwm_dts(ps);
              }else if(speed>0){
-               if(ps+mv>15 && ps+mv<95){
+               if(ps+mv>ConvertQ15(0.15) && ps+mv<ConvertQ15(0.95)){
                ps=ps+mv;
-               }else if(ps+mv<=15){
-               ps=15;    
-               }else if(ps+mv>=95){
-               ps=95;    
+               }else if(ps+mv<=ConvertQ15(0.15)){
+               ps=ConvertQ15(0.15);    
+               }else if(ps+mv>=ConvertQ15(0.95)){
+               ps=ConvertQ15(0.95);    
                }
+               pwm_dts(ps);
            }else if(speed<0){
                
-               if(ps+mv<-15 && ps+mv>-95){
+               if(ps+mv<ConvertQ15(-0.15) && ps+mv>ConvertQ15(-0.95)){
                ps=ps+mv;
-               }else if(ps+mv>=-15){
-               ps=-15;    
-               }else if(ps+mv<=-95){
-               ps=-95;    
+               }else if(ps+mv>=ConvertQ15(-0.15)){
+               ps=ConvertQ15(-0.15);    
+               }else if(ps+mv<=ConvertQ15(-0.95)){
+               ps=ConvertQ15(-0.95);    
                }
+             pwm_dts(ps);
            }
-           
-             pwm_dts(ConvertQ15(dt_map(ps)));
              
         }
            
@@ -105,38 +106,3 @@ void set_d(float dc){
     d=d+(int)dc<<8;
     }*/   
 }
-//Q15_t mv=0;//p制御の操作量
-           
-           /*if(x>-0.95 && x<0.95){
-           mv=ConvertQ15(x);
-           }else if(x<-0.95){
-           mv=ConvertQ15(-0.95);
-           }else if(x>0.95){
-           mv=ConvertQ15(0.95);
-           }
-           
-           
-           
-            if(speed==0){
-               ps=ps+mv;
-               pwm_dts(ps);
-             }else if(speed>0){
-               if(ps+mv>ConvertQ15(0.15) && ps+mv<ConvertQ15(0.95)){
-               ps=ps+mv;
-               }else if(ps+mv<=ConvertQ15(0.15)){
-               ps=ConvertQ15(0.15);    
-               }else if(ps+mv>=ConvertQ15(0.95)){
-               ps=ConvertQ15(0.95);    
-               }
-               pwm_dts(ps);
-           }else if(speed<0){
-               
-               if(ps+mv<ConvertQ15(-0.15) && ps+mv>ConvertQ15(-0.95)){
-               ps=ps+mv;
-               }else if(ps+mv>=ConvertQ15(-0.15)){
-               ps=ConvertQ15(-0.15);    
-               }else if(ps+mv<=ConvertQ15(-0.95)){
-               ps=ConvertQ15(-0.95);    
-               }
-             pwm_dts(ps);
-           }*/

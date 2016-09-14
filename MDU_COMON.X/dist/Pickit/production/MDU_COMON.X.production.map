@@ -151,12 +151,12 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100               0x81e           0xc2d  (3117)
 .const                       0x91e               0x1be           0x29d  (669)
-.text                        0xadc               0xe28          0x153c  (5436)
-.dinit                      0x1904                0x80            0xc0  (192)
-.text                       0x1984               0x114           0x19e  (414)
-.shared.dinit               0x1a98                 0x2             0x3  (3)
+.text                        0xadc               0xe26          0x1539  (5433)
+.dinit                      0x1902                0x80            0xc0  (192)
+.text                       0x1982               0x114           0x19e  (414)
+.shared.dinit               0x1a96                 0x2             0x3  (3)
 
-                 Total program memory used (bytes):         0x2667  (9831) 20%
+                 Total program memory used (bytes):         0x2664  (9828) 20%
 
 
 Ivt Memory  [Origin = 0x4, Length = 0x7c]
@@ -173,7 +173,7 @@ Data EEPROM Memory  [Origin = 0x7ffc00, Length = 0x400]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-_0486596057d7a692         0x7ffc00                0x80            0x80  (128)
+_0483596057d8ac4f         0x7ffc00                0x80            0x80  (128)
 
                  Total data EEPROM used (bytes):           0x80  (128) 12%
 
@@ -342,72 +342,72 @@ External Symbols in Program Memory (by address):
                   0x001400                  _basic_select
                   0x001432                  _system_setup
                   0x001478                  _motor
-                  0x00160e                  _set_motor_dt
-                  0x001620                  _set_motor_speed
-                  0x00162c                  _set_p
-                  0x001632                  _set_i
-                  0x001638                  _set_d
-                  0x00163e                  _pwm_setup
-                  0x001670                  _dt_limit
-                  0x001686                  _pwm_dt_direct
-                  0x0016ac                  _pwm_dt
-                  0x0016be                  _pwm_dts
-                  0x0016d2                  _set_pwm_period
-                  0x0016e6                  _get_pwm_period
-                  0x0016ea                  _set_pwm_max
-                  0x0016f4                  _get_pwm_max
-                  0x0016f8                  _set_pwm_min
-                  0x001702                  _get_pwm_min
-                  0x001706                  _get_pwm_dt
-                  0x00171e                  _pwm_shutdown
-                  0x001730                  _timer_flag
-                  0x001734                  _pwm_pid_period
-                  0x001738                  _pid_rate
-                  0x00173c                  __PWMInterrupt
-                  0x001768                  _set_event
-                  0x001770                  __CNInterrupt
-                  0x0017b8                  _get_mc_period
-                  0x0017c4                  _ports_setup
-                  0x0017fe                  _port_address
-                  0x001824                  _led_rx
-                  0x001832                  _port_get
-                  0x001864                  _pin_encode_idx
-                  0x00186c                  _pin_encode_x
-                  0x001874                  _pin_encode_y
-                  0x00187c                  _encoder_setup
-                  0x001890                  _counter_setup
-                  0x0018b6                  _mcp_enable
-                  0x0018cc                  _encoder_raw
-                  0x0018d0                  _encoder_speed_raw
-                  0x0018d4                  _encoder_spin_raw
-                  0x0018de                  _encoder_direction
-                  0x0018ee                  _encoder_period
-                  0x0018fe                  _get_encoder_period
-                  0x001984                  _eeprom_open
-                  0x001988                  _eeprom_close
-                  0x00198c                  _eeprom_flush
-                  0x0019a6                  _eeprom_putc
-                  0x0019c0                  _eeprom_puts
-                  0x0019dc                  _eeprom_setup
-                  0x0019f2                  _timer_setup
-                  0x001a0c                  _timer_period
-                  0x001a18                  _timer_enable
-                  0x001a2c                  _timer_check
-                  0x001a30                  _task_setup
-                  0x001a36                  _transmit_init
-                  0x001a38                  _transmit
-                  0x001a54                  _process_old
-                  0x001a58                  _main
-                  0x001a7a                  _driver_setup
-                  0x001a96                  _motor_book
+                  0x00160c                  _set_motor_dt
+                  0x00161e                  _set_motor_speed
+                  0x00162a                  _set_p
+                  0x001630                  _set_i
+                  0x001636                  _set_d
+                  0x00163c                  _pwm_setup
+                  0x00166e                  _dt_limit
+                  0x001684                  _pwm_dt_direct
+                  0x0016aa                  _pwm_dt
+                  0x0016bc                  _pwm_dts
+                  0x0016d0                  _set_pwm_period
+                  0x0016e4                  _get_pwm_period
+                  0x0016e8                  _set_pwm_max
+                  0x0016f2                  _get_pwm_max
+                  0x0016f6                  _set_pwm_min
+                  0x001700                  _get_pwm_min
+                  0x001704                  _get_pwm_dt
+                  0x00171c                  _pwm_shutdown
+                  0x00172e                  _timer_flag
+                  0x001732                  _pwm_pid_period
+                  0x001736                  _pid_rate
+                  0x00173a                  __PWMInterrupt
+                  0x001766                  _set_event
+                  0x00176e                  __CNInterrupt
+                  0x0017b6                  _get_mc_period
+                  0x0017c2                  _ports_setup
+                  0x0017fc                  _port_address
+                  0x001822                  _led_rx
+                  0x001830                  _port_get
+                  0x001862                  _pin_encode_idx
+                  0x00186a                  _pin_encode_x
+                  0x001872                  _pin_encode_y
+                  0x00187a                  _encoder_setup
+                  0x00188e                  _counter_setup
+                  0x0018b4                  _mcp_enable
+                  0x0018ca                  _encoder_raw
+                  0x0018ce                  _encoder_speed_raw
+                  0x0018d2                  _encoder_spin_raw
+                  0x0018dc                  _encoder_direction
+                  0x0018ec                  _encoder_period
+                  0x0018fc                  _get_encoder_period
+                  0x001982                  _eeprom_open
+                  0x001986                  _eeprom_close
+                  0x00198a                  _eeprom_flush
+                  0x0019a4                  _eeprom_putc
+                  0x0019be                  _eeprom_puts
+                  0x0019da                  _eeprom_setup
+                  0x0019f0                  _timer_setup
+                  0x001a0a                  _timer_period
+                  0x001a16                  _timer_enable
+                  0x001a2a                  _timer_check
+                  0x001a2e                  _task_setup
+                  0x001a34                  _transmit_init
+                  0x001a36                  _transmit
+                  0x001a52                  _process_old
+                  0x001a56                  _main
+                  0x001a78                  _driver_setup
+                  0x001a94                  _motor_book
                   0xf8000a                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x001770                  __CNInterrupt
+                  0x00176e                  __CNInterrupt
                   0x0001e8                  __DefaultInterrupt
                   0xf8000a                  __FGS.sec
-                  0x00173c                  __PWMInterrupt
+                  0x00173a                  __PWMInterrupt
                   0x0011a4                  __U1RXInterrupt
                   0x0011de                  __U1TXInterrupt
                   0x00024e                  ___addsf3
@@ -463,28 +463,28 @@ External Symbols in Program Memory (by name):
                   0x000a1a                  _cmp_pwm_max
                   0x000a22                  _cmp_pwm_min
                   0x000a2a                  _cmp_pwm_period
-                  0x001890                  _counter_setup
-                  0x001a7a                  _driver_setup
-                  0x001670                  _dt_limit
+                  0x00188e                  _counter_setup
+                  0x001a78                  _driver_setup
+                  0x00166e                  _dt_limit
                   0x000f52                  _dt_map
-                  0x001988                  _eeprom_close
-                  0x00198c                  _eeprom_flush
-                  0x001984                  _eeprom_open
-                  0x0019a6                  _eeprom_putc
-                  0x0019c0                  _eeprom_puts
-                  0x0019dc                  _eeprom_setup
-                  0x0018de                  _encoder_direction
-                  0x0018ee                  _encoder_period
-                  0x0018cc                  _encoder_raw
-                  0x00187c                  _encoder_setup
-                  0x0018d0                  _encoder_speed_raw
-                  0x0018d4                  _encoder_spin_raw
-                  0x0018fe                  _get_encoder_period
-                  0x0017b8                  _get_mc_period
-                  0x001706                  _get_pwm_dt
-                  0x0016f4                  _get_pwm_max
-                  0x001702                  _get_pwm_min
-                  0x0016e6                  _get_pwm_period
+                  0x001986                  _eeprom_close
+                  0x00198a                  _eeprom_flush
+                  0x001982                  _eeprom_open
+                  0x0019a4                  _eeprom_putc
+                  0x0019be                  _eeprom_puts
+                  0x0019da                  _eeprom_setup
+                  0x0018dc                  _encoder_direction
+                  0x0018ec                  _encoder_period
+                  0x0018ca                  _encoder_raw
+                  0x00187a                  _encoder_setup
+                  0x0018ce                  _encoder_speed_raw
+                  0x0018d2                  _encoder_spin_raw
+                  0x0018fc                  _get_encoder_period
+                  0x0017b6                  _get_mc_period
+                  0x001704                  _get_pwm_dt
+                  0x0016f2                  _get_pwm_max
+                  0x001700                  _get_pwm_min
+                  0x0016e4                  _get_pwm_period
                   0x000b58                  _interval_timer_mc
                   0x000afe                  _interval_timer_mcp
                   0x000cd0                  _io_get
@@ -492,42 +492,42 @@ External Symbols in Program Memory (by name):
                   0x000f08                  _io_setup
                   0x0001ec                  _isspace
                   0x000830                  _itoa
-                  0x001824                  _led_rx
-                  0x001a58                  _main
-                  0x0018b6                  _mcp_enable
+                  0x001822                  _led_rx
+                  0x001a56                  _main
+                  0x0018b4                  _mcp_enable
                   0x001478                  _motor
-                  0x001a96                  _motor_book
+                  0x001a94                  _motor_book
                   0x000bbc                  _motor_control
                   0x000ba8                  _motor_control_period
                   0x000f96                  _motor_dt
                   0x001242                  _option_mode
                   0x000ae6                  _option_test
                   0x000adc                  _period_encoder
-                  0x001738                  _pid_rate
-                  0x001864                  _pin_encode_idx
-                  0x00186c                  _pin_encode_x
-                  0x001874                  _pin_encode_y
-                  0x0017fe                  _port_address
-                  0x001832                  _port_get
-                  0x0017c4                  _ports_setup
+                  0x001736                  _pid_rate
+                  0x001862                  _pin_encode_idx
+                  0x00186a                  _pin_encode_x
+                  0x001872                  _pin_encode_y
+                  0x0017fc                  _port_address
+                  0x001830                  _port_get
+                  0x0017c2                  _ports_setup
                   0x000ad8                  _pos
                   0x000ada                  _poss
-                  0x001a54                  _process_old
-                  0x0016ac                  _pwm_dt
-                  0x001686                  _pwm_dt_direct
-                  0x0016be                  _pwm_dts
-                  0x001734                  _pwm_pid_period
-                  0x00163e                  _pwm_setup
-                  0x00171e                  _pwm_shutdown
-                  0x001638                  _set_d
-                  0x001768                  _set_event
-                  0x001632                  _set_i
-                  0x00160e                  _set_motor_dt
-                  0x001620                  _set_motor_speed
-                  0x00162c                  _set_p
-                  0x0016ea                  _set_pwm_max
-                  0x0016f8                  _set_pwm_min
-                  0x0016d2                  _set_pwm_period
+                  0x001a52                  _process_old
+                  0x0016aa                  _pwm_dt
+                  0x001684                  _pwm_dt_direct
+                  0x0016bc                  _pwm_dts
+                  0x001732                  _pwm_pid_period
+                  0x00163c                  _pwm_setup
+                  0x00171c                  _pwm_shutdown
+                  0x001636                  _set_d
+                  0x001766                  _set_event
+                  0x001630                  _set_i
+                  0x00160c                  _set_motor_dt
+                  0x00161e                  _set_motor_speed
+                  0x00162a                  _set_p
+                  0x0016e8                  _set_pwm_max
+                  0x0016f6                  _set_pwm_min
+                  0x0016d0                  _set_pwm_period
                   0x0008f8                  _strchr
                   0x00084c                  _strcmp
                   0x00085a                  _strcpy
@@ -544,14 +544,14 @@ External Symbols in Program Memory (by name):
                   0x0012d2                  _system_decode
                   0x0013ac                  _system_error_cheak
                   0x001432                  _system_setup
-                  0x001a30                  _task_setup
-                  0x001a2c                  _timer_check
-                  0x001a18                  _timer_enable
-                  0x001730                  _timer_flag
-                  0x001a0c                  _timer_period
-                  0x0019f2                  _timer_setup
-                  0x001a38                  _transmit
-                  0x001a36                  _transmit_init
+                  0x001a2e                  _task_setup
+                  0x001a2a                  _timer_check
+                  0x001a16                  _timer_enable
+                  0x00172e                  _timer_flag
+                  0x001a0a                  _timer_period
+                  0x0019f0                  _timer_setup
+                  0x001a36                  _transmit
+                  0x001a34                  _transmit_init
                   0x001154                  _uart_begin
                   0x0010e2                  _uart_bufc
                   0x0010fc                  _uart_bufs
@@ -793,59 +793,59 @@ userdata
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x61db
+.debug_info       0x000000       0x620d
  *(.debug_info)
- .debug_info      0x000000        0x3a0 build/Pickit/production/Application/motor.o
- .debug_info      0x0003a0        0x31f build/Pickit/production/Driver/driver.o
- .debug_info      0x0006bf        0x4b6 build/Pickit/production/Driver/eeprom.o
- .debug_info      0x000b75        0xef6 build/Pickit/production/Driver/encoder.o
- .debug_info      0x001a6b        0xb0c build/Pickit/production/Driver/ports.o
- .debug_info      0x002577       0x1037 build/Pickit/production/Driver/pwm.o
- .debug_info      0x0035ae        0x51b build/Pickit/production/Driver/timer.o
- .debug_info      0x003ac9        0xec5 build/Pickit/production/Driver/uart.o
- .debug_info      0x00498e         0xb8 build/Pickit/production/Setting/configuration.o
- .debug_info      0x004a46        0x31e build/Pickit/production/main.o
- .debug_info      0x004d64        0xa88 build/Pickit/production/Driver/io.o
- .debug_info      0x0057ec        0x6f3 build/Pickit/production/Task/system.o
- .debug_info      0x005edf        0x1b6 build/Pickit/production/Task/task.o
- .debug_info      0x006095        0x146 build/Pickit/production/Task/motor.o
+ .debug_info      0x000000        0x3d2 build/Pickit/production/Application/motor.o
+ .debug_info      0x0003d2        0x31f build/Pickit/production/Driver/driver.o
+ .debug_info      0x0006f1        0x4b6 build/Pickit/production/Driver/eeprom.o
+ .debug_info      0x000ba7        0xef6 build/Pickit/production/Driver/encoder.o
+ .debug_info      0x001a9d        0xb0c build/Pickit/production/Driver/ports.o
+ .debug_info      0x0025a9       0x1037 build/Pickit/production/Driver/pwm.o
+ .debug_info      0x0035e0        0x51b build/Pickit/production/Driver/timer.o
+ .debug_info      0x003afb        0xec5 build/Pickit/production/Driver/uart.o
+ .debug_info      0x0049c0         0xb8 build/Pickit/production/Setting/configuration.o
+ .debug_info      0x004a78        0x31e build/Pickit/production/main.o
+ .debug_info      0x004d96        0xa88 build/Pickit/production/Driver/io.o
+ .debug_info      0x00581e        0x6f3 build/Pickit/production/Task/system.o
+ .debug_info      0x005f11        0x1b6 build/Pickit/production/Task/task.o
+ .debug_info      0x0060c7        0x146 build/Pickit/production/Task/motor.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0xe6f
+.debug_abbrev     0x000000        0xe7a
  *(.debug_abbrev)
- .debug_abbrev    0x000000         0xd7 build/Pickit/production/Application/motor.o
- .debug_abbrev    0x0000d7         0xa7 build/Pickit/production/Driver/driver.o
- .debug_abbrev    0x00017e        0x192 build/Pickit/production/Driver/eeprom.o
- .debug_abbrev    0x000310        0x198 build/Pickit/production/Driver/encoder.o
- .debug_abbrev    0x0004a8         0xed build/Pickit/production/Driver/ports.o
- .debug_abbrev    0x000595        0x185 build/Pickit/production/Driver/pwm.o
- .debug_abbrev    0x00071a        0x172 build/Pickit/production/Driver/timer.o
- .debug_abbrev    0x00088c        0x18a build/Pickit/production/Driver/uart.o
- .debug_abbrev    0x000a16         0x1f build/Pickit/production/Setting/configuration.o
- .debug_abbrev    0x000a35         0xbc build/Pickit/production/main.o
- .debug_abbrev    0x000af1        0x183 build/Pickit/production/Driver/io.o
- .debug_abbrev    0x000c74        0x160 build/Pickit/production/Task/system.o
- .debug_abbrev    0x000dd4         0x68 build/Pickit/production/Task/task.o
- .debug_abbrev    0x000e3c         0x32 build/Pickit/production/Task/motor.o
- .debug_abbrev    0x000e6e          0x1 build/Pickit/production/_ext/1472/message.o
+ .debug_abbrev    0x000000         0xe2 build/Pickit/production/Application/motor.o
+ .debug_abbrev    0x0000e2         0xa7 build/Pickit/production/Driver/driver.o
+ .debug_abbrev    0x000189        0x192 build/Pickit/production/Driver/eeprom.o
+ .debug_abbrev    0x00031b        0x198 build/Pickit/production/Driver/encoder.o
+ .debug_abbrev    0x0004b3         0xed build/Pickit/production/Driver/ports.o
+ .debug_abbrev    0x0005a0        0x185 build/Pickit/production/Driver/pwm.o
+ .debug_abbrev    0x000725        0x172 build/Pickit/production/Driver/timer.o
+ .debug_abbrev    0x000897        0x18a build/Pickit/production/Driver/uart.o
+ .debug_abbrev    0x000a21         0x1f build/Pickit/production/Setting/configuration.o
+ .debug_abbrev    0x000a40         0xbc build/Pickit/production/main.o
+ .debug_abbrev    0x000afc        0x183 build/Pickit/production/Driver/io.o
+ .debug_abbrev    0x000c7f        0x160 build/Pickit/production/Task/system.o
+ .debug_abbrev    0x000ddf         0x68 build/Pickit/production/Task/task.o
+ .debug_abbrev    0x000e47         0x32 build/Pickit/production/Task/motor.o
+ .debug_abbrev    0x000e79          0x1 build/Pickit/production/_ext/1472/message.o
 
-.debug_line       0x000000        0xbd9
+.debug_line       0x000000        0xc1a
  *(.debug_line)
- .debug_line      0x000000         0xc5 build/Pickit/production/Application/motor.o
- .debug_line      0x0000c5         0x64 build/Pickit/production/Driver/driver.o
- .debug_line      0x000129         0xde build/Pickit/production/Driver/eeprom.o
- .debug_line      0x000207        0x10e build/Pickit/production/Driver/encoder.o
- .debug_line      0x000315         0xdd build/Pickit/production/Driver/ports.o
- .debug_line      0x0003f2        0x149 build/Pickit/production/Driver/pwm.o
- .debug_line      0x00053b         0xf6 build/Pickit/production/Driver/timer.o
- .debug_line      0x000631        0x140 build/Pickit/production/Driver/uart.o
- .debug_line      0x000771         0x1a build/Pickit/production/Setting/configuration.o
- .debug_line      0x00078b         0x50 build/Pickit/production/main.o
- .debug_line      0x0007db        0x227 build/Pickit/production/Driver/io.o
- .debug_line      0x000a02        0x140 build/Pickit/production/Task/system.o
- .debug_line      0x000b42         0x46 build/Pickit/production/Task/task.o
- .debug_line      0x000b88         0x37 build/Pickit/production/Task/motor.o
- .debug_line      0x000bbf         0x1a build/Pickit/production/_ext/1472/message.o
+ .debug_line      0x000000        0x106 build/Pickit/production/Application/motor.o
+ .debug_line      0x000106         0x64 build/Pickit/production/Driver/driver.o
+ .debug_line      0x00016a         0xde build/Pickit/production/Driver/eeprom.o
+ .debug_line      0x000248        0x10e build/Pickit/production/Driver/encoder.o
+ .debug_line      0x000356         0xdd build/Pickit/production/Driver/ports.o
+ .debug_line      0x000433        0x149 build/Pickit/production/Driver/pwm.o
+ .debug_line      0x00057c         0xf6 build/Pickit/production/Driver/timer.o
+ .debug_line      0x000672        0x140 build/Pickit/production/Driver/uart.o
+ .debug_line      0x0007b2         0x1a build/Pickit/production/Setting/configuration.o
+ .debug_line      0x0007cc         0x50 build/Pickit/production/main.o
+ .debug_line      0x00081c        0x227 build/Pickit/production/Driver/io.o
+ .debug_line      0x000a43        0x140 build/Pickit/production/Task/system.o
+ .debug_line      0x000b83         0x46 build/Pickit/production/Task/task.o
+ .debug_line      0x000bc9         0x37 build/Pickit/production/Task/motor.o
+ .debug_line      0x000c00         0x1a build/Pickit/production/_ext/1472/message.o
 
 .debug_frame      0x000000        0x932
  *(.debug_frame)
@@ -863,18 +863,19 @@ userdata
  .debug_frame     0x0008ae         0x60 build/Pickit/production/Task/task.o
  .debug_frame     0x00090e         0x24 build/Pickit/production/Task/motor.o
 
-.debug_str        0x000000        0x29d
+.debug_str        0x000000        0x2a5
  *(.debug_str)
- .debug_str       0x000000          0xb build/Pickit/production/Driver/driver.o
- .debug_str       0x00000b         0x17 build/Pickit/production/Driver/eeprom.o
- .debug_str       0x000022         0x61 build/Pickit/production/Driver/encoder.o
- .debug_str       0x000083         0x6b build/Pickit/production/Driver/ports.o
- .debug_str       0x0000ee         0x4e build/Pickit/production/Driver/pwm.o
- .debug_str       0x00013c          0xa build/Pickit/production/Driver/timer.o
- .debug_str       0x000146         0x43 build/Pickit/production/Driver/uart.o
- .debug_str       0x000189         0x13 build/Pickit/production/main.o
- .debug_str       0x00019c         0xe2 build/Pickit/production/Driver/io.o
- .debug_str       0x00027e         0x1f build/Pickit/production/Task/system.o
+ .debug_str       0x000000          0x8 build/Pickit/production/Application/motor.o
+ .debug_str       0x000008          0xb build/Pickit/production/Driver/driver.o
+ .debug_str       0x000013         0x17 build/Pickit/production/Driver/eeprom.o
+ .debug_str       0x00002a         0x61 build/Pickit/production/Driver/encoder.o
+ .debug_str       0x00008b         0x6b build/Pickit/production/Driver/ports.o
+ .debug_str       0x0000f6         0x4e build/Pickit/production/Driver/pwm.o
+ .debug_str       0x000144          0xa build/Pickit/production/Driver/timer.o
+ .debug_str       0x00014e         0x43 build/Pickit/production/Driver/uart.o
+ .debug_str       0x000191         0x13 build/Pickit/production/main.o
+ .debug_str       0x0001a4         0xe2 build/Pickit/production/Driver/io.o
+ .debug_str       0x000286         0x1f build/Pickit/production/Task/system.o
 
 .debug_loc
  *(.debug_loc)
@@ -1618,130 +1619,130 @@ LOAD data_init
 LOAD shared_data_init
 
 .debug_pubtypes
-                  0x000138        0x778
+                  0x000138        0x782
  .debug_pubtypes
-                  0x000138         0x35 build/Pickit/production/Application/motor.o
+                  0x000138         0x3f build/Pickit/production/Application/motor.o
  .debug_pubtypes
-                  0x00016d         0x33 build/Pickit/production/Driver/driver.o
+                  0x000177         0x33 build/Pickit/production/Driver/driver.o
  .debug_pubtypes
-                  0x0001a0         0x6e build/Pickit/production/Driver/eeprom.o
+                  0x0001aa         0x6e build/Pickit/production/Driver/eeprom.o
  .debug_pubtypes
-                  0x00020e        0x14b build/Pickit/production/Driver/encoder.o
+                  0x000218        0x14b build/Pickit/production/Driver/encoder.o
  .debug_pubtypes
-                  0x000359        0x17a build/Pickit/production/Driver/ports.o
+                  0x000363        0x17a build/Pickit/production/Driver/ports.o
  .debug_pubtypes
-                  0x0004d3        0x164 build/Pickit/production/Driver/pwm.o
+                  0x0004dd        0x164 build/Pickit/production/Driver/pwm.o
  .debug_pubtypes
-                  0x000637         0x63 build/Pickit/production/Driver/timer.o
+                  0x000641         0x63 build/Pickit/production/Driver/timer.o
  .debug_pubtypes
-                  0x00069a        0x109 build/Pickit/production/Driver/uart.o
+                  0x0006a4        0x109 build/Pickit/production/Driver/uart.o
  .debug_pubtypes
-                  0x0007a3         0x12 build/Pickit/production/Setting/configuration.o
+                  0x0007ad         0x12 build/Pickit/production/Setting/configuration.o
  .debug_pubtypes
-                  0x0007b5         0x2f build/Pickit/production/main.o
+                  0x0007bf         0x2f build/Pickit/production/main.o
  .debug_pubtypes
-                  0x0007e4         0x4e build/Pickit/production/Driver/io.o
+                  0x0007ee         0x4e build/Pickit/production/Driver/io.o
  .debug_pubtypes
-                  0x000832         0x5a build/Pickit/production/Task/system.o
+                  0x00083c         0x5a build/Pickit/production/Task/system.o
  .debug_pubtypes
-                  0x00088c         0x12 build/Pickit/production/Task/task.o
+                  0x000896         0x12 build/Pickit/production/Task/task.o
  .debug_pubtypes
-                  0x00089e         0x12 build/Pickit/production/Task/motor.o
+                  0x0008a8         0x12 build/Pickit/production/Task/motor.o
 
 __c30_signature
-                  0x0008b0        0x114
+                  0x0008ba        0x114
  __c30_signature
-                  0x0008b0          0x6 build/Pickit/production/Application/motor.o
+                  0x0008ba          0x6 build/Pickit/production/Application/motor.o
  __c30_signature
-                  0x0008b6          0x6 build/Pickit/production/Driver/driver.o
+                  0x0008c0          0x6 build/Pickit/production/Driver/driver.o
  __c30_signature
-                  0x0008bc          0x6 build/Pickit/production/Driver/eeprom.o
+                  0x0008c6          0x6 build/Pickit/production/Driver/eeprom.o
  __c30_signature
-                  0x0008c2          0x6 build/Pickit/production/Driver/encoder.o
+                  0x0008cc          0x6 build/Pickit/production/Driver/encoder.o
  __c30_signature
-                  0x0008c8          0x6 build/Pickit/production/Driver/ports.o
+                  0x0008d2          0x6 build/Pickit/production/Driver/ports.o
  __c30_signature
-                  0x0008ce          0x6 build/Pickit/production/Driver/pwm.o
+                  0x0008d8          0x6 build/Pickit/production/Driver/pwm.o
  __c30_signature
-                  0x0008d4          0x6 build/Pickit/production/Driver/timer.o
+                  0x0008de          0x6 build/Pickit/production/Driver/timer.o
  __c30_signature
-                  0x0008da          0x6 build/Pickit/production/Driver/uart.o
+                  0x0008e4          0x6 build/Pickit/production/Driver/uart.o
  __c30_signature
-                  0x0008e0          0x6 build/Pickit/production/Setting/configuration.o
+                  0x0008ea          0x6 build/Pickit/production/Setting/configuration.o
  __c30_signature
-                  0x0008e6          0x6 build/Pickit/production/main.o
+                  0x0008f0          0x6 build/Pickit/production/main.o
  __c30_signature
-                  0x0008ec          0x6 build/Pickit/production/Driver/io.o
+                  0x0008f6          0x6 build/Pickit/production/Driver/io.o
  __c30_signature
-                  0x0008f2          0x6 build/Pickit/production/Task/system.o
+                  0x0008fc          0x6 build/Pickit/production/Task/system.o
  __c30_signature
-                  0x0008f8          0x6 build/Pickit/production/Task/task.o
+                  0x000902          0x6 build/Pickit/production/Task/task.o
  __c30_signature
-                  0x0008fe          0x6 build/Pickit/production/Task/motor.o
+                  0x000908          0x6 build/Pickit/production/Task/motor.o
  __c30_signature
-                  0x000904          0x6 build/Pickit/production/_ext/1472/message.o
+                  0x00090e          0x6 build/Pickit/production/_ext/1472/message.o
  __c30_signature
-                  0x00090a          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
+                  0x000914          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x000910          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
+                  0x00091a          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x000916          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(eedata_helper.eo)
+                  0x000920          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(eedata_helper.eo)
  __c30_signature
-                  0x00091c          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(addsf3.eo)
+                  0x000926          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(addsf3.eo)
  __c30_signature
-                  0x000922          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(divsf3.eo)
+                  0x00092c          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(divsf3.eo)
  __c30_signature
-                  0x000928          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(feqltle.eo)
+                  0x000932          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(feqltle.eo)
  __c30_signature
-                  0x00092e          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(fgtge.eo)
+                  0x000938          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(fgtge.eo)
  __c30_signature
-                  0x000934          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(fixsfsi.eo)
+                  0x00093e          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(fixsfsi.eo)
  __c30_signature
-                  0x00093a          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(fixunssfsi.eo)
+                  0x000944          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(fixunssfsi.eo)
  __c30_signature
-                  0x000940          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(floatsisf.eo)
+                  0x00094a          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(floatsisf.eo)
  __c30_signature
-                  0x000946          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(fpack.eo)
+                  0x000950          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(fpack.eo)
  __c30_signature
-                  0x00094c          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(funpack.eo)
+                  0x000956          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(funpack.eo)
  __c30_signature
-                  0x000952          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(funpack2.eo)
+                  0x00095c          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(funpack2.eo)
  __c30_signature
-                  0x000958          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(futil.eo)
+                  0x000962          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(futil.eo)
  __c30_signature
-                  0x00095e          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(mulsf3.eo)
+                  0x000968          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(mulsf3.eo)
  __c30_signature
-                  0x000964          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                  0x00096e          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
  __c30_signature
-                  0x00096a          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(fcompare.eo)
+                  0x000974          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(fcompare.eo)
  __c30_signature
-                  0x000970          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(floatdisf.eo)
+                  0x00097a          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(floatdisf.eo)
  __c30_signature
-                  0x000976          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
+                  0x000980          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
  __c30_signature
-                  0x00097c          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atof.eo)
+                  0x000986          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atof.eo)
  __c30_signature
-                  0x000982          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atoi.eo)
+                  0x00098c          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atoi.eo)
  __c30_signature
-                  0x000988          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(errno.eo)
+                  0x000992          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(errno.eo)
  __c30_signature
-                  0x00098e          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(itoa.eo)
+                  0x000998          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(itoa.eo)
  __c30_signature
-                  0x000994          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcmp.eo)
+                  0x00099e          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcmp.eo)
  __c30_signature
-                  0x00099a          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcpy.eo)
+                  0x0009a4          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcpy.eo)
  __c30_signature
-                  0x0009a0          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strlen.eo)
+                  0x0009aa          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strlen.eo)
  __c30_signature
-                  0x0009a6          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strtok.eo)
+                  0x0009b0          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strtok.eo)
  __c30_signature
-                  0x0009ac          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcspn.eo)
+                  0x0009b6          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcspn.eo)
  __c30_signature
-                  0x0009b2          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strspn.eo)
+                  0x0009bc          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strspn.eo)
  __c30_signature
-                  0x0009b8          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strchr.elo)
+                  0x0009c2          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strchr.elo)
  __c30_signature
-                  0x0009be          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(mulsi3.eo)
+                  0x0009c8          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libm-elf.a(mulsi3.eo)
 
 .nbss               0x0800        0x1b6
  .nbss              0x0800         0xe4 build/Pickit/production/Task/system.o
@@ -1837,7 +1838,7 @@ __c30_signature
  .const             0x8ada          0x2 build/Pickit/production/Driver/pwm.o
                     0x8ada                  _poss
 
-.text             0x000adc        0xe28
+.text             0x000adc        0xe26
  .text            0x000adc        0x514 build/Pickit/production/Driver/io.o
                   0x000adc                  _period_encoder
                   0x000ae6                  _option_test
@@ -1884,86 +1885,86 @@ __c30_signature
                   0x0013e4                  _system_change
                   0x001400                  _basic_select
                   0x001432                  _system_setup
- .text            0x001478        0x1c6 build/Pickit/production/Application/motor.o
+ .text            0x001478        0x1c4 build/Pickit/production/Application/motor.o
                   0x001478                  _motor
-                  0x00160e                  _set_motor_dt
-                  0x001620                  _set_motor_speed
-                  0x00162c                  _set_p
-                  0x001632                  _set_i
-                  0x001638                  _set_d
- .text            0x00163e        0x186 build/Pickit/production/Driver/pwm.o
-                  0x00163e                  _pwm_setup
-                  0x001670                  _dt_limit
-                  0x001686                  _pwm_dt_direct
-                  0x0016ac                  _pwm_dt
-                  0x0016be                  _pwm_dts
-                  0x0016d2                  _set_pwm_period
-                  0x0016e6                  _get_pwm_period
-                  0x0016ea                  _set_pwm_max
-                  0x0016f4                  _get_pwm_max
-                  0x0016f8                  _set_pwm_min
-                  0x001702                  _get_pwm_min
-                  0x001706                  _get_pwm_dt
-                  0x00171e                  _pwm_shutdown
-                  0x001730                  _timer_flag
-                  0x001734                  _pwm_pid_period
-                  0x001738                  _pid_rate
-                  0x00173c                  __PWMInterrupt
-                  0x001768                  _set_event
-                  0x001770                  __CNInterrupt
-                  0x0017b8                  _get_mc_period
- .text            0x0017c4         0xb8 build/Pickit/production/Driver/ports.o
-                  0x0017c4                  _ports_setup
-                  0x0017fe                  _port_address
-                  0x001824                  _led_rx
-                  0x001832                  _port_get
-                  0x001864                  _pin_encode_idx
-                  0x00186c                  _pin_encode_x
-                  0x001874                  _pin_encode_y
- .text            0x00187c         0x88 build/Pickit/production/Driver/encoder.o
-                  0x00187c                  _encoder_setup
-                  0x001890                  _counter_setup
-                  0x0018b6                  _mcp_enable
-                  0x0018cc                  _encoder_raw
-                  0x0018d0                  _encoder_speed_raw
-                  0x0018d4                  _encoder_spin_raw
-                  0x0018de                  _encoder_direction
-                  0x0018ee                  _encoder_period
-                  0x0018fe                  _get_encoder_period
+                  0x00160c                  _set_motor_dt
+                  0x00161e                  _set_motor_speed
+                  0x00162a                  _set_p
+                  0x001630                  _set_i
+                  0x001636                  _set_d
+ .text            0x00163c        0x186 build/Pickit/production/Driver/pwm.o
+                  0x00163c                  _pwm_setup
+                  0x00166e                  _dt_limit
+                  0x001684                  _pwm_dt_direct
+                  0x0016aa                  _pwm_dt
+                  0x0016bc                  _pwm_dts
+                  0x0016d0                  _set_pwm_period
+                  0x0016e4                  _get_pwm_period
+                  0x0016e8                  _set_pwm_max
+                  0x0016f2                  _get_pwm_max
+                  0x0016f6                  _set_pwm_min
+                  0x001700                  _get_pwm_min
+                  0x001704                  _get_pwm_dt
+                  0x00171c                  _pwm_shutdown
+                  0x00172e                  _timer_flag
+                  0x001732                  _pwm_pid_period
+                  0x001736                  _pid_rate
+                  0x00173a                  __PWMInterrupt
+                  0x001766                  _set_event
+                  0x00176e                  __CNInterrupt
+                  0x0017b6                  _get_mc_period
+ .text            0x0017c2         0xb8 build/Pickit/production/Driver/ports.o
+                  0x0017c2                  _ports_setup
+                  0x0017fc                  _port_address
+                  0x001822                  _led_rx
+                  0x001830                  _port_get
+                  0x001862                  _pin_encode_idx
+                  0x00186a                  _pin_encode_x
+                  0x001872                  _pin_encode_y
+ .text            0x00187a         0x88 build/Pickit/production/Driver/encoder.o
+                  0x00187a                  _encoder_setup
+                  0x00188e                  _counter_setup
+                  0x0018b4                  _mcp_enable
+                  0x0018ca                  _encoder_raw
+                  0x0018ce                  _encoder_speed_raw
+                  0x0018d2                  _encoder_spin_raw
+                  0x0018dc                  _encoder_direction
+                  0x0018ec                  _encoder_period
+                  0x0018fc                  _get_encoder_period
 
-.dinit            0x001904         0x80
- .dinit           0x001904         0x80 data_init
+.dinit            0x001902         0x80
+ .dinit           0x001902         0x80 data_init
 
-.text             0x001984        0x114
- .text            0x001984         0x6e build/Pickit/production/Driver/eeprom.o
-                  0x001984                  _eeprom_open
-                  0x001988                  _eeprom_close
-                  0x00198c                  _eeprom_flush
-                  0x0019a6                  _eeprom_putc
-                  0x0019c0                  _eeprom_puts
-                  0x0019dc                  _eeprom_setup
- .text            0x0019f2         0x3e build/Pickit/production/Driver/timer.o
-                  0x0019f2                  _timer_setup
-                  0x001a0c                  _timer_period
-                  0x001a18                  _timer_enable
-                  0x001a2c                  _timer_check
- .text            0x001a30         0x28 build/Pickit/production/Task/task.o
-                  0x001a30                  _task_setup
-                  0x001a36                  _transmit_init
-                  0x001a38                  _transmit
-                  0x001a54                  _process_old
- .text            0x001a58         0x22 build/Pickit/production/main.o
-                  0x001a58                  _main
- .text            0x001a7a         0x1c build/Pickit/production/Driver/driver.o
-                  0x001a7a                  _driver_setup
- .text            0x001a96          0x2 build/Pickit/production/Task/motor.o
-                  0x001a96                  _motor_book
+.text             0x001982        0x114
+ .text            0x001982         0x6e build/Pickit/production/Driver/eeprom.o
+                  0x001982                  _eeprom_open
+                  0x001986                  _eeprom_close
+                  0x00198a                  _eeprom_flush
+                  0x0019a4                  _eeprom_putc
+                  0x0019be                  _eeprom_puts
+                  0x0019da                  _eeprom_setup
+ .text            0x0019f0         0x3e build/Pickit/production/Driver/timer.o
+                  0x0019f0                  _timer_setup
+                  0x001a0a                  _timer_period
+                  0x001a16                  _timer_enable
+                  0x001a2a                  _timer_check
+ .text            0x001a2e         0x28 build/Pickit/production/Task/task.o
+                  0x001a2e                  _task_setup
+                  0x001a34                  _transmit_init
+                  0x001a36                  _transmit
+                  0x001a52                  _process_old
+ .text            0x001a56         0x22 build/Pickit/production/main.o
+                  0x001a56                  _main
+ .text            0x001a78         0x1c build/Pickit/production/Driver/driver.o
+                  0x001a78                  _driver_setup
+ .text            0x001a94          0x2 build/Pickit/production/Task/motor.o
+                  0x001a94                  _motor_book
 
-.shared.dinit     0x001a98          0x2
- .shared.dinit    0x001a98          0x2 shared_data_init
+.shared.dinit     0x001a96          0x2
+ .shared.dinit    0x001a96          0x2 shared_data_init
 
-_0486596057d7a692
+_0483596057d8ac4f
                     0xfc00         0x80 load address 0x7ffc00  
- _0486596057d7a692
+ _0483596057d8ac4f
                     0xfc00         0x80 build/Pickit/production/Driver/eeprom.o
                     0xfc00                  _system_file
