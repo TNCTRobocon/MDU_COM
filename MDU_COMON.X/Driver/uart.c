@@ -7,50 +7,50 @@
 
 //キュー実装
 static volatile uint16_t rused, rin, rout;
-static char rbuf[RX_BUFFER_SIZE];
+static volatile char rbuf[RX_BUFFER_SIZE];
 
 static volatile uint16_t tused, tin, tout;
-static char tbuf[TX_BUFFER_SIZE];
+static volatile char tbuf[TX_BUFFER_SIZE];
 
 void uart_setup() {
 
-//    const unsigned int config1 =
-//            UART_EN & UART_IDLE_CON & UART_ALTRX_ALTTX & UART_DIS_LOOPBACK &
-//            UART_DIS_ABAUD & UART_NO_PAR_8BIT&UART_1STOPBIT;
-//    const unsigned int config2 =
-//            UART_INT_TX_BUF_EMPTY & UART_TX_PIN_NORMAL & UART_TX_ENABLE &
-//            UART_INT_RX_CHAR & UART_ADR_DETECT_DIS&UART_RX_OVERRUN_CLEAR;
-//
-//    ConfigIntUART1(UART_RX_INT_EN & UART_RX_INT_PR5 & UART_TX_INT_EN & UART_TX_INT_PR4);
-//    OpenUART1(config1, config2, 10);
+    //    const unsigned int config1 =
+    //            UART_EN & UART_IDLE_CON & UART_ALTRX_ALTTX & UART_DIS_LOOPBACK &
+    //            UART_DIS_ABAUD & UART_NO_PAR_8BIT&UART_1STOPBIT;
+    //    const unsigned int config2 =
+    //            UART_INT_TX_BUF_EMPTY & UART_TX_PIN_NORMAL & UART_TX_ENABLE &
+    //            UART_INT_RX_CHAR & UART_ADR_DETECT_DIS&UART_RX_OVERRUN_CLEAR;
+    //
+    //    ConfigIntUART1(UART_RX_INT_EN & UART_RX_INT_PR5 & UART_TX_INT_EN & UART_TX_INT_PR4);
+    //    OpenUART1(config1, config2, 10);
     U1MODEBITS mode;
     U1STABITS sta;
     //各種設定
-    mode.UARTEN=true;
-    mode.USIDL=false;
-    mode.ALTIO=true;
-    mode.WAKE=true;
-    mode.LPBACK=false;
-    mode.ABAUD=false;
-    mode.PDSEL=0b00;//8bit parity off
-    mode.STSEL=false;//1 stop
-    sta.UTXISEL=true;
-    sta.UTXBRK=false;
-    sta.UTXEN=true;
-    sta.URXISEL=0b00;//each char
-    
-    U1STAbits=sta;
-    U1MODEbits=mode;
-    U1BRG=10;
+    mode.UARTEN = true;
+    mode.USIDL = false;
+    mode.ALTIO = true;
+    mode.WAKE = true;
+    mode.LPBACK = false;
+    mode.ABAUD = false;
+    mode.PDSEL = 0b00; //8bit parity off
+    mode.STSEL = false; //1 stop
+    sta.UTXISEL = true;
+    sta.UTXBRK = false;
+    sta.UTXEN = true;
+    sta.URXISEL = 0b00; //each char
+
+    U1STAbits = sta;
+    U1MODEbits = mode;
+    U1BRG = 10;
     //割り込み設定
-    IFS0bits.U1RXIF=false;
-    IFS0bits.U1TXIF=false;
-    IPC2bits.U1RXIP=5;
-    IPC2bits.U1TXIP=4;
-    IEC0bits.U1RXIE=true;
-    IEC0bits.U1TXIE=true;
-    
-    
+    IFS0bits.U1RXIF = false;
+    IFS0bits.U1TXIF = false;
+    IPC2bits.U1RXIP = 5;
+    IPC2bits.U1TXIP = 4;
+    IEC0bits.U1RXIE = true;
+    IEC0bits.U1TXIE = true;
+
+
     //管理領域初期化
     rused = 0;
     rin = rout = 0;
@@ -82,8 +82,8 @@ inline void uart_remove(uint16_t cnt) {
     rused -= cnt;
 }
 
-inline void uart_remove_all(){
-    rused=0;
+inline void uart_remove_all() {
+    rused = 0;
 }
 
 inline char uart_getc() {
@@ -135,12 +135,22 @@ inline char uart_bufc(char c) {
     return c;
 }
 
-inline const char* uart_bufs(const char* buf) {
+inline char uart_bufnl(){
+    return uart_bufc('\r');
+}
+
+const char* uart_bufs(const char* buf) {
     const char* keep = buf;
     while (*buf != '\0') {
         uart_bufc(*(buf++));
     }
     return keep;
+}
+
+const char* uart_bufl(const char* buf) {
+    uart_bufs(buf);
+    uart_bufc('\r');
+    return buf;
 }
 
 inline void uart_flush() {
@@ -152,19 +162,28 @@ inline void uart_flush() {
         }
         IEC0bits.U1TXIE = true;
     }
+    //送信待ち
+    while (tused > (TX_BUFFER_SIZE >> 2));
+
+
 }
 
-inline void  uart_stop(){
-    TRISCbits.TRISC13=true;//T
-    
-    U1STAbits.UTXEN=false;
+void uart_clr() {
+    tused = 0;
+    tin = tout = 0;
 }
 
-inline void uart_begin(){
-    LATCbits.LATC13=true;
-    TRISCbits.TRISC13=false;//TX
-    
-    U1STAbits.UTXEN=true;
+inline void uart_stop() {
+    TRISCbits.TRISC13 = true; //T
+    LED_TX=false;
+    U1STAbits.UTXEN = false;
+}
+
+inline void uart_begin() {
+    LATCbits.LATC13 = true;
+    TRISCbits.TRISC13 = false; //TX
+    LED_TX=true;
+    U1STAbits.UTXEN = true;
 }
 
 inline char uart_putc(char c) {
@@ -179,16 +198,33 @@ inline char uart_putc(char c) {
     }
 }
 
-const char* uart_print(const char* str, bool nl) {
+inline char uart_putnl(){
+    return uart_putc('\r');
+}
+
+const char* uart_puts(const char* str) {
     //TODO 
     size_t len = strlen(str);
     if (tused + len < TX_BUFFER_SIZE) {
         const char* keep = str;
         //すべてキューに詰む
         uart_bufs(str);
-        if (nl) {
-            uart_bufc('\r');
-        }
+        //送信
+        uart_flush();
+        return keep;
+    } else {
+        return NULL;
+    }
+}
+
+const char* uart_putl(const char* str) {
+    //TODO 
+    size_t len = strlen(str);
+    if (tused + len < TX_BUFFER_SIZE) {
+        const char* keep = str;
+        //すべてキューに詰む
+        uart_bufs(str);
+        uart_bufc('\r');
         //送信
         uart_flush();
         return keep;
@@ -212,6 +248,7 @@ void _ISR _U1RXInterrupt() {
         }
 
     } while (U1STAbits.URXDA);
+    LED_RX=!LED_RX;
     IFS0bits.U1RXIF = false;
 }
 
@@ -221,7 +258,7 @@ void _ISR _U1TXInterrupt() {
         tout = (tout + 1) == TX_BUFFER_SIZE ? 0 : tout + 1;
         tused--;
     }
-
+    LED_TX=!LED_TX;
     IEC0bits.U1TXIE = tused > 0;
     IFS0bits.U1TXIF = false;
 }

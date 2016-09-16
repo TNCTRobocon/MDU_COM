@@ -5,25 +5,26 @@
  * Created on 2016/07/11, 18:14
  */
 
-#ifndef TIMER_H
-#define	TIMER_H
+#ifndef TIMER_HEADER_H
+#define	TIMER_HEADER_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
 #include<stdint.h>
 #include<stdbool.h> 
 
 //タイマ2とタイマ3による32bitタイマ
-void timer_setup();
-void timer_period(uint32_t period);
-void timer_enable(bool check);
+void timer23_setup();
+void timer23_period(uint32_t period);
+void timer23_enable(bool check);
 
-int16_t timer_check();
+int16_t timer23_check();
 
-#ifdef	__cplusplus
-}
-#endif
+//タイマー1によるSystem用delay
+// 指定された時間以上の時間を待つ。
+
+void delay_ns(uint16_t);
+void delay_us(uint16_t);
+void delay_ms(uint16_t);
+
 
 #endif	/* TIMER_H */
 

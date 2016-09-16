@@ -129,7 +129,7 @@ inline uint16_t get_pwm_min(){
     return pwm_min;
 }
 
-inline Q16_t  get_pwm_dt(){
+inline Q16_t get_pwm_dt(){
     //現在のモーター状態を確認
     uint16_t raw;
     raw= PDC2>PDC3?PDC2:PDC3;//最大値をもとめる

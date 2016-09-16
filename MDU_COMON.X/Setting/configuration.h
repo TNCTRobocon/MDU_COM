@@ -26,6 +26,8 @@
 #define SEL8() PORTBbits.RB1
 //アドレス取得マクロ
 
+
+
 //Stoper
 #define SW_ST()   PORTEbits.RE8
 
@@ -35,14 +37,24 @@
 #define LED_ERROR   LATEbits.LATE2
 #define LED_APP     LATBbits.LATB2
 
+#define LED_HIGH(x) ((x)=true)
+#define LED_LOW(x)  ((x)=false)
+#define LED_INV(x)  ((x)=(^x))
+
 //PWM
 #define ST_PIN      LATEbits.LATE4
 //UART
 #define RX_BUFFER_SIZE  (64) //受信バッファの一つ当たりの大きさ
 #define TX_BUFFER_SIZE  (64)
-#define SYSTEM_SIZE (32)        //  システムに登録できる機能数
 #define CMD_LENGTH (32)        // システムが受け入れられる文字の最大数、
 #define CMD_MAX     (16)        // 最大分割数(1LINEあたり)
+#define FILE_MAX    (32)        // 最大ファイル数
+#define MULTI_MAX (8) //同時に実行できるコマンドの最大値
+#define WORD_MAX (32)
+#define PATH_DEPTH_MAX (8)
+#define QUICK_MAX (8) 
+#define WORD_MAX (32)
+
 //EEPROM
 #define EEPROM_BUFFER_SIZE (64) //EEPROMの書き込み用バッファ
 

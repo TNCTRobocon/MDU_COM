@@ -9,7 +9,7 @@
 #define	TYPES_H
 
 //プログラミング 環境
-
+#include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
 #include "../Helper/dsp_helper.h"
@@ -27,11 +27,11 @@ typedef int16_t count_t; //個数表記用
 typedef uint16_t word_t;
 
 //メモリー配置
-#define NEAR    __attribute__ ((near))
-#define FAR     __attribute__ ((far))
-#define AT(X)   __attribute__ ((address(X)))
-#define XMEM    __attribute__ ((space(xmemory))
-#define YMEM    __attribute__ ((space(ymemory))
+#define Near    __attribute__ ((near))
+#define Far     __attribute__ ((far))
+#define At(X)   __attribute__ ((address(X)))
+#define Xmem    __attribute__ ((space(xmemory))
+#define Ymem    __attribute__ ((space(ymemory))
 #define EEPROM  __attribute__ ((space(eedata)))
 #define PSV     __attribute__((space(psv)))
 
@@ -43,6 +43,11 @@ typedef enum {
     OptionSystem,
     OptionDisenable
 } option_t;
+
+//DSP環境
+
+
+
 
 
 
