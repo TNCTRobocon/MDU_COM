@@ -29,7 +29,7 @@ inline Q16_t  get_pwm_dt();
 
 inline void pwm_shutdown(bool fag);
 
-int16_t timer_flag();
+void pid_enable(uint16_t);
 void pwm_pid_period(uint16_t);
 int16_t pid_rate();
 void get_mc_period(uint32_t *,uint32_t *);

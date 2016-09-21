@@ -256,7 +256,8 @@ int motor_dt(int argc, char** argv) {
     } else {
         pwm_shutdown(false);
         float dt = atof(argv[1]);
-        set_motor_dt(100*dt);
+        set_motor_dt();
+        pid_enable(CNT_FALSE);
         pwm_dts(ConvertQ15(dt));//dt_map(dt)));
     }
     return 0;
@@ -272,6 +273,7 @@ int pid_mode(int argc,char** argv){
 int motor_control(int argc, char** argv){
     mcp_enable(false);
     int32_t speed=atoi(argv[1]);
+    pid_enable(CNT_TRUE);
         set_motor_speed(speed);
     return 0;
 }
@@ -329,6 +331,13 @@ int period_encoder(int argc, char** argv){
     encoder_period(e_period);
     return 0;
 }
+
+
+
+
+
+
+
 
 float dt_map(float n_dt){
     if(n_dt<Dt_min){

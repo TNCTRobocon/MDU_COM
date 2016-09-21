@@ -11,9 +11,9 @@ int main(){
     task_setup();
     
     timer_enable(true);
+    //uart_stop();                        //test
     for (;;){
         process_old();
-        set_event(&motor);
     }
     __asm("reset");//初期化
     return 0;//決してここまで来ない

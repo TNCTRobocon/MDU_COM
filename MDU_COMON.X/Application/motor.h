@@ -22,7 +22,7 @@
 //#include <xc.h> // include processor files - each processor file is guarded.  
 
 void motor();
-void set_motor_dt(float);
+void set_motor_dt();
 void set_motor_speed(int32_t);
 
 Q15_t pid_limit(Q15_t,Q15_t,float,float);

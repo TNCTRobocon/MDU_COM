@@ -1,12 +1,11 @@
 #include "../Setting/configuration.h"
+#include "../Application/motor.h"
 #include "ports.h"
 #include "pwm.h"
 //デフォルト値
 #define PWM_PERIOD  (0x063E)//031E)//現在約25kHz
 #define PWM_DT_MAX      (0.95)
 #define PWM_DT_MIN      (0.15)
-
-
 
 static uint16_t pwm_period = PWM_PERIOD;
 //Q16 Formatで生で保存
@@ -20,10 +19,10 @@ inline uint16_t dt_limit(uint16_t); //dt比をdt_max～dt_min,0の間の値に�
 
 const int16_t poss=0x7fff;
 static int16_t rate=0;
-static int flag=0;
 static uint32_t pid_period=1200;//現在100ms(10Hz)
+static uint16_t cnt_enable=0x0000;
 
- static uint32_t hz=0; 
+static uint32_t hz=0; 
 void pwm_setup() {
 
     //initialize module
@@ -152,10 +151,6 @@ inline void pwm_shutdown(bool fag) {
 
 
 
-int16_t timer_flag(){
-    return flag;
-}
-
 void pwm_pid_period(uint16_t period){
     pid_period=period;
 }
@@ -164,23 +159,22 @@ inline int16_t pid_rate(){
     return rate;
 }
 
+void pid_enable(uint16_t enable){
+    cnt_enable=enable;
+}
 
 void _ISR _PWMInterrupt(){
-static uint16_t cnt,led;
+static uint16_t cnt;
     if(cnt==pid_period/*(++cnt & 0xFF)==0x01*/){
-        if(led==10){
-            led_pwm(true);
-        }
-     flag=1;
      rate=POSCNT-poss;
+     set_event(&motor);
      POSCNT=poss;
      cnt=0;
     }else{
-        led_pwm(false);
-        flag=0;
+        set_event(NULL);
     }
     cnt++;
-    led++;
+    cnt=cnt&cnt_enable;
     IFS2bits.PWMIF=false;
 }
 

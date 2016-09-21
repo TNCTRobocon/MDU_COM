@@ -22,6 +22,9 @@
 #define Dt_min (-95)
 #define Dt_max (95)
 
+#define CNT_TRUE (0xFFFF)
+#define CNT_FALSE (0x0000)
+
 extern int system_address_ofset;
 
 void system_setup();
