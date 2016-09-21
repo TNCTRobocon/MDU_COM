@@ -41,7 +41,8 @@ void uart_setup() {
     
     U1STAbits=sta;
     U1MODEbits=mode;
-    U1BRG=10;
+    U1BRG=10;//130;//9600//10//115200;//(20000000/(16*BAUD))-1(うまくいかなかったら±1)
+             // ↳PLL(8)*クロックの値/4=2*クロック値(小数点以下切り上げ？)
     //割り込み設定
     IFS0bits.U1RXIF=false;
     IFS0bits.U1TXIF=false;

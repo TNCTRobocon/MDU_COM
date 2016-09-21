@@ -4,7 +4,9 @@
 #include "encoder.h"
 #include "pwm.h"
 #include "ports.h"
+#include "../Application/motor.h"
 #include "../Setting/p30F4012.h"
+#include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
@@ -18,6 +20,8 @@ const char cmp_pwm_min[] = "pwm.min"; //border
 const char cmp_pwm_period[] = "pwm.period"; //border
 const char cmp_pwm_dt[]="pwm.dt";//read only
 
+const char cmp_encoder_speed[]="encoder.speed";
+const char cmp_encoder_direction[]="encoder.dir";
 const char cmp_mc_period[]="mc.period";
 const char cmp_mc_p[]="p";
 const char cmp_mc_i[]="i";
@@ -27,7 +31,7 @@ const char cmp_mc_d[]="d";
 const char cmp_help[] = "help";
 //Help時用　グループ分け ここにあるとヘルプに表示される。
 const char *group_get[] = {cmp_port_encode, cmp_port_idx, cmp_addr_value, cmp_addr_ofset,
-                           cmp_pwm_max,cmp_pwm_min,cmp_pwm_period,cmp_pwm_dt,cmp_mc_p,cmp_mc_i,cmp_mc_d,cmp_mc_period};
+                           cmp_pwm_max,cmp_pwm_min,cmp_pwm_period,cmp_pwm_dt,cmp_mc_p,cmp_mc_i,cmp_mc_d,cmp_mc_period,cmp_encoder_speed,cmp_encoder_direction};
 const char *group_set[] = {cmp_addr_ofset,cmp_pwm_max,cmp_pwm_min,cmp_pwm_period,cmp_mc_p,cmp_mc_i,cmp_mc_d};
 
 
@@ -37,6 +41,7 @@ void io_setup() {
     system_insert(io_set, "set");
     system_insert(option_test, "test");
     system_insert(motor_dt, "dt");
+    system_insert(pid_mode,"mode");
     system_insert(motor_control,"mc");
     system_insert(motor_control_period,"mcp");
     system_insert(interval_timer_mc,"ev");
@@ -125,10 +130,25 @@ int io_get(int argc, char** argv) {
                 uart_bufs("pwm.dt:");
                 itoa(buf,var,10);
                 uart_bufs(buf);
+            }else if (!strcmp(cmp,cmp_mc_p)){
+                float var=get_pid('p');
+                uart_bufs("p:");
+                ftoa(buf,var,5);
+                uart_bufs(buf);
+            }else if (!strcmp(cmp,cmp_mc_i)){
+                float var=get_pid('i');
+                uart_bufs("i:");
+                ftoa(buf,var,5);
+                uart_bufs(buf);
+            }else if (!strcmp(cmp,cmp_mc_d)){
+                float var=get_pid('d');
+                uart_bufs("d:");
+                ftoa(buf,var,5);
+                uart_bufs(buf);
             }else if (!strcmp(cmp,cmp_mc_period)){
                 mcp_enable(true);
                 uint32_t hz_get;
-                uint16_t period_get;
+                uint32_t period_get;
                 get_mc_period(&hz_get,&period_get);
                 int var =period_get;
                 uart_bufs("mc.period:0x");
@@ -139,6 +159,26 @@ int io_get(int argc, char** argv) {
                 itoa(buf,var,10);
                 uart_bufs(buf);
                  uart_bufs("us?)");
+            }else if (!strcmp(cmp,cmp_encoder_speed)){
+                int16_t speed=pid_rate();
+                int var =speed;
+                uart_bufs("encoder.speed:");
+                itoa(buf,var,10);
+                uart_bufs(buf);
+                uart_bufs("[pulse/100ms]");
+            }else if (!strcmp(cmp,cmp_encoder_direction)){
+                int16_t speed=pid_rate();
+                int8_t  dir=QEICONbits.UPDN;
+                if(speed==0){
+                uart_bufs("no spin");
+                }else{
+                uart_bufs("encoder_spin_direction:");
+                if(dir==1){
+                 uart_bufs("+");
+                }else if(dir==0){
+                 uart_bufs("-");
+                }
+                }
             }else{
                 uart_bufs("?");
             }
@@ -202,7 +242,9 @@ int io_set(int argc, char** argv) {
 
 int option_test(int argc, char** argv) {
         char buf[8];
-    itoa(buf,encoder_speed_raw(), 10);
+        int test = atoi(argv[1]);
+        int sign=(test>0)-(test<0);
+    itoa(buf,(sign*sign),10);
     uart_putl(buf);
     return 0;
 }
@@ -214,9 +256,16 @@ int motor_dt(int argc, char** argv) {
     } else {
         pwm_shutdown(false);
         float dt = atof(argv[1]);
-        set_motor_dt((int)dt);
-        pwm_dts(ConvertQ15(dt_map(dt)));
+        set_motor_dt(100*dt);
+        pwm_dts(ConvertQ15(dt));//dt_map(dt)));
     }
+    return 0;
+}
+
+
+int pid_mode(int argc,char** argv){
+    int mode=atoi(argv[1]);
+    change_pid(mode);
     return 0;
 }
 
@@ -231,6 +280,7 @@ int motor_control_period(int argc, char** argv){
     mcp_enable(true);
     int32_t speed=atoi(argv[1]);
         set_motor_speed(speed);
+        return 0;
 }
 
 
@@ -238,7 +288,6 @@ int interval_timer_mc(int argc, char** argv){
     char buf[8];
     uint32_t a;
     uint32_t period=get_encoder_period();//us(20*x)
-    //timer_enable(true);
     while(uart_depth() == 0){
         itoa(buf,encoder_speed_raw(), 10);
         uart_putl(buf);
@@ -252,14 +301,12 @@ int interval_timer_mc(int argc, char** argv){
       TMR3=0;
       TMR3HLD=0;
     }
-    //timer_enable(false);
     return 0;
 }
 int interval_timer_mcp(int argc, char** argv){
     char buf[8];
     uint32_t a;
     uint32_t period;//us(20*x)
-    //timer_enable(true);
     get_mc_period(&a,&period);
     while(uart_depth() == 0){
         itoa(buf,encoder_speed_raw(), 10);
@@ -275,7 +322,6 @@ int interval_timer_mcp(int argc, char** argv){
       TMR3HLD=0;
       get_mc_period(&a,&period);
     }
-    //timer_enable(false);
     return 0;
 }
 int period_encoder(int argc, char** argv){
@@ -291,4 +337,8 @@ float dt_map(float n_dt){
         n_dt=Dt_max;
     }
     return((n_dt-Dt_max)*(Pwm_max-Pwm_min)/(Dt_max-Dt_min)+Pwm_max);
+}
+
+void ftoa(char *string,double f,int figure){
+    sprintf(string,"%.*f",figure,f);
 }

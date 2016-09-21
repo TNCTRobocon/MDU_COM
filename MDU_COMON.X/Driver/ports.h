@@ -16,6 +16,7 @@ void ports_setup();
 inline uint16_t port_address();
 
 inline void led_rx(bool);
+inline void led_pwm(bool);
 
 inline int16_t port_get(int idx);
 

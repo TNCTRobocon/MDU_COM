@@ -47,11 +47,16 @@ int basic_repeat(int,char**);
 int option_mode(int,char**);
 
 int motor_dt(int,char**);
+
+int pid_mode(int,char**);
 int motor_control(int,char**);
-int motor_control_period(int,char**);
 int interval_timer_mc(int,char**);
+
+int motor_control_period(int,char**);
 int interval_timer_mcp(int,char**);
+
 int period_encoder(int,char**);
 
 float dt_map(float);
+void ftoa(char *string,double f,int figure);
 #endif	/* SYSTEM_H */

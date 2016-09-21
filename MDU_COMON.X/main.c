@@ -1,6 +1,6 @@
 #include "Setting/configuration.h"
-#include "Driver/driver.h"
 #include "Task/task.h"
+#include "Driver/driver.h"
 #include "Driver/uart.h"
 #include "Application/motor.h"
 #include <stdbool.h>
@@ -13,11 +13,7 @@ int main(){
     timer_enable(true);
     for (;;){
         process_old();
-        if(IEC0bits.CNIE==1){
-         set_event(&motor);
-        }else{
-         set_event(&motor);
-        }
+        set_event(&motor);
     }
     __asm("reset");//初期化
     return 0;//決してここまで来ない

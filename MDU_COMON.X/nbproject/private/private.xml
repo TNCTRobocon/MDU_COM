@@ -5,12 +5,10 @@
         <group>
             <file>file:/D:/robocon2016/md_commom/MDU_COMON.X/Application/motor.c</file>
             <file>file:/D:/robocon2016/md_commom/MDU_COMON.X/Task/system.h</file>
-            <file>file:/D:/robocon2016/md_commom/MDU_COMON.X/Driver/pwm.h</file>
             <file>file:/D:/robocon2016/md_commom/MDU_COMON.X/Driver/uart.c</file>
             <file>file:/D:/robocon2016/md_commom/MDU_COMON.X/Task/task.c</file>
-            <file>file:/D:/robocon2016/md_commom/MDU_COMON.X/Driver/encoder.h</file>
-            <file>file:/D:/robocon2016/md_commom/MDU_COMON.X/Driver/pwm.c</file>
-            <file>file:/D:/robocon2016/md_commom/MDU_COMON.X/main.c</file>
+            <file>file:/D:/robocon2016/md_commom/MDU_COMON.X/Driver/io.c</file>
+            <file>file:/D:/robocon2016/md_commom/MDU_COMON.X/Task/system.c</file>
             <file>file:/D:/robocon2016/md_commom/MDU_COMON.X/Application/motor.h</file>
         </group>
     </open-files>

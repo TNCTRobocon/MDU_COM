@@ -55,6 +55,10 @@ inline void led_rx(bool fag){
     LED_RX=fag;
 }
 
+inline void led_pwm(bool flag){
+    LATEbits.LATE2=flag;
+}
+
 inline int16_t port_get(int idx){
     switch (idx){
         case 1:

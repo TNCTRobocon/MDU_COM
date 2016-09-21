@@ -1,4 +1,5 @@
 #include "../Setting/configuration.h"
+#include "ports.h"
 #include "pwm.h"
 //デフォルト値
 #define PWM_PERIOD  (0x063E)//031E)//現在約25kHz
@@ -20,9 +21,9 @@ inline uint16_t dt_limit(uint16_t); //dt比をdt_max～dt_min,0の間の値に�
 const int16_t poss=0x7fff;
 static int16_t rate=0;
 static int flag=0;
-static uint16_t pid_period=1200;//現在100ms(10Hz)
+static uint32_t pid_period=1200;//現在100ms(10Hz)
 
- uint32_t hz=0; 
+ static uint32_t hz=0; 
 void pwm_setup() {
 
     //initialize module
@@ -159,22 +160,27 @@ void pwm_pid_period(uint16_t period){
     pid_period=period;
 }
 
-int16_t pid_rate(){
+inline int16_t pid_rate(){
     return rate;
 }
 
 
 void _ISR _PWMInterrupt(){
-static uint16_t cnt;
+static uint16_t cnt,led;
     if(cnt==pid_period/*(++cnt & 0xFF)==0x01*/){
+        if(led==10){
+            led_pwm(true);
+        }
      flag=1;
      rate=POSCNT-poss;
      POSCNT=poss;
      cnt=0;
     }else{
+        led_pwm(false);
         flag=0;
     }
     cnt++;
+    led++;
     IFS2bits.PWMIF=false;
 }
 
@@ -199,7 +205,7 @@ void _ISR _CNInterrupt(){
     IFS0bits.CNIF=false;
 }
 
-void get_mc_period(uint32_t *Hz,uint16_t *P){
+void get_mc_period(uint32_t *Hz,uint32_t *P){
      *Hz=hz;
      *P=pid_period;
 }

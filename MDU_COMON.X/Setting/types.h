@@ -19,7 +19,10 @@ typedef int8_t triple_t;
 #define zero ((int8_t)0)
 #define minus ((int8_t)-1)
 
-typedef unsigned short Q8_8_t;
+typedef unsigned short Q3_13;
+typedef unsigned short Q4_12;
+typedef uint32_t Q16_16;
+
 
 typedef int16_t count_t; //個数表記用
 #define nullptr NULL

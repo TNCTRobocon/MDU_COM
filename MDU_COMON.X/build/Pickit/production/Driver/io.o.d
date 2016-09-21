@@ -9,4 +9,13 @@ Driver/uart.h  \
 Driver/encoder.h  \
 Driver/pwm.h  \
 Driver/ports.h  \
- Driver/../Setting/p30F4012.h 
+ Driver/../Application/motor.h  \
+Driver/../Application/../Setting/types.h  \
+ Driver/../Application/../Setting/configuration.h  \
+ Driver/../Application/../Setting/p30F4012.h  \
+ Driver/../Application/../Task/task.h  \
+ Driver/../Application/../Driver/uart.h  \
+ Driver/../Application/../Driver/encoder.h  \
+ Driver/../Application/../Driver/pwm.h  \
+ Driver/../Application/../Driver/timer.h  \
+Driver/../Setting/p30F4012.h 
