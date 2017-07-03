@@ -20,13 +20,14 @@
 //10MHz*8(PLL)/4(divsion))
 
 //アドレス取得　ピン配置
-#define SEL1() PORTEbits.RE1
-#define SEL2() PORTEbits.RE0
-#define SEL4() PORTBbits.RB0
-#define SEL8() PORTBbits.RB1
-//アドレス取得マクロ
-
-
+#define PIN_SEL1() PORTEbits.RE1
+#define PIN_SEL2() PORTEbits.RE0
+#define PIN_SEL4() PORTBbits.RB0
+#define PIN_SEL8() PORTBbits.RB1
+#define TRIS_SEL1(X) TRISEbits.TRISE1=(X)
+#define TRIS_SEL2(X) TRISEbits.TRISE0=(X)
+#define TRIS_SEL4(X) TRISBbits.TRISB2=(X)
+#define TRIS_SEL8(X) TRISBbits.TRISB1=(X)
 
 //Stoper
 #define SW_ST()   PORTEbits.RE8
