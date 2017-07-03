@@ -5,10 +5,10 @@ void ports_setup(){
     //Switch (STOP)
     TRISEbits.TRISE8=true;
     //Switch Address (Din)
-    TRISEbits.TRISE0=true;//2
-    TRISEbits.TRISE1=true;//1
-    TRISBbits.TRISB0=true;//3
-    TRISBbits.TRISB1=true;//4
+    TRIS_SEL1(true);
+    TRIS_SEL2(true);
+    TRIS_SEL4(true);
+    TRIS_SEL8(true);
     
     ADPCFGbits.PCFG0=true;
     ADPCFGbits.PCFG1=true;
@@ -45,10 +45,10 @@ void ports_setup(){
 }
 
 inline uint16_t port_address(){
-    return  ((!PORTEbits.RE0)<<0)+
-            ((!PORTEbits.RE1)<<3)+
-            ((!PORTBbits.RB0)<<2)+
-            ((!PORTBbits.RB1)<<1);   
+    return  ((!PIN_SEL1())<<0)+
+            ((!PIN_SEL2())<<3)+
+            ((!PIN_SEL4())<<2)+
+            ((!PIN_SEL8())<<1);   
 }
 
 inline void led_rx(bool fag){
