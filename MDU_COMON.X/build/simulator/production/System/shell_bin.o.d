@@ -10,4 +10,5 @@ System/../Setting/../Helper/dsp_helper.h  \
 System/../Driver/../Setting/types.h  \
  System/../Setting/configuration.h  \
 System/../Setting/p30F4012.h  \
- System/../Driver/timer.h 
+ System/../Driver/timer.h  \
+System/error.h 

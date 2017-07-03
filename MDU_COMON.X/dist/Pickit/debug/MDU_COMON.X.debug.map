@@ -1,20 +1,26 @@
-Microchip Technology Inc, v1.26 (A)
+Microchip Technology Inc, vv1.22 (A)
 
 Tool Name:
-  c:\program files (x86)\microchip\xc16\v1.26\bin\bin\..\bin/elf-ld.exe
+  c:\program files (x86)\microchip\xc16\v1.22\bin\bin\..\bin/elf-ld.exe
 
 Command:
   -p30F4012 \
   -o \
   dist/Pickit/debug/MDU_COMON.X.debug.elf \
-  -Lc:/program files (x86)/microchip/xc16/v1.26/bin/bin/.. \
-  -Lc:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib \
-  -Lc:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../support/PIC24E/gld \
-  -Lc:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../support/PIC24F/gld \
-  -Lc:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../support/PIC24H/gld \
-  -Lc:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../support/dsPIC30F/gld \
-  -Lc:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../support/dsPIC33E/gld \
-  -Lc:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../support/dsPIC33F/gld \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/.. \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib/PIC24E \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../support/PIC24E/gld \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib/PIC24F \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../support/PIC24F/gld \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib/PIC24H \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../support/PIC24H/gld \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib/dsPIC30F \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../support/dsPIC30F/gld \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib/dsPIC33E \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../support/dsPIC33E/gld \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib/dsPIC33F \
+  -Lc:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../support/dsPIC33F/gld \
   build/Pickit/debug/Driver/driver.o \
   build/Pickit/debug/Driver/eeprom.o \
   build/Pickit/debug/Driver/encoder.o \
@@ -33,16 +39,11 @@ Command:
   build/Pickit/debug/System/motor.o \
   build/Pickit/debug/System/shell_sbin.o \
   build/Pickit/debug/System/file.o \
-  build/Pickit/debug/System/error.o \
-  -TC:\\Users\\TERU\\AppData\\Local\\Temp\\tmp00002be8.00 \
-  -TC:\\Users\\TERU\\AppData\\Local\\Temp\\tmp00002be8.01 \
-  -TC:\\Users\\TERU\\AppData\\Local\\Temp\\tmp00002be8.02 \
-  -TC:\\Users\\TERU\\AppData\\Local\\Temp\\tmp00002be8.03 \
   --defsym=__MPLAB_BUILD=1 \
   --defsym=__MPLAB_DEBUG=1 \
   --defsym=__DEBUG=1 \
-  --defsym=__MPLAB_DEBUGGER_PK3=1 \
-  -Tp30F4012.gld.04 \
+  --defsym=__MPLAB_DEBUGGER_SIMULATOR=1 \
+  -Tp30F4012.gld.00 \
   --stack=64 \
   --check-sections \
   --data-init \
@@ -56,168 +57,126 @@ Command:
   --smart-io \
   -Map=dist/Pickit/debug/MDU_COMON.X.debug.map \
   --report-mem \
-  --memorysummary \
-  dist/Pickit/debug/memoryfile.xml \
   -start-group \
+  --library=fx-elf \
   --library=pic30-elf \
   --library=fastm-elf \
   --library=c-elf \
   -end-group \
 
-
-Optional library libp30F4012.a not found
 Archive member included because of file (symbol)
 
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
                               (__resetPRI)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o) (__data_init_standard)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(eedata_helper.eo)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o) (__data_init_standard)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a(eedata_helper.eo)
                               build/Pickit/debug/Driver/eeprom.o (__eedata_helper1)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fixsfsi.eo)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fixsfsi.eo)
                               build/Pickit/debug/System/shell_bin.o (_(float, int, long long, short, float, short, int))
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(funpack.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fixsfsi.eo) (__funpack)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(mulsf3x.eo)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(funpack.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fixsfsi.eo) (__funpack)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(mulsf3x.eo)
                               build/Pickit/debug/System/motor.o (___mulsf3)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(udivsi3x.eo)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(udivsi3x.eo)
                               build/Pickit/debug/Driver/pwm.o (___udivsi3)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(unpackdnrmfx.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(mulsf3x.eo) (__unpackdnrmf)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(propnanfx.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(mulsf3x.eo) (__propnanf)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(dnrmpackfx.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(mulsf3x.eo) (__dnrmpackf)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(typefx.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(mulsf3x.eo) (__typef)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atof.eo)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(unpackdnrmfx.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(mulsf3x.eo) (__unpackdnrmf)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(propnanfx.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(mulsf3x.eo) (__propnanf)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(dnrmpackfx.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(mulsf3x.eo) (__dnrmpackf)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(typefx.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(mulsf3x.eo) (__typef)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atof.eo)
                               build/Pickit/debug/System/shell_bin.o (_atof)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atoi.eo)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atoi.eo)
                               build/Pickit/debug/System/shell_bin.o (_atoi)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(exit.eo)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(errno.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atof.eo) (_errno)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(exit.eo)
                               build/Pickit/debug/System/shell_bin.o (_exit)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(itoa.eo)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(itoa.eo)
                               build/Pickit/debug/System/shell_bin.o (_itoa)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(stdclean.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(exit.eo) (__cleanup)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcmp.eo)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(stdclean.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(exit.eo) (__cleanup)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strcmp.eo)
                               build/Pickit/debug/System/shell_bin.o (_strcmp)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcpy.eo)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strcpy.eo)
                               build/Pickit/debug/System/shell_core.o (_strcpy)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strlen.eo)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strlen.eo)
                               build/Pickit/debug/Driver/uart.o (_strlen)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strtok.eo)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strtok.eo)
                               build/Pickit/debug/System/shell_core.o (_strtok)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(isspace.eso)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atof.eo) (_isspace)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcspn.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strtok.eo) (_strcspn)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strspn.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strtok.eo) (_strspn)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strchr.elo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcspn.eo) (_strchr)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(_exit.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(exit.eo) (__exit)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(feqltle.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atof.eo) (___eqsf2)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fgtge.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atof.eo) (___gtsf2)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(floatsisf.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atof.eo) (___floatsisf)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(mulsi3.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atof.eo) (___mulsi3)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(divsf3x.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atof.eo) (___divsf3)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(unpackfx.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(divsf3x.eo) (__unpackf)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(spackfx.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(divsf3x.eo) (__spackf)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fcompare.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(feqltle.eo) (__fcompare)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(floatdisf.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(floatsisf.eo) (___floatdisf)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(floatundisf.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(floatdisf.eo) (___floatundisf)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fpack.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(floatundisf.eo) (__fpack)
-c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(funpack2.eo)
-                              c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fcompare.eo) (__funpack2)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strcspn.elo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strtok.eo) (_strcspn)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strspn.elo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strtok.eo) (_strspn)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(isspace.eso)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atof.eo) (_isspace)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strchr.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strcspn.elo) (_strchr)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a(_exit.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(exit.eo) (__exit)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(feqltle.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atof.eo) (___eqsf2)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fgtge.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atof.eo) (___gtsf2)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(floatsisf.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atof.eo) (___floatsisf)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(mulsi3.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atof.eo) (___mulsi3)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(divsf3x.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atof.eo) (___divsf3)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(unpackfx.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(divsf3x.eo) (__unpackf)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(spackfx.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(divsf3x.eo) (__spackf)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fcompare.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(feqltle.eo) (__fcompare)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(floatdisf.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(floatsisf.eo) (___floatdisf)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(floatundisf.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(floatdisf.eo) (___floatundisf)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fpack.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(floatundisf.eo) (__fpack)
+c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(funpack2.eo)
+                              c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fcompare.eo) (__funpack2)
 
-
-Selected CodeGuard Options:
-  FGS:GWRP:GWRP_OFF
-  FGS:GCP:CODE_PROT_OFF
-
-CodeGuard FLASH Memory:
-  boot    (none)
-  secure  (none)
-  general 0x100 to 0x7ffe
-
-CodeGuard RAM Memory:
-  general 0x800 to 0xfff
-  secure  (none)
-  boot    (none)
-
-CodeGuard EEPROM Memory:
-  general 0x7ffc00 to 0x7fffff
-  secure  (none)
-  boot    (none)
-
-
-xc16-ld 1.26 (A)
 
 Program Memory  [Origin = 0x100, Length = 0x7f00]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x100               0xbc2          0x11a3  (4515)
-_03da506057dc3162            0xcc2                0x9a            0xe7  (231)
-_0486e72057dc315e            0xd5c                0x60            0x90  (144)
-.const                       0xdbc                0x8e            0xd5  (213)
-_0473ef0057dc3161            0xe4a                0x10            0x18  (24)
-_03da2de057dc3162            0xe5a                 0x8             0xc  (12)
-.text                        0xe62              0x158e          0x2055  (8277)
-.dinit                      0x23f0                0x5e            0x8d  (141)
-.text                       0x244e               0x102           0x183  (387)
-.shared.dinit               0x2550                 0x2             0x3  (3)
+.text                        0x100               0xbfc          0x11fa  (4602)
+.const                       0xcfc               0x132           0x1cb  (459)
+.text                        0xe2e              0x17b0          0x2388  (9096)
+.dinit                      0x25de                0x64            0x96  (150)
+.text                       0x2642                0xfc           0x17a  (378)
 
-                 Total program memory used (bytes):         0x367b  (13947) 28%
-
-
-Ivt Memory  [Origin = 0x4, Length = 0x7c]
-
-section                    address   length (PC units)   length (bytes) (dec)
--------                    -------   -----------------   --------------------
-.ivt._U1RXInterrupt           0x26                 0x2             0x3  (3)
-.ivt._U1TXInterrupt           0x28                 0x2             0x3  (3)
-.ivt._PWMInterrupt            0x62                 0x2             0x3  (3)
+                     Total program memory used (bytes):         0x395d  (14685) 30%
 
 
 Data EEPROM Memory  [Origin = 0x7ffc00, Length = 0x400]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-_0485496057dc315e         0x7ffc00                0x80            0x80  (128)
+_047DF8A05959f85a         0x7ffc00                0x80            0x80  (128)
 
-                 Total data EEPROM used (bytes):           0x80  (128) 12%
+                        Total data EEPROM used (bytes):           0x80  (128) 12%
 
 
 Data Memory  [Origin = 0x800, Length = 0x800]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-reserve_data_0x800           0x800                0x20            0x20  (32)
-reserve_data_0x820           0x820                 0x2             0x2  (2)
-reserve_data_0x822           0x822                 0x2             0x2  (2)
-reserve_data_0x824           0x824                0x2c            0x2c  (44)
-.nbss                        0x850                   0           0x22e  (558)
-.ndata                       0xa7e                   0            0x12  (18)
-.nbss                        0xa90                   0             0xc  (12)
-.ndata                       0xa9c                   0             0x6  (6)
-.nbss                        0xaa2                   0             0x2  (2)
-.bss                         0xaa4                   0             0x2  (2)
+.nbss                        0x800                   0           0x22e  (558)
+.ndata                       0xa2e                   0            0x12  (18)
+.nbss                        0xa40                   0             0xc  (12)
+.ndata                       0xa4c                   0             0x6  (6)
+.bss                         0xa52                   0             0x6  (6)
 
-                 Total data memory used (bytes):          0x2a6  (678) 33%
+                        Total data memory used (bytes):          0x258  (600) 29%
 
 
 Dynamic Memory Usage
@@ -225,26 +184,28 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0xaa6                               0x55a  (1370)
+stack                        0xa58                               0x5a8  (1448)
 
-                 Maximum dynamic memory (bytes):          0x55a  (1370)
+                        Maximum dynamic memory (bytes):          0x5a8  (1448)
 
 
 External Symbols in Data Memory (by address):
 
-                    0x0a1e                  _fb
-                    0x0a64                  _current
-                    0x0a66                  _root
-                    0x0a68                  _lst_quick
-                    0x0aa2                  _errno
+                    0x09ce                  _fb
+                    0x0a14                  _current
+                    0x0a16                  _root
+                    0x0a18                  _lst_quick
+                    0x0a52                  _errno
+                    0x0a54                  __atexitptr
 
 External Symbols in Data Memory (by name):
 
-                    0x0a64                  _current
-                    0x0aa2                  _errno
-                    0x0a1e                  _fb
-                    0x0a68                  _lst_quick
-                    0x0a66                  _root
+                    0x0a54                  __atexitptr
+                    0x0a14                  _current
+                    0x0a52                  _errno
+                    0x09ce                  _fb
+                    0x0a18                  _lst_quick
+                    0x0a16                  _root
 
 External Symbols in Data EEPROM (by address):
 
@@ -260,367 +221,363 @@ External Symbols in Program Memory (by address):
                   0x00012c                  __psv_init
                   0x00013c                  __data_init
                   0x00013c                  __data_init_standard
-                  0x0001e8                  __DefaultInterrupt
-                  0x0001ec                  _isspace
-                  0x00020c                  __eedata_helper1
-                  0x000236                  __eedata_helper2
-                  0x00023e                  __eedata_helper3
-                  0x00024a                  __eedata_helper4
-                  0x00025c                  ___fixsfsi
-                  0x00029e                  __funpack
-                  0x0002c8                  ___mulsf3
-                  0x0002c8                  ___mulsf3x
-                  0x0003d4                  ___udivsi3
-                  0x0003d4                  ___udivsi3x
-                  0x0004ae                  __unpackdnrmf
-                  0x00050c                  __propnanf
-                  0x00051e                  __dnrmpackf
-                  0x000572                  __typef
-                  0x0005a6                  _strtof
-                  0x00076a                  _strtod
-                  0x00076c                  _atof
-                  0x000770                  _atoi
-                  0x0007ae                  _exit
-                  0x0007b6                  _utoa
-                  0x0007ea                  _itoa
-                  0x000808                  _strcmp
-                  0x000816                  _strcpy
-                  0x000822                  _strlen
-                  0x00082e                  _strtok
-                  0x000868                  _strcspn
-                  0x00088e                  _strspn
-                  0x0008b4                  _strchr
-                  0x0008ce                  ___lesf2
-                  0x0008ce                  ___ltsf2
-                  0x0008ce                  ___eqsf2
-                  0x0008d2                  ___gesf2
-                  0x0008d2                  ___gtsf2
-                  0x0008d6                  ___floatsisf
-                  0x0008dc                  ___mulsi3
-                  0x0008dc                  ___mulp32eds3
-                  0x0008dc                  ___mulp32peds3
-                  0x0008e8                  ___divsf3
-                  0x0008e8                  ___divsf3x
-                  0x000a7a                  __sdivf
-                  0x000aa6                  __unpackf
-                  0x000b0c                  __spackf
-                  0x000bb2                  __fcompare
-                  0x000be8                  ___floatdisf
-                  0x000c08                  ___floatundisf
-                  0x000c66                  __fpack
-                  0x000cb2                  __funpack2
-                  0x000e48                  _pos
-                  0x000e62                  _path_root
-                  0x000e6a                  _path_current
-                  0x000e72                  _path_move
-                  0x000e7e                  _path_init
-                  0x000e90                  _path_insert
-                  0x000ebe                  _path_access_get
-                  0x000ed6                  _path_access_set
-                  0x000ef8                  _path_filetype_get
-                  0x000f12                  _path_filetype_set
-                  0x000f36                  _path_get
-                  0x001038                  _path_get_registor
-                  0x001096                  _path_get_all
-                  0x0010c0                  _directory_create
+                  0x0001da                  __DefaultInterrupt
+                  0x0001de                  _isspace
+                  0x000206                  __eedata_helper1
+                  0x000230                  __eedata_helper2
+                  0x000238                  __eedata_helper3
+                  0x000244                  __eedata_helper4
+                  0x000256                  ___fixsfsi
+                  0x000298                  __funpack
+                  0x0002c2                  ___mulsf3
+                  0x0002c2                  ___mulsf3x
+                  0x0003ce                  ___udivsi3x
+                  0x0003ce                  ___udivsi3
+                  0x0004a8                  __unpackdnrmf
+                  0x000506                  __propnanf
+                  0x000518                  __dnrmpackf
+                  0x00056c                  __typef
+                  0x0005a0                  _strtof
+                  0x00078e                  _strtod
+                  0x000790                  _atof
+                  0x000794                  _atoi
+                  0x0007d2                  _exit
+                  0x0007dc                  _utoa
+                  0x000810                  _itoa
+                  0x00082e                  _strcmp
+                  0x00083c                  _strcpy
+                  0x000848                  _strlen
+                  0x000856                  _strtok
+                  0x000894                  _strcspn
+                  0x0008c4                  _strspn
+                  0x0008f4                  _strchr
+                  0x000908                  ___eqsf2
+                  0x000908                  ___ltsf2
+                  0x000908                  ___lesf2
+                  0x00090c                  ___gtsf2
+                  0x00090c                  ___gesf2
+                  0x000910                  ___floatsisf
+                  0x000916                  ___mulp32peds3
+                  0x000916                  ___mulp32eds3
+                  0x000916                  ___mulsi3
+                  0x000922                  ___divsf3
+                  0x000922                  ___divsf3x
+                  0x000ab4                  __sdivf
+                  0x000ae0                  __unpackf
+                  0x000b46                  __spackf
+                  0x000bec                  __fcompare
+                  0x000c22                  ___floatdisf
+                  0x000c42                  ___floatundisf
+                  0x000ca0                  __fpack
+                  0x000cec                  __funpack2
+                  0x000e2c                  _pos
+                  0x000e2e                  _path_root
+                  0x000e38                  _path_current
+                  0x000e42                  _path_move
+                  0x000e4e                  _path_init
+                  0x000e62                  _path_insert
+                  0x000e92                  _path_access_get
+                  0x000eac                  _path_access_set
+                  0x000ed2                  _path_filetype_get
+                  0x000eee                  _path_filetype_set
+                  0x000f16                  _path_get
+                  0x00102a                  _path_get_registor
+                  0x00108c                  _path_get_all
+                  0x0010bc                  _directory_create
                   0x0010e6                  _directory_insert
-                  0x00112a                  _directory_registor
-                  0x00116a                  _directory_registor_init
-                  0x00118a                  _shell_system
-                  0x00123a                  _shell_system_s
-                  0x001288                  _execute_create
-                  0x0012b0                  _integer_create
-                  0x0012e8                  _float_create
-                  0x001320                  _select_listen_set
-                  0x00132c                  _select_general_set
-                  0x001338                  _select_selected_set
-                  0x001344                  _select_listen
-                  0x001356                  _select_general
-                  0x001368                  _select_selected
-                  0x001380                  _directory_insert_excute
-                  0x0013ba                  _bin_create
-                  0x0013d0                  _bin_exit
-                  0x0013de                  _bin_echo
-                  0x0013f8                  _bin_ls
-                  0x00149a                  _bin_pwd
-                  0x0014be                  _bin_tree_sub
-                  0x001520                  _bin_tree
-                  0x001536                  _bin_cd
-                  0x001576                  _bin_system
-                  0x0015b8                  _bin_set
-                  0x001674                  _bin_get
-                  0x001728                  _bin_loop
-                  0x0017ac                  _bin_delay
-                  0x00186a                  _uart_setup
-                  0x0018f4                  _uart_depth
-                  0x0018fc                  _uart_find
-                  0x00192a                  _uart_seek
-                  0x001942                  _uart_remove
-                  0x00195a                  _uart_remove_all
-                  0x001962                  _uart_getc
-                  0x001998                  _uart_gets
-                  0x0019f4                  _uart_used
-                  0x0019fc                  _uart_full
-                  0x001a12                  _uart_bufc
-                  0x001a3c                  _uart_bufnl
-                  0x001a46                  _uart_bufs
-                  0x001a6a                  _uart_bufl
-                  0x001a7c                  _uart_flush
-                  0x001ace                  _uart_clr
-                  0x001adc                  _uart_stop
-                  0x001ae8                  _uart_begin
-                  0x001af6                  _uart_putc
-                  0x001b14                  _uart_putnl
-                  0x001b1e                  _uart_puts
-                  0x001b46                  _uart_putl
-                  0x001b72                  __U1RXInterrupt
-                  0x001bda                  __U1TXInterrupt
-                  0x001c62                  _pwm_setup
-                  0x001cfe                  _dt_limit
-                  0x001d20                  _pwm_dt_direct
-                  0x001d5e                  _pwm_dt
-                  0x001d90                  _pwm_dts
-                  0x001db4                  _set_pwm_period
-                  0x001e02                  _get_pwm_period
-                  0x001e0a                  _set_pwm_max
-                  0x001e34                  _get_pwm_max
-                  0x001e3c                  _set_pwm_min
-                  0x001e66                  _get_pwm_min
-                  0x001e6e                  _get_pwm_dt
-                  0x001e94                  _pwm_shutdown
-                  0x001eb6                  _ports_setup
-                  0x001ef4                  _port_address
-                  0x001f36                  _led_rx
-                  0x001f4c                  _port_get
-                  0x001f88                  _pin_encode_idx
-                  0x001fa0                  _pin_encode_x
-                  0x001fb8                  _pin_encode_y
-                  0x001fd0                  _encoder_setup
-                  0x002036                  _encoder_raw
-                  0x00203e                  _encoder_speed_raw
-                  0x002046                  _encoder_spin_raw
-                  0x002056                  _encoder_direction
-                  0x00206e                  _encoder_period
-                  0x00209a                  _timer_flag
-                  0x0020a2                  __PWMInterrupt
-                  0x0020da                  _get_encoder_period
-                  0x0020e4                  _file_init
-                  0x002140                  _file_free
-                  0x00216e                  _file_used
-                  0x00217a                  _file_memory
-                  0x002182                  _file_create
-                  0x0021c2                  _file_delete
-                  0x0021d8                  _eeprom_setup
-                  0x0021f2                  _eeprom_open
-                  0x00220e                  _eeprom_close
-                  0x002218                  _eeprom_putc
-                  0x00224a                  _eeprom_puts
-                  0x002270                  _eeprom_flush
-                  0x002298                  build/Pickit/debug/System/shell.o:_shell_listen
-                  0x0022b2                  build/Pickit/debug/System/shell.o:_shell_selected
-                  0x002302                  _shell_init
-                  0x002316                  _timer23_setup
-                  0x00233a                  _timer23_period
-                  0x00235e                  _timer23_enable
-                  0x00237e                  _timer23_check
-                  0x002392                  _sbin_create
-                  0x0023a8                  _sbin_rst
-                  0x0023b6                  _sbin_sel
-                  0x00244e                  _delay_ns
-                  0x002460                  _delay_us
-                  0x00247e                  _delay_ms
-                  0x00249c                  _motor_create
-                  0x0024b6                  _motor_dt
-                  0x0024e6                  _driver_setup
-                  0x002508                  _system_setup
-                  0x002510                  _system_process
-                  0x002528                  _error_print
-                  0x002546                  _main
-                  0xf8000a                  __FGS.sec
+                  0x00112c                  _directory_registor
+                  0x00116e                  _directory_registor_init
+                  0x00118e                  _shell_system
+                  0x00124c                  _shell_system_s
+                  0x0012a8                  _execute_create
+                  0x0012d4                  _integer_create
+                  0x001314                  _float_create
+                  0x001354                  _select_listen_set
+                  0x001360                  _select_general_set
+                  0x00136c                  _select_selected_set
+                  0x001378                  _select_listen
+                  0x00138a                  _select_general
+                  0x00139c                  _select_selected
+                  0x0013b4                  _directory_insert_excute
+                  0x0013f6                  _bin_create
+                  0x001410                  _bin_exit
+                  0x00141e                  _bin_echo
+                  0x00143c                  _bin_ls
+                  0x0014f8                  _bin_pwd
+                  0x001522                  _bin_tree_sub
+                  0x00158a                  _bin_tree
+                  0x0015a4                  _bin_cd
+                  0x0015ee                  _bin_system
+                  0x001644                  _bin_set
+                  0x00171a                  _bin_get
+                  0x0017f0                  _bin_loop
+                  0x001882                  _bin_delay
+                  0x001966                  _uart_setup
+                  0x0019f8                  _uart_depth
+                  0x001a02                  _uart_find
+                  0x001a32                  _uart_seek
+                  0x001a4c                  _uart_remove
+                  0x001a64                  _uart_remove_all
+                  0x001a6e                  _uart_getc
+                  0x001aa8                  _uart_gets
+                  0x001b06                  _uart_used
+                  0x001b10                  _uart_full
+                  0x001b28                  _uart_bufc
+                  0x001b54                  _uart_bufnl
+                  0x001b62                  _uart_bufs
+                  0x001b8a                  _uart_bufl
+                  0x001b9e                  _uart_flush
+                  0x001bf0                  _uart_clr
+                  0x001c02                  _uart_stop
+                  0x001c0e                  _uart_begin
+                  0x001c1c                  _uart_putc
+                  0x001c3c                  _uart_putnl
+                  0x001c4a                  _uart_puts
+                  0x001c76                  _uart_putl
+                  0x001ca6                  __U1RXInterrupt
+                  0x001d12                  __U1TXInterrupt
+                  0x001d9e                  _pwm_setup
+                  0x001e46                  _dt_limit
+                  0x001e6a                  _pwm_dt_direct
+                  0x001eb2                  _pwm_dt
+                  0x001ee8                  _pwm_dts
+                  0x001f0c                  _set_pwm_period
+                  0x001f66                  _get_pwm_period
+                  0x001f70                  _set_pwm_max
+                  0x001fa0                  _get_pwm_max
+                  0x001faa                  _set_pwm_min
+                  0x001fda                  _get_pwm_min
+                  0x001fe4                  _get_pwm_dt
+                  0x00200e                  _pwm_shutdown
+                  0x002030                  _encoder_setup
+                  0x002096                  _encoder_raw
+                  0x0020a0                  _encoder_speed_raw
+                  0x0020aa                  _encoder_spin_raw
+                  0x0020bc                  _encoder_direction
+                  0x0020d6                  _encoder_period
+                  0x002104                  _timer_flag
+                  0x00210e                  __PWMInterrupt
+                  0x00214e                  _get_encoder_period
+                  0x00215a                  _ports_setup
+                  0x002198                  _port_address
+                  0x0021dc                  _led_rx
+                  0x0021f4                  _port_get
+                  0x002236                  _pin_encode_idx
+                  0x002250                  _pin_encode_x
+                  0x00226a                  _pin_encode_y
+                  0x002284                  _file_init
+                  0x0022e2                  _file_free
+                  0x002312                  _file_used
+                  0x002322                  _file_memory
+                  0x00232c                  _file_create
+                  0x00236e                  _file_delete
+                  0x002384                  _eeprom_setup
+                  0x0023a0                  _eeprom_open
+                  0x0023be                  _eeprom_close
+                  0x0023ca                  _eeprom_putc
+                  0x0023fe                  _eeprom_puts
+                  0x002426                  _eeprom_flush
+                  0x002452                  build/Pickit/debug/System/shell.o:_shell_listen
+                  0x002470                  build/Pickit/debug/System/shell.o:_shell_selected
+                  0x0024cc                  _shell_init
+                  0x0024e6                  _timer23_setup
+                  0x002510                  _timer23_period
+                  0x002534                  _timer23_enable
+                  0x002558                  _timer23_check
+                  0x002572                  _sbin_create
+                  0x00258c                  _sbin_rst
+                  0x00259c                  _sbin_sel
+                  0x002642                  _motor_create
+                  0x002662                  _motor_dt
+                  0x0026a0                  _delay_ns
+                  0x0026b2                  _delay_us
+                  0x0026d0                  _delay_ms
+                  0x0026ee                  _driver_setup
+                  0x002712                  _system_setup
+                  0x00271a                  _system_process
+                  0x002734                  _main
 
 External Symbols in Program Memory (by name):
 
-                  0x0001e8                  __DefaultInterrupt
-                  0xf8000a                  __FGS.sec
-                  0x0020a2                  __PWMInterrupt
-                  0x001b72                  __U1RXInterrupt
-                  0x001bda                  __U1TXInterrupt
-                  0x0008e8                  ___divsf3
-                  0x0008e8                  ___divsf3x
-                  0x0008ce                  ___eqsf2
-                  0x00025c                  ___fixsfsi
-                  0x000be8                  ___floatdisf
-                  0x0008d6                  ___floatsisf
-                  0x000c08                  ___floatundisf
-                  0x0008d2                  ___gesf2
-                  0x0008d2                  ___gtsf2
-                  0x0008ce                  ___lesf2
-                  0x0008ce                  ___ltsf2
-                  0x0008dc                  ___mulp32eds3
-                  0x0008dc                  ___mulp32peds3
-                  0x0002c8                  ___mulsf3
-                  0x0002c8                  ___mulsf3x
-                  0x0008dc                  ___mulsi3
-                  0x0003d4                  ___udivsi3
-                  0x0003d4                  ___udivsi3x
+                  0x0001da                  __DefaultInterrupt
+                  0x00210e                  __PWMInterrupt
+                  0x001ca6                  __U1RXInterrupt
+                  0x001d12                  __U1TXInterrupt
+                  0x000922                  ___divsf3
+                  0x000922                  ___divsf3x
+                  0x000908                  ___eqsf2
+                  0x000256                  ___fixsfsi
+                  0x000c22                  ___floatdisf
+                  0x000910                  ___floatsisf
+                  0x000c42                  ___floatundisf
+                  0x00090c                  ___gesf2
+                  0x00090c                  ___gtsf2
+                  0x000908                  ___lesf2
+                  0x000908                  ___ltsf2
+                  0x000916                  ___mulp32eds3
+                  0x000916                  ___mulp32peds3
+                  0x0002c2                  ___mulsf3
+                  0x0002c2                  ___mulsf3x
+                  0x000916                  ___mulsi3
+                  0x0003ce                  ___udivsi3
+                  0x0003ce                  ___udivsi3x
                   0x00013c                  __data_init
                   0x00013c                  __data_init_standard
-                  0x00051e                  __dnrmpackf
-                  0x00020c                  __eedata_helper1
-                  0x000236                  __eedata_helper2
-                  0x00023e                  __eedata_helper3
-                  0x00024a                  __eedata_helper4
-                  0x000bb2                  __fcompare
-                  0x000c66                  __fpack
-                  0x00029e                  __funpack
-                  0x000cb2                  __funpack2
-                  0x00050c                  __propnanf
+                  0x000518                  __dnrmpackf
+                  0x000206                  __eedata_helper1
+                  0x000230                  __eedata_helper2
+                  0x000238                  __eedata_helper3
+                  0x000244                  __eedata_helper4
+                  0x000bec                  __fcompare
+                  0x000ca0                  __fpack
+                  0x000298                  __funpack
+                  0x000cec                  __funpack2
+                  0x000506                  __propnanf
                   0x00012c                  __psv_init
                   0x000100                  __resetPRI
-                  0x000a7a                  __sdivf
-                  0x000b0c                  __spackf
-                  0x000572                  __typef
-                  0x0004ae                  __unpackdnrmf
-                  0x000aa6                  __unpackf
-                  0x00076c                  _atof
-                  0x000770                  _atoi
-                  0x001536                  _bin_cd
-                  0x0013ba                  _bin_create
-                  0x0017ac                  _bin_delay
-                  0x0013de                  _bin_echo
-                  0x0013d0                  _bin_exit
-                  0x001674                  _bin_get
-                  0x001728                  _bin_loop
-                  0x0013f8                  _bin_ls
-                  0x00149a                  _bin_pwd
-                  0x0015b8                  _bin_set
-                  0x001576                  _bin_system
-                  0x001520                  _bin_tree
-                  0x0014be                  _bin_tree_sub
-                  0x00247e                  _delay_ms
-                  0x00244e                  _delay_ns
-                  0x002460                  _delay_us
-                  0x0010c0                  _directory_create
+                  0x000ab4                  __sdivf
+                  0x000b46                  __spackf
+                  0x00056c                  __typef
+                  0x0004a8                  __unpackdnrmf
+                  0x000ae0                  __unpackf
+                  0x000790                  _atof
+                  0x000794                  _atoi
+                  0x0015a4                  _bin_cd
+                  0x0013f6                  _bin_create
+                  0x001882                  _bin_delay
+                  0x00141e                  _bin_echo
+                  0x001410                  _bin_exit
+                  0x00171a                  _bin_get
+                  0x0017f0                  _bin_loop
+                  0x00143c                  _bin_ls
+                  0x0014f8                  _bin_pwd
+                  0x001644                  _bin_set
+                  0x0015ee                  _bin_system
+                  0x00158a                  _bin_tree
+                  0x001522                  _bin_tree_sub
+                  0x0026d0                  _delay_ms
+                  0x0026a0                  _delay_ns
+                  0x0026b2                  _delay_us
+                  0x0010bc                  _directory_create
                   0x0010e6                  _directory_insert
-                  0x001380                  _directory_insert_excute
-                  0x00112a                  _directory_registor
-                  0x00116a                  _directory_registor_init
-                  0x0024e6                  _driver_setup
-                  0x001cfe                  _dt_limit
-                  0x00220e                  _eeprom_close
-                  0x002270                  _eeprom_flush
-                  0x0021f2                  _eeprom_open
-                  0x002218                  _eeprom_putc
-                  0x00224a                  _eeprom_puts
-                  0x0021d8                  _eeprom_setup
-                  0x002056                  _encoder_direction
-                  0x00206e                  _encoder_period
-                  0x002036                  _encoder_raw
-                  0x001fd0                  _encoder_setup
-                  0x00203e                  _encoder_speed_raw
-                  0x002046                  _encoder_spin_raw
-                  0x002528                  _error_print
-                  0x001288                  _execute_create
-                  0x0007ae                  _exit
-                  0x002182                  _file_create
-                  0x0021c2                  _file_delete
-                  0x002140                  _file_free
-                  0x0020e4                  _file_init
-                  0x00217a                  _file_memory
-                  0x00216e                  _file_used
-                  0x0012e8                  _float_create
-                  0x0020da                  _get_encoder_period
-                  0x001e6e                  _get_pwm_dt
-                  0x001e34                  _get_pwm_max
-                  0x001e66                  _get_pwm_min
-                  0x001e02                  _get_pwm_period
-                  0x0012b0                  _integer_create
-                  0x0001ec                  _isspace
-                  0x0007ea                  _itoa
-                  0x001f36                  _led_rx
-                  0x002546                  _main
-                  0x00249c                  _motor_create
-                  0x0024b6                  _motor_dt
-                  0x000ebe                  _path_access_get
-                  0x000ed6                  _path_access_set
-                  0x000e6a                  _path_current
-                  0x000ef8                  _path_filetype_get
-                  0x000f12                  _path_filetype_set
-                  0x000f36                  _path_get
-                  0x001096                  _path_get_all
-                  0x001038                  _path_get_registor
-                  0x000e7e                  _path_init
-                  0x000e90                  _path_insert
-                  0x000e72                  _path_move
-                  0x000e62                  _path_root
-                  0x001f88                  _pin_encode_idx
-                  0x001fa0                  _pin_encode_x
-                  0x001fb8                  _pin_encode_y
-                  0x001ef4                  _port_address
-                  0x001f4c                  _port_get
-                  0x001eb6                  _ports_setup
-                  0x000e48                  _pos
-                  0x001d5e                  _pwm_dt
-                  0x001d20                  _pwm_dt_direct
-                  0x001d90                  _pwm_dts
-                  0x001c62                  _pwm_setup
-                  0x001e94                  _pwm_shutdown
-                  0x002392                  _sbin_create
-                  0x0023a8                  _sbin_rst
-                  0x0023b6                  _sbin_sel
-                  0x001356                  _select_general
-                  0x00132c                  _select_general_set
-                  0x001344                  _select_listen
-                  0x001320                  _select_listen_set
-                  0x001368                  _select_selected
-                  0x001338                  _select_selected_set
-                  0x001e0a                  _set_pwm_max
-                  0x001e3c                  _set_pwm_min
-                  0x001db4                  _set_pwm_period
-                  0x002302                  _shell_init
-                  0x00118a                  _shell_system
-                  0x00123a                  _shell_system_s
-                  0x0008b4                  _strchr
-                  0x000808                  _strcmp
-                  0x000816                  _strcpy
-                  0x000868                  _strcspn
-                  0x000822                  _strlen
-                  0x00088e                  _strspn
-                  0x00076a                  _strtod
-                  0x0005a6                  _strtof
-                  0x00082e                  _strtok
-                  0x002510                  _system_process
-                  0x002508                  _system_setup
-                  0x00237e                  _timer23_check
-                  0x00235e                  _timer23_enable
-                  0x00233a                  _timer23_period
-                  0x002316                  _timer23_setup
-                  0x00209a                  _timer_flag
-                  0x001ae8                  _uart_begin
-                  0x001a12                  _uart_bufc
-                  0x001a6a                  _uart_bufl
-                  0x001a3c                  _uart_bufnl
-                  0x001a46                  _uart_bufs
-                  0x001ace                  _uart_clr
-                  0x0018f4                  _uart_depth
-                  0x0018fc                  _uart_find
-                  0x001a7c                  _uart_flush
-                  0x0019fc                  _uart_full
-                  0x001962                  _uart_getc
-                  0x001998                  _uart_gets
-                  0x001af6                  _uart_putc
-                  0x001b46                  _uart_putl
-                  0x001b14                  _uart_putnl
-                  0x001b1e                  _uart_puts
-                  0x001942                  _uart_remove
-                  0x00195a                  _uart_remove_all
-                  0x00192a                  _uart_seek
-                  0x00186a                  _uart_setup
-                  0x001adc                  _uart_stop
-                  0x0019f4                  _uart_used
-                  0x0007b6                  _utoa
-                  0x002298                  build/Pickit/debug/System/shell.o:_shell_listen
-                  0x0022b2                  build/Pickit/debug/System/shell.o:_shell_selected
+                  0x0013b4                  _directory_insert_excute
+                  0x00112c                  _directory_registor
+                  0x00116e                  _directory_registor_init
+                  0x0026ee                  _driver_setup
+                  0x001e46                  _dt_limit
+                  0x0023be                  _eeprom_close
+                  0x002426                  _eeprom_flush
+                  0x0023a0                  _eeprom_open
+                  0x0023ca                  _eeprom_putc
+                  0x0023fe                  _eeprom_puts
+                  0x002384                  _eeprom_setup
+                  0x0020bc                  _encoder_direction
+                  0x0020d6                  _encoder_period
+                  0x002096                  _encoder_raw
+                  0x002030                  _encoder_setup
+                  0x0020a0                  _encoder_speed_raw
+                  0x0020aa                  _encoder_spin_raw
+                  0x0012a8                  _execute_create
+                  0x0007d2                  _exit
+                  0x00232c                  _file_create
+                  0x00236e                  _file_delete
+                  0x0022e2                  _file_free
+                  0x002284                  _file_init
+                  0x002322                  _file_memory
+                  0x002312                  _file_used
+                  0x001314                  _float_create
+                  0x00214e                  _get_encoder_period
+                  0x001fe4                  _get_pwm_dt
+                  0x001fa0                  _get_pwm_max
+                  0x001fda                  _get_pwm_min
+                  0x001f66                  _get_pwm_period
+                  0x0012d4                  _integer_create
+                  0x0001de                  _isspace
+                  0x000810                  _itoa
+                  0x0021dc                  _led_rx
+                  0x002734                  _main
+                  0x002642                  _motor_create
+                  0x002662                  _motor_dt
+                  0x000e92                  _path_access_get
+                  0x000eac                  _path_access_set
+                  0x000e38                  _path_current
+                  0x000ed2                  _path_filetype_get
+                  0x000eee                  _path_filetype_set
+                  0x000f16                  _path_get
+                  0x00108c                  _path_get_all
+                  0x00102a                  _path_get_registor
+                  0x000e4e                  _path_init
+                  0x000e62                  _path_insert
+                  0x000e42                  _path_move
+                  0x000e2e                  _path_root
+                  0x002236                  _pin_encode_idx
+                  0x002250                  _pin_encode_x
+                  0x00226a                  _pin_encode_y
+                  0x002198                  _port_address
+                  0x0021f4                  _port_get
+                  0x00215a                  _ports_setup
+                  0x000e2c                  _pos
+                  0x001eb2                  _pwm_dt
+                  0x001e6a                  _pwm_dt_direct
+                  0x001ee8                  _pwm_dts
+                  0x001d9e                  _pwm_setup
+                  0x00200e                  _pwm_shutdown
+                  0x002572                  _sbin_create
+                  0x00258c                  _sbin_rst
+                  0x00259c                  _sbin_sel
+                  0x00138a                  _select_general
+                  0x001360                  _select_general_set
+                  0x001378                  _select_listen
+                  0x001354                  _select_listen_set
+                  0x00139c                  _select_selected
+                  0x00136c                  _select_selected_set
+                  0x001f70                  _set_pwm_max
+                  0x001faa                  _set_pwm_min
+                  0x001f0c                  _set_pwm_period
+                  0x0024cc                  _shell_init
+                  0x00118e                  _shell_system
+                  0x00124c                  _shell_system_s
+                  0x0008f4                  _strchr
+                  0x00082e                  _strcmp
+                  0x00083c                  _strcpy
+                  0x000894                  _strcspn
+                  0x000848                  _strlen
+                  0x0008c4                  _strspn
+                  0x00078e                  _strtod
+                  0x0005a0                  _strtof
+                  0x000856                  _strtok
+                  0x00271a                  _system_process
+                  0x002712                  _system_setup
+                  0x002558                  _timer23_check
+                  0x002534                  _timer23_enable
+                  0x002510                  _timer23_period
+                  0x0024e6                  _timer23_setup
+                  0x002104                  _timer_flag
+                  0x001c0e                  _uart_begin
+                  0x001b28                  _uart_bufc
+                  0x001b8a                  _uart_bufl
+                  0x001b54                  _uart_bufnl
+                  0x001b62                  _uart_bufs
+                  0x001bf0                  _uart_clr
+                  0x0019f8                  _uart_depth
+                  0x001a02                  _uart_find
+                  0x001b9e                  _uart_flush
+                  0x001b10                  _uart_full
+                  0x001a6e                  _uart_getc
+                  0x001aa8                  _uart_gets
+                  0x001c1c                  _uart_putc
+                  0x001c76                  _uart_putl
+                  0x001c3c                  _uart_putnl
+                  0x001c4a                  _uart_puts
+                  0x001a4c                  _uart_remove
+                  0x001a64                  _uart_remove_all
+                  0x001a32                  _uart_seek
+                  0x001966                  _uart_setup
+                  0x001c02                  _uart_stop
+                  0x001b06                  _uart_used
+                  0x0007dc                  _utoa
+                  0x002452                  build/Pickit/debug/System/shell.o:_shell_listen
+                  0x002470                  build/Pickit/debug/System/shell.o:_shell_selected
 
 Memory Configuration
 
@@ -665,33 +622,11 @@ LOAD build/Pickit/debug/System/system.o
 LOAD build/Pickit/debug/System/motor.o
 LOAD build/Pickit/debug/System/shell_sbin.o
 LOAD build/Pickit/debug/System/file.o
-LOAD build/Pickit/debug/System/error.o
-
-reserve_data_0x800
-                    0x0800         0x20
-                    0x0820                  . = 0x20
- *fill*             0x0800         0x2000
-
-reserve_data_0x820
-                    0x0820          0x2
-                    0x0822                  . = 0x2
- *fill*             0x0820          0x200
-
-reserve_data_0x822
-                    0x0822          0x2
-                    0x0824                  . = 0x2
- *fill*             0x0822          0x200
-
-reserve_data_0x824
-                    0x0824         0x2c
-                    0x0850                  . = 0x2c
- *fill*             0x0824         0x2c00
                     0x0001                  __MPLAB_BUILD = 0x1
                     0x0001                  __MPLAB_DEBUG = 0x1
                     0x0001                  __DEBUG = 0x1
-                    0x0001                  __MPLAB_DEBUGGER_PK3 = 0x1
-LOAD p30F4012
-LOAD c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfx-elf.a
+                    0x0001                  __MPLAB_DEBUGGER_SIMULATOR = 0x1
+LOAD c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib/dsPIC30F\libp30F4012-elf.a
                     0x8005c0                  __FUID0 = 0x8005c0
                     0x8005c2                  __FUID1 = 0x8005c2
                     0x8005c4                  __FUID2 = 0x8005c4
@@ -718,119 +653,119 @@ LOAD c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000100        0xbc2
+.text             0x000100        0xbfc
  *(.init)
- .init            0x000100         0x3c c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
+ .init            0x000100         0x3c c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
                   0x000100                  __resetPRI
                   0x000100                  __reset
                   0x00012c                  __psv_init
- .init            0x00013c         0x6c c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
+ .init            0x00013c         0x5e c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
                   0x00013c                  __data_init_standard
                   0x00013c                  __data_init
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr             0x0001e8          0x4 default_isr
-                  0x0001e8                  __DefaultInterrupt
+ .isr             0x0001da          0x4 default_isr
+                  0x0001da                  __DefaultInterrupt
  *(.libc)
- .libc            0x0001ec         0x10 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(isspace.eso)
-                  0x0001ec                  _isspace
- .libc            0x0001fc         0x10 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(_exit.eo)
-                  0x0001fc                  __exit
+ .libc            0x0001de         0x10 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(isspace.eso)
+                  0x0001de                  _isspace
+ .libc            0x0001ee         0x18 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a(_exit.eo)
+                  0x0001ee                  __exit
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libc.eedata_helper1234
-                  0x00020c         0x50 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(eedata_helper.eo)
-                  0x00020c                  __eedata_helper1
-                  0x000236                  __eedata_helper2
-                  0x00023e                  __eedata_helper3
-                  0x00024a                  __eedata_helper4
- .libm.fixsfsi    0x00025c         0x42 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fixsfsi.eo)
-                  0x00025c                  _(float, int, long long, short, float, short, int)
- .libm.funpack    0x00029e         0x2a c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(funpack.eo)
-                  0x00029e                  __funpack
- .libmx           0x0002c8        0x10c c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(mulsf3x.eo)
-                  0x0002c8                  ___mulsf3x
-                  0x0002c8                  ___mulsf3
- .libmx           0x0003d4         0xda c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(udivsi3x.eo)
-                  0x0003d4                  ___udivsi3
-                  0x0003d4                  ___udivsi3x
- .libmx           0x0004ae         0x5e c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(unpackdnrmfx.eo)
-                  0x0004ae                  __unpackdnrmf
- .libmx           0x00050c         0x12 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(propnanfx.eo)
-                  0x00050c                  __propnanf
- .libmx           0x00051e         0x54 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(dnrmpackfx.eo)
-                  0x00051e                  __dnrmpackf
- .libmx           0x000572         0x34 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(typefx.eo)
-                  0x000572                  __typef
- .libc.strtof     0x0005a6        0x1c4 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atof.eo)
-                  0x0005a6                  _strtof
- .libc.strtod     0x00076a          0x2 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atof.eo)
-                  0x00076a                  _strtod
- .libc.atof       0x00076c          0x4 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atof.eo)
-                  0x00076c                  _atof
- .libc.atoi       0x000770         0x3e c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atoi.eo)
-                  0x000770                  _atoi
- .libc.exit       0x0007ae          0x8 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(exit.eo)
-                  0x0007ae                  _exit
- .libc.utoa       0x0007b6         0x34 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(itoa.eo)
-                  0x0007b6                  _utoa
- .libc.itoa       0x0007ea         0x1c c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(itoa.eo)
-                  0x0007ea                  _itoa
+                  0x000206         0x50 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a(eedata_helper.eo)
+                  0x000206                  __eedata_helper1
+                  0x000230                  __eedata_helper2
+                  0x000238                  __eedata_helper3
+                  0x000244                  __eedata_helper4
+ .libm.fixsfsi    0x000256         0x42 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fixsfsi.eo)
+                  0x000256                  _(float, int, long long, short, float, short, int)
+ .libm.funpack    0x000298         0x2a c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(funpack.eo)
+                  0x000298                  __funpack
+ .libmx           0x0002c2        0x10c c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(mulsf3x.eo)
+                  0x0002c2                  ___mulsf3x
+                  0x0002c2                  ___mulsf3
+ .libmx           0x0003ce         0xda c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(udivsi3x.eo)
+                  0x0003ce                  ___udivsi3
+                  0x0003ce                  ___udivsi3x
+ .libmx           0x0004a8         0x5e c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(unpackdnrmfx.eo)
+                  0x0004a8                  __unpackdnrmf
+ .libmx           0x000506         0x12 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(propnanfx.eo)
+                  0x000506                  __propnanf
+ .libmx           0x000518         0x54 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(dnrmpackfx.eo)
+                  0x000518                  __dnrmpackf
+ .libmx           0x00056c         0x34 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(typefx.eo)
+                  0x00056c                  __typef
+ .libc.strtof     0x0005a0        0x1ee c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atof.eo)
+                  0x0005a0                  _strtof
+ .libc.strtod     0x00078e          0x2 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atof.eo)
+                  0x00078e                  _strtod
+ .libc.atof       0x000790          0x4 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atof.eo)
+                  0x000790                  _atof
+ .libc.atoi       0x000794         0x3e c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atoi.eo)
+                  0x000794                  _atoi
+ .libc.exit       0x0007d2          0xa c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(exit.eo)
+                  0x0007d2                  _exit
+ .libc.utoa       0x0007dc         0x34 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(itoa.eo)
+                  0x0007dc                  _utoa
+ .libc.itoa       0x000810         0x1c c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(itoa.eo)
+                  0x000810                  _itoa
  .libc._cleanup
-                  0x000806          0x2 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(stdclean.eo)
-                  0x000806                  __cleanup
- .libc.strcmp     0x000808          0xe c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcmp.eo)
-                  0x000808                  _strcmp
- .libc.strcpy     0x000816          0xc c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcpy.eo)
-                  0x000816                  _strcpy
- .libc.strlen     0x000822          0xc c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strlen.eo)
-                  0x000822                  _strlen
- .libc.strtok     0x00082e         0x3a c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strtok.eo)
-                  0x00082e                  _strtok
- .libc.strcspn    0x000868         0x26 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcspn.eo)
-                  0x000868                  _strcspn
- .libc.strspn     0x00088e         0x26 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strspn.eo)
-                  0x00088e                  _strspn
- .libc.strchr     0x0008b4         0x1a c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strchr.elo)
-                  0x0008b4                  _strchr
- .libm.eqsf2      0x0008ce          0x4 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(feqltle.eo)
-                  0x0008ce                  ___eqsf2
-                  0x0008ce                  ___ltsf2
-                  0x0008ce                  ___lesf2
- .libm.gtsf2      0x0008d2          0x4 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fgtge.eo)
-                  0x0008d2                  ___gesf2
-                  0x0008d2                  ___gtsf2
+                  0x00082c          0x2 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(stdclean.eo)
+                  0x00082c                  __cleanup
+ .libc.strcmp     0x00082e          0xe c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strcmp.eo)
+                  0x00082e                  _strcmp
+ .libc.strcpy     0x00083c          0xc c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strcpy.eo)
+                  0x00083c                  _strcpy
+ .libc.strlen     0x000848          0xe c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strlen.eo)
+                  0x000848                  _strlen
+ .libc.strtok     0x000856         0x3e c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strtok.eo)
+                  0x000856                  _strtok
+ .libc.strcspn    0x000894         0x30 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strcspn.elo)
+                  0x000894                  _strcspn
+ .libc.strspn     0x0008c4         0x30 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strspn.elo)
+                  0x0008c4                  _strspn
+ .libc.strchr     0x0008f4         0x14 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strchr.eo)
+                  0x0008f4                  _strchr
+ .libm.eqsf2      0x000908          0x4 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(feqltle.eo)
+                  0x000908                  ___eqsf2
+                  0x000908                  ___ltsf2
+                  0x000908                  ___lesf2
+ .libm.gtsf2      0x00090c          0x4 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fgtge.eo)
+                  0x00090c                  ___gesf2
+                  0x00090c                  ___gtsf2
  .libm.floatsisf
-                  0x0008d6          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(floatsisf.eo)
-                  0x0008d6                  ___floatsisf
- .libm.mulsi3     0x0008dc          0xc c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(mulsi3.eo)
-                  0x0008dc                  ___mulp32peds3
-                  0x0008dc                  ___mulsi3
-                  0x0008dc                  ___mulp32eds3
- .libmx           0x0008e8        0x1be c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(divsf3x.eo)
-                  0x0008e8                  ___divsf3x
-                  0x0008e8                  ___divsf3
-                  0x000a7a                  __sdivf
- .libmx           0x000aa6         0x66 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(unpackfx.eo)
-                  0x000aa6                  __unpackf
- .libmx           0x000b0c         0xa6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(spackfx.eo)
-                  0x000b0c                  __spackf
+                  0x000910          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(floatsisf.eo)
+                  0x000910                  ___floatsisf
+ .libm.mulsi3     0x000916          0xc c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(mulsi3.eo)
+                  0x000916                  ___mulp32peds3
+                  0x000916                  ___mulsi3
+                  0x000916                  ___mulp32eds3
+ .libmx           0x000922        0x1be c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(divsf3x.eo)
+                  0x000922                  ___divsf3x
+                  0x000922                  ___divsf3
+                  0x000ab4                  __sdivf
+ .libmx           0x000ae0         0x66 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(unpackfx.eo)
+                  0x000ae0                  __unpackf
+ .libmx           0x000b46         0xa6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(spackfx.eo)
+                  0x000b46                  __spackf
  .libm.fcompare
-                  0x000bb2         0x36 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fcompare.eo)
-                  0x000bb2                  __fcompare
+                  0x000bec         0x36 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fcompare.eo)
+                  0x000bec                  __fcompare
  .libm.floatdisf
-                  0x000be8         0x20 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(floatdisf.eo)
-                  0x000be8                  ___floatdisf
+                  0x000c22         0x20 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(floatdisf.eo)
+                  0x000c22                  ___floatdisf
  .libm.floatundisf
-                  0x000c08         0x5e c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(floatundisf.eo)
-                  0x000c08                  ___floatundisf
- .libm.fpack      0x000c66         0x4c c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fpack.eo)
-                  0x000c66                  __fpack
+                  0x000c42         0x5e c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(floatundisf.eo)
+                  0x000c42                  ___floatundisf
+ .libm.fpack      0x000ca0         0x4c c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fpack.eo)
+                  0x000ca0                  __fpack
  .libm.funpack2
-                  0x000cb2         0x10 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(funpack2.eo)
-                  0x000cb2                  __funpack2
+                  0x000cec         0x10 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(funpack2.eo)
+                  0x000cec                  __funpack2
 
 usercode
  *(usercode)
@@ -862,10 +797,8 @@ __RESERVED1
 __RESERVED2
  *(__RESERVED2.sec*)
 
-__FGS             0xf8000a          0x2
+__FGS
  *(__FGS.sec*)
- __FGS.sec        0xf8000a          0x2 FGS
-                  0xf8000a                  __FGS.sec
 
 __FICD
  *(__FICD.sec*)
@@ -879,30 +812,29 @@ userdata
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x6a5e
+.debug_info       0x000000       0x692f
  *(.debug_info)
- .debug_info      0x000000        0x328 build/Pickit/debug/Driver/driver.o
- .debug_info      0x000328        0x4d0 build/Pickit/debug/Driver/eeprom.o
- .debug_info      0x0007f8        0x7b4 build/Pickit/debug/Driver/encoder.o
- .debug_info      0x000fac        0xb17 build/Pickit/debug/Driver/ports.o
- .debug_info      0x001ac3        0xc7d build/Pickit/debug/Driver/pwm.o
- .debug_info      0x002740       0x102c build/Pickit/debug/Driver/uart.o
- .debug_info      0x00376c        0x52b build/Pickit/debug/Driver/timer.o
- .debug_info      0x003c97         0x8e build/Pickit/debug/Driver/timer_asm.o
- .debug_info      0x003d25         0xc1 build/Pickit/debug/Setting/configuration.o
- .debug_info      0x003de6        0x150 build/Pickit/debug/main.o
- .debug_info      0x003f36        0x139 build/Pickit/debug/Setting/types.o
- .debug_info      0x00406f        0x40a build/Pickit/debug/System/shell.o
- .debug_info      0x004479        0x8ff build/Pickit/debug/System/shell_bin.o
- .debug_info      0x004d78        0xd5f build/Pickit/debug/System/shell_core.o
- .debug_info      0x005ad7        0x199 build/Pickit/debug/System/system.o
- .debug_info      0x005c70        0x2c6 build/Pickit/debug/System/motor.o
- .debug_info      0x005f36        0x431 build/Pickit/debug/System/shell_sbin.o
- .debug_info      0x006367        0x3f4 build/Pickit/debug/System/file.o
- .debug_info      0x00675b        0x303 build/Pickit/debug/System/error.o
+ .debug_info      0x000000        0x342 build/Pickit/debug/Driver/driver.o
+ .debug_info      0x000342        0x4ea build/Pickit/debug/Driver/eeprom.o
+ .debug_info      0x00082c        0x7ce build/Pickit/debug/Driver/encoder.o
+ .debug_info      0x000ffa        0xb31 build/Pickit/debug/Driver/ports.o
+ .debug_info      0x001b2b        0xc97 build/Pickit/debug/Driver/pwm.o
+ .debug_info      0x0027c2       0x1046 build/Pickit/debug/Driver/uart.o
+ .debug_info      0x003808        0x545 build/Pickit/debug/Driver/timer.o
+ .debug_info      0x003d4d         0xa8 build/Pickit/debug/Driver/timer_asm.o
+ .debug_info      0x003df5         0xdb build/Pickit/debug/Setting/configuration.o
+ .debug_info      0x003ed0        0x16a build/Pickit/debug/main.o
+ .debug_info      0x00403a        0x153 build/Pickit/debug/Setting/types.o
+ .debug_info      0x00418d        0x424 build/Pickit/debug/System/shell.o
+ .debug_info      0x0045b1        0x919 build/Pickit/debug/System/shell_bin.o
+ .debug_info      0x004eca        0xd79 build/Pickit/debug/System/shell_core.o
+ .debug_info      0x005c43        0x1b3 build/Pickit/debug/System/system.o
+ .debug_info      0x005df6        0x2e0 build/Pickit/debug/System/motor.o
+ .debug_info      0x0060d6        0x44b build/Pickit/debug/System/shell_sbin.o
+ .debug_info      0x006521        0x40e build/Pickit/debug/System/file.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000       0x11db
+.debug_abbrev     0x000000       0x1123
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0xa7 build/Pickit/debug/Driver/driver.o
  .debug_abbrev    0x0000a7        0x185 build/Pickit/debug/Driver/eeprom.o
@@ -922,48 +854,45 @@ userdata
  .debug_abbrev    0x000db1         0xdb build/Pickit/debug/System/motor.o
  .debug_abbrev    0x000e8c        0x158 build/Pickit/debug/System/shell_sbin.o
  .debug_abbrev    0x000fe4        0x13f build/Pickit/debug/System/file.o
- .debug_abbrev    0x001123         0xb8 build/Pickit/debug/System/error.o
 
-.debug_line       0x000000        0xe8e
+.debug_line       0x000000       0x2c7a
  *(.debug_line)
- .debug_line      0x000000         0x65 build/Pickit/debug/Driver/driver.o
- .debug_line      0x000065         0xe7 build/Pickit/debug/Driver/eeprom.o
- .debug_line      0x00014c        0x11a build/Pickit/debug/Driver/encoder.o
- .debug_line      0x000266         0xe7 build/Pickit/debug/Driver/ports.o
- .debug_line      0x00034d        0x140 build/Pickit/debug/Driver/pwm.o
- .debug_line      0x00048d        0x167 build/Pickit/debug/Driver/uart.o
- .debug_line      0x0005f4         0xfc build/Pickit/debug/Driver/timer.o
- .debug_line      0x0006f0         0x61 build/Pickit/debug/Driver/timer_asm.o
- .debug_line      0x000751         0x1a build/Pickit/debug/Setting/configuration.o
- .debug_line      0x00076b         0x37 build/Pickit/debug/main.o
- .debug_line      0x0007a2         0x1a build/Pickit/debug/Setting/types.o
- .debug_line      0x0007bc         0xab build/Pickit/debug/System/shell.o
- .debug_line      0x000867        0x179 build/Pickit/debug/System/shell_bin.o
- .debug_line      0x0009e0        0x18f build/Pickit/debug/System/shell_core.o
- .debug_line      0x000b6f         0x41 build/Pickit/debug/System/system.o
- .debug_line      0x000bb0         0x9c build/Pickit/debug/System/motor.o
- .debug_line      0x000c4c         0xe0 build/Pickit/debug/System/shell_sbin.o
- .debug_line      0x000d2c         0xbd build/Pickit/debug/System/file.o
- .debug_line      0x000de9         0xa5 build/Pickit/debug/System/error.o
+ .debug_line      0x000000         0xbc build/Pickit/debug/Driver/driver.o
+ .debug_line      0x0000bc        0x21c build/Pickit/debug/Driver/eeprom.o
+ .debug_line      0x0002d8        0x2d3 build/Pickit/debug/Driver/encoder.o
+ .debug_line      0x0005ab        0x2d5 build/Pickit/debug/Driver/ports.o
+ .debug_line      0x000880        0x43d build/Pickit/debug/Driver/pwm.o
+ .debug_line      0x000cbd        0x6f8 build/Pickit/debug/Driver/uart.o
+ .debug_line      0x0013b5        0x1c7 build/Pickit/debug/Driver/timer.o
+ .debug_line      0x00157c         0x61 build/Pickit/debug/Driver/timer_asm.o
+ .debug_line      0x0015dd         0x24 build/Pickit/debug/Setting/configuration.o
+ .debug_line      0x001601         0x60 build/Pickit/debug/main.o
+ .debug_line      0x001661         0x24 build/Pickit/debug/Setting/types.o
+ .debug_line      0x001685        0x16c build/Pickit/debug/System/shell.o
+ .debug_line      0x0017f1        0x6da build/Pickit/debug/System/shell_bin.o
+ .debug_line      0x001ecb        0x83b build/Pickit/debug/System/shell_core.o
+ .debug_line      0x002706         0x8b build/Pickit/debug/System/system.o
+ .debug_line      0x002791        0x102 build/Pickit/debug/System/motor.o
+ .debug_line      0x002893        0x1be build/Pickit/debug/System/shell_sbin.o
+ .debug_line      0x002a51        0x229 build/Pickit/debug/System/file.o
 
-.debug_frame      0x000000        0xf3e
+.debug_frame      0x000000        0x8ec
  *(.debug_frame)
- .debug_frame     0x000000         0x30 build/Pickit/debug/Driver/driver.o
- .debug_frame     0x000030         0xbc build/Pickit/debug/Driver/eeprom.o
- .debug_frame     0x0000ec        0x11e build/Pickit/debug/Driver/encoder.o
- .debug_frame     0x00020a         0xd8 build/Pickit/debug/Driver/ports.o
- .debug_frame     0x0002e2        0x180 build/Pickit/debug/Driver/pwm.o
- .debug_frame     0x000462        0x2f2 build/Pickit/debug/Driver/uart.o
- .debug_frame     0x000754         0x84 build/Pickit/debug/Driver/timer.o
- .debug_frame     0x0007d8         0x30 build/Pickit/debug/main.o
- .debug_frame     0x000808         0x68 build/Pickit/debug/System/shell.o
- .debug_frame     0x000870        0x1a2 build/Pickit/debug/System/shell_bin.o
- .debug_frame     0x000a12        0x324 build/Pickit/debug/System/shell_core.o
- .debug_frame     0x000d36         0x4c build/Pickit/debug/System/system.o
- .debug_frame     0x000d82         0x4c build/Pickit/debug/System/motor.o
- .debug_frame     0x000dce         0x84 build/Pickit/debug/System/shell_sbin.o
- .debug_frame     0x000e52         0xbc build/Pickit/debug/System/file.o
- .debug_frame     0x000f0e         0x30 build/Pickit/debug/System/error.o
+ .debug_frame     0x000000         0x24 build/Pickit/debug/Driver/driver.o
+ .debug_frame     0x000024         0x74 build/Pickit/debug/Driver/eeprom.o
+ .debug_frame     0x000098         0xa4 build/Pickit/debug/Driver/encoder.o
+ .debug_frame     0x00013c         0x84 build/Pickit/debug/Driver/ports.o
+ .debug_frame     0x0001c0         0xe4 build/Pickit/debug/Driver/pwm.o
+ .debug_frame     0x0002a4        0x194 build/Pickit/debug/Driver/uart.o
+ .debug_frame     0x000438         0x54 build/Pickit/debug/Driver/timer.o
+ .debug_frame     0x00048c         0x24 build/Pickit/debug/main.o
+ .debug_frame     0x0004b0         0x44 build/Pickit/debug/System/shell.o
+ .debug_frame     0x0004f4         0xf4 build/Pickit/debug/System/shell_bin.o
+ .debug_frame     0x0005e8        0x1d4 build/Pickit/debug/System/shell_core.o
+ .debug_frame     0x0007bc         0x34 build/Pickit/debug/System/system.o
+ .debug_frame     0x0007f0         0x34 build/Pickit/debug/System/motor.o
+ .debug_frame     0x000824         0x54 build/Pickit/debug/System/shell_sbin.o
+ .debug_frame     0x000878         0x74 build/Pickit/debug/System/file.o
 
 .debug_str        0x000000        0x178
  *(.debug_str)
@@ -985,7 +914,7 @@ userdata
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x935
+                  0x000000        0x909
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x23 build/Pickit/debug/Driver/driver.o
@@ -1017,13 +946,11 @@ userdata
                   0x000861         0x3c build/Pickit/debug/System/shell_sbin.o
  .debug_pubnames
                   0x00089d         0x6c build/Pickit/debug/System/file.o
- .debug_pubnames
-                  0x000909         0x2c build/Pickit/debug/System/error.o
 
 .debug_ranges
  *(.debug_ranges)
 
-.debug_aranges    0x000000        0x198
+.debug_aranges    0x000000        0x180
  *(.debug_aranges)
  .debug_aranges
                   0x000000         0x18 build/Pickit/debug/Driver/driver.o
@@ -1057,8 +984,134 @@ userdata
                   0x000150         0x18 build/Pickit/debug/System/shell_sbin.o
  .debug_aranges
                   0x000168         0x18 build/Pickit/debug/System/file.o
- .debug_aranges
-                  0x000180         0x18 build/Pickit/debug/System/error.o
+
+.ivt              0x000004         0x7c
+                  0x000004          0x4 LONG 0x1da DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt)
+                  0x000006          0x4 LONG 0x1da DEFINED (__OscillatorFail)?ABSOLUTE (__OscillatorFail):ABSOLUTE (__DefaultInterrupt)
+                  0x000008          0x4 LONG 0x1da DEFINED (__AddressError)?ABSOLUTE (__AddressError):ABSOLUTE (__DefaultInterrupt)
+                  0x00000a          0x4 LONG 0x1da DEFINED (__StackError)?ABSOLUTE (__StackError):ABSOLUTE (__DefaultInterrupt)
+                  0x00000c          0x4 LONG 0x1da DEFINED (__MathError)?ABSOLUTE (__MathError):ABSOLUTE (__DefaultInterrupt)
+                  0x00000e          0x4 LONG 0x1da DEFINED (__ReservedTrap5)?ABSOLUTE (__ReservedTrap5):ABSOLUTE (__DefaultInterrupt)
+                  0x000010          0x4 LONG 0x1da DEFINED (__ReservedTrap6)?ABSOLUTE (__ReservedTrap6):ABSOLUTE (__DefaultInterrupt)
+                  0x000012          0x4 LONG 0x1da DEFINED (__ReservedTrap7)?ABSOLUTE (__ReservedTrap7):ABSOLUTE (__DefaultInterrupt)
+                  0x000014          0x4 LONG 0x1da DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000016          0x4 LONG 0x1da DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000018          0x4 LONG 0x1da DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001a          0x4 LONG 0x1da DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001c          0x4 LONG 0x1da DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001e          0x4 LONG 0x1da DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000020          0x4 LONG 0x1da DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000022          0x4 LONG 0x1da DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000024          0x4 LONG 0x1da DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000026          0x4 LONG 0x1ca6 DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000028          0x4 LONG 0x1d12 DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002a          0x4 LONG 0x1da DEFINED (__ADCInterrupt)?ABSOLUTE (__ADCInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002c          0x4 LONG 0x1da DEFINED (__NVMInterrupt)?ABSOLUTE (__NVMInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002e          0x4 LONG 0x1da DEFINED (__SI2CInterrupt)?ABSOLUTE (__SI2CInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000030          0x4 LONG 0x1da DEFINED (__MI2CInterrupt)?ABSOLUTE (__MI2CInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000032          0x4 LONG 0x1da DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000034          0x4 LONG 0x1da DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000036          0x4 LONG 0x1da DEFINED (__IC7Interrupt)?ABSOLUTE (__IC7Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000038          0x4 LONG 0x1da DEFINED (__IC8Interrupt)?ABSOLUTE (__IC8Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00003a          0x4 LONG 0x1da DEFINED (__OC3Interrupt)?ABSOLUTE (__OC3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00003c          0x4 LONG 0x1da DEFINED (__OC4Interrupt)?ABSOLUTE (__OC4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00003e          0x4 LONG 0x1da DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000040          0x4 LONG 0x1da DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000042          0x4 LONG 0x1da DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000044          0x4 LONG 0x1da DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000046          0x4 LONG 0x1da DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000048          0x4 LONG 0x1da DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00004a          0x4 LONG 0x1da DEFINED (__C1Interrupt)?ABSOLUTE (__C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00004c          0x4 LONG 0x1da DEFINED (__IC3Interrupt)?ABSOLUTE (__IC3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00004e          0x4 LONG 0x1da DEFINED (__IC4Interrupt)?ABSOLUTE (__IC4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000050          0x4 LONG 0x1da DEFINED (__IC5Interrupt)?ABSOLUTE (__IC5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000052          0x4 LONG 0x1da DEFINED (__IC6Interrupt)?ABSOLUTE (__IC6Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000054          0x4 LONG 0x1da DEFINED (__OC5Interrupt)?ABSOLUTE (__OC5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000056          0x4 LONG 0x1da DEFINED (__OC6Interrupt)?ABSOLUTE (__OC6Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000058          0x4 LONG 0x1da DEFINED (__OC7Interrupt)?ABSOLUTE (__OC7Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00005a          0x4 LONG 0x1da DEFINED (__OC8Interrupt)?ABSOLUTE (__OC8Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00005c          0x4 LONG 0x1da DEFINED (__INT3Interrupt)?ABSOLUTE (__INT3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00005e          0x4 LONG 0x1da DEFINED (__INT4Interrupt)?ABSOLUTE (__INT4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000060          0x4 LONG 0x1da DEFINED (__C2Interrupt)?ABSOLUTE (__C2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000062          0x4 LONG 0x210e DEFINED (__PWMInterrupt)?ABSOLUTE (__PWMInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000064          0x4 LONG 0x1da DEFINED (__QEIInterrupt)?ABSOLUTE (__QEIInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000066          0x4 LONG 0x1da DEFINED (__DCIInterrupt)?ABSOLUTE (__DCIInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000068          0x4 LONG 0x1da DEFINED (__LVDInterrupt)?ABSOLUTE (__LVDInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00006a          0x4 LONG 0x1da DEFINED (__FLTAInterrupt)?ABSOLUTE (__FLTAInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00006c          0x4 LONG 0x1da DEFINED (__FLTBInterrupt)?ABSOLUTE (__FLTBInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00006e          0x4 LONG 0x1da DEFINED (__Interrupt45)?ABSOLUTE (__Interrupt45):ABSOLUTE (__DefaultInterrupt)
+                  0x000070          0x4 LONG 0x1da DEFINED (__Interrupt46)?ABSOLUTE (__Interrupt46):ABSOLUTE (__DefaultInterrupt)
+                  0x000072          0x4 LONG 0x1da DEFINED (__Interrupt47)?ABSOLUTE (__Interrupt47):ABSOLUTE (__DefaultInterrupt)
+                  0x000074          0x4 LONG 0x1da DEFINED (__Interrupt48)?ABSOLUTE (__Interrupt48):ABSOLUTE (__DefaultInterrupt)
+                  0x000076          0x4 LONG 0x1da DEFINED (__Interrupt49)?ABSOLUTE (__Interrupt49):ABSOLUTE (__DefaultInterrupt)
+                  0x000078          0x4 LONG 0x1da DEFINED (__Interrupt50)?ABSOLUTE (__Interrupt50):ABSOLUTE (__DefaultInterrupt)
+                  0x00007a          0x4 LONG 0x1da DEFINED (__Interrupt51)?ABSOLUTE (__Interrupt51):ABSOLUTE (__DefaultInterrupt)
+                  0x00007c          0x4 LONG 0x1da DEFINED (__Interrupt52)?ABSOLUTE (__Interrupt52):ABSOLUTE (__DefaultInterrupt)
+                  0x00007e          0x4 LONG 0x1da DEFINED (__Interrupt53)?ABSOLUTE (__Interrupt53):ABSOLUTE (__DefaultInterrupt)
+
+.aivt             0x000084         0x7c
+                  0x000084          0x4 LONG 0x1da DEFINED (__AltReservedTrap0)?ABSOLUTE (__AltReservedTrap0):DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt)
+                  0x000086          0x4 LONG 0x1da DEFINED (__AltOscillatorFail)?ABSOLUTE (__AltOscillatorFail):DEFINED (__OscillatorFail)?ABSOLUTE (__OscillatorFail):ABSOLUTE (__DefaultInterrupt)
+                  0x000088          0x4 LONG 0x1da DEFINED (__AltAddressError)?ABSOLUTE (__AltAddressError):DEFINED (__AddressError)?ABSOLUTE (__AddressError):ABSOLUTE (__DefaultInterrupt)
+                  0x00008a          0x4 LONG 0x1da DEFINED (__AltStackError)?ABSOLUTE (__AltStackError):DEFINED (__StackError)?ABSOLUTE (__StackError):ABSOLUTE (__DefaultInterrupt)
+                  0x00008c          0x4 LONG 0x1da DEFINED (__AltMathError)?ABSOLUTE (__AltMathError):DEFINED (__MathError)?ABSOLUTE (__MathError):ABSOLUTE (__DefaultInterrupt)
+                  0x00008e          0x4 LONG 0x1da DEFINED (__AltReservedTrap5)?ABSOLUTE (__AltReservedTrap5):DEFINED (__ReservedTrap5)?ABSOLUTE (__ReservedTrap5):ABSOLUTE (__DefaultInterrupt)
+                  0x000090          0x4 LONG 0x1da DEFINED (__AltReservedTrap6)?ABSOLUTE (__AltReservedTrap6):DEFINED (__ReservedTrap6)?ABSOLUTE (__ReservedTrap6):ABSOLUTE (__DefaultInterrupt)
+                  0x000092          0x4 LONG 0x1da DEFINED (__AltReservedTrap7)?ABSOLUTE (__AltReservedTrap7):DEFINED (__ReservedTrap7)?ABSOLUTE (__ReservedTrap7):ABSOLUTE (__DefaultInterrupt)
+                  0x000094          0x4 LONG 0x1da DEFINED (__AltINT0Interrupt)?ABSOLUTE (__AltINT0Interrupt):DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000096          0x4 LONG 0x1da DEFINED (__AltIC1Interrupt)?ABSOLUTE (__AltIC1Interrupt):DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000098          0x4 LONG 0x1da DEFINED (__AltOC1Interrupt)?ABSOLUTE (__AltOC1Interrupt):DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00009a          0x4 LONG 0x1da DEFINED (__AltT1Interrupt)?ABSOLUTE (__AltT1Interrupt):DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00009c          0x4 LONG 0x1da DEFINED (__AltIC2Interrupt)?ABSOLUTE (__AltIC2Interrupt):DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00009e          0x4 LONG 0x1da DEFINED (__AltOC2Interrupt)?ABSOLUTE (__AltOC2Interrupt):DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a0          0x4 LONG 0x1da DEFINED (__AltT2Interrupt)?ABSOLUTE (__AltT2Interrupt):DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a2          0x4 LONG 0x1da DEFINED (__AltT3Interrupt)?ABSOLUTE (__AltT3Interrupt):DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a4          0x4 LONG 0x1da DEFINED (__AltSPI1Interrupt)?ABSOLUTE (__AltSPI1Interrupt):DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a6          0x4 LONG 0x1ca6 DEFINED (__AltU1RXInterrupt)?ABSOLUTE (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a8          0x4 LONG 0x1d12 DEFINED (__AltU1TXInterrupt)?ABSOLUTE (__AltU1TXInterrupt):DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000aa          0x4 LONG 0x1da DEFINED (__AltADCInterrupt)?ABSOLUTE (__AltADCInterrupt):DEFINED (__ADCInterrupt)?ABSOLUTE (__ADCInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ac          0x4 LONG 0x1da DEFINED (__AltNVMInterrupt)?ABSOLUTE (__AltNVMInterrupt):DEFINED (__NVMInterrupt)?ABSOLUTE (__NVMInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ae          0x4 LONG 0x1da DEFINED (__AltSI2CInterrupt)?ABSOLUTE (__AltSI2CInterrupt):DEFINED (__SI2CInterrupt)?ABSOLUTE (__SI2CInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b0          0x4 LONG 0x1da DEFINED (__AltMI2CInterrupt)?ABSOLUTE (__AltMI2CInterrupt):DEFINED (__MI2CInterrupt)?ABSOLUTE (__MI2CInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b2          0x4 LONG 0x1da DEFINED (__AltCNInterrupt)?ABSOLUTE (__AltCNInterrupt):DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b4          0x4 LONG 0x1da DEFINED (__AltINT1Interrupt)?ABSOLUTE (__AltINT1Interrupt):DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b6          0x4 LONG 0x1da DEFINED (__AltIC7Interrupt)?ABSOLUTE (__AltIC7Interrupt):DEFINED (__IC7Interrupt)?ABSOLUTE (__IC7Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b8          0x4 LONG 0x1da DEFINED (__AltIC8Interrupt)?ABSOLUTE (__AltIC8Interrupt):DEFINED (__IC8Interrupt)?ABSOLUTE (__IC8Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ba          0x4 LONG 0x1da DEFINED (__AltOC3Interrupt)?ABSOLUTE (__AltOC3Interrupt):DEFINED (__OC3Interrupt)?ABSOLUTE (__OC3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000bc          0x4 LONG 0x1da DEFINED (__AltOC4Interrupt)?ABSOLUTE (__AltOC4Interrupt):DEFINED (__OC4Interrupt)?ABSOLUTE (__OC4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000be          0x4 LONG 0x1da DEFINED (__AltT4Interrupt)?ABSOLUTE (__AltT4Interrupt):DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c0          0x4 LONG 0x1da DEFINED (__AltT5Interrupt)?ABSOLUTE (__AltT5Interrupt):DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c2          0x4 LONG 0x1da DEFINED (__AltINT2Interrupt)?ABSOLUTE (__AltINT2Interrupt):DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c4          0x4 LONG 0x1da DEFINED (__AltU2RXInterrupt)?ABSOLUTE (__AltU2RXInterrupt):DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c6          0x4 LONG 0x1da DEFINED (__AltU2TXInterrupt)?ABSOLUTE (__AltU2TXInterrupt):DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c8          0x4 LONG 0x1da DEFINED (__AltSPI2Interrupt)?ABSOLUTE (__AltSPI2Interrupt):DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ca          0x4 LONG 0x1da DEFINED (__AltC1Interrupt)?ABSOLUTE (__AltC1Interrupt):DEFINED (__C1Interrupt)?ABSOLUTE (__C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000cc          0x4 LONG 0x1da DEFINED (__AltIC3Interrupt)?ABSOLUTE (__AltIC3Interrupt):DEFINED (__IC3Interrupt)?ABSOLUTE (__IC3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ce          0x4 LONG 0x1da DEFINED (__AltIC4Interrupt)?ABSOLUTE (__AltIC4Interrupt):DEFINED (__IC4Interrupt)?ABSOLUTE (__IC4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d0          0x4 LONG 0x1da DEFINED (__AltIC5Interrupt)?ABSOLUTE (__AltIC5Interrupt):DEFINED (__IC5Interrupt)?ABSOLUTE (__IC5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d2          0x4 LONG 0x1da DEFINED (__AltIC6Interrupt)?ABSOLUTE (__AltIC6Interrupt):DEFINED (__IC6Interrupt)?ABSOLUTE (__IC6Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d4          0x4 LONG 0x1da DEFINED (__AltOC5Interrupt)?ABSOLUTE (__AltOC5Interrupt):DEFINED (__OC5Interrupt)?ABSOLUTE (__OC5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d6          0x4 LONG 0x1da DEFINED (__AltOC6Interrupt)?ABSOLUTE (__AltOC6Interrupt):DEFINED (__OC6Interrupt)?ABSOLUTE (__OC6Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d8          0x4 LONG 0x1da DEFINED (__AltOC7Interrupt)?ABSOLUTE (__AltOC7Interrupt):DEFINED (__OC7Interrupt)?ABSOLUTE (__OC7Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000da          0x4 LONG 0x1da DEFINED (__AltOC8Interrupt)?ABSOLUTE (__AltOC8Interrupt):DEFINED (__OC8Interrupt)?ABSOLUTE (__OC8Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000dc          0x4 LONG 0x1da DEFINED (__AltINT3Interrupt)?ABSOLUTE (__AltINT3Interrupt):DEFINED (__INT3Interrupt)?ABSOLUTE (__INT3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000de          0x4 LONG 0x1da DEFINED (__AltINT4Interrupt)?ABSOLUTE (__AltINT4Interrupt):DEFINED (__INT4Interrupt)?ABSOLUTE (__INT4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e0          0x4 LONG 0x1da DEFINED (__AltC2Interrupt)?ABSOLUTE (__AltC2Interrupt):DEFINED (__C2Interrupt)?ABSOLUTE (__C2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e2          0x4 LONG 0x210e DEFINED (__AltPWMInterrupt)?ABSOLUTE (__AltPWMInterrupt):DEFINED (__PWMInterrupt)?ABSOLUTE (__PWMInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e4          0x4 LONG 0x1da DEFINED (__AltQEIInterrupt)?ABSOLUTE (__AltQEIInterrupt):DEFINED (__QEIInterrupt)?ABSOLUTE (__QEIInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e6          0x4 LONG 0x1da DEFINED (__AltDCIInterrupt)?ABSOLUTE (__AltDCIInterrupt):DEFINED (__DCIInterrupt)?ABSOLUTE (__DCIInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e8          0x4 LONG 0x1da DEFINED (__AltLVDInterrupt)?ABSOLUTE (__AltLVDInterrupt):DEFINED (__LVDInterrupt)?ABSOLUTE (__LVDInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ea          0x4 LONG 0x1da DEFINED (__AltFLTAInterrupt)?ABSOLUTE (__AltFLTAInterrupt):DEFINED (__FLTAInterrupt)?ABSOLUTE (__FLTAInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ec          0x4 LONG 0x1da DEFINED (__AltFLTBInterrupt)?ABSOLUTE (__AltFLTBInterrupt):DEFINED (__FLTBInterrupt)?ABSOLUTE (__FLTBInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ee          0x4 LONG 0x1da DEFINED (__AltInterrupt45)?ABSOLUTE (__AltInterrupt45):DEFINED (__Interrupt45)?ABSOLUTE (__Interrupt45):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f0          0x4 LONG 0x1da DEFINED (__AltInterrupt46)?ABSOLUTE (__AltInterrupt46):DEFINED (__Interrupt46)?ABSOLUTE (__Interrupt46):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f2          0x4 LONG 0x1da DEFINED (__AltInterrupt47)?ABSOLUTE (__AltInterrupt47):DEFINED (__Interrupt47)?ABSOLUTE (__Interrupt47):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f4          0x4 LONG 0x1da DEFINED (__AltInterrupt48)?ABSOLUTE (__AltInterrupt48):DEFINED (__Interrupt48)?ABSOLUTE (__Interrupt48):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f6          0x4 LONG 0x1da DEFINED (__AltInterrupt49)?ABSOLUTE (__AltInterrupt49):DEFINED (__Interrupt49)?ABSOLUTE (__Interrupt49):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f8          0x4 LONG 0x1da DEFINED (__AltInterrupt50)?ABSOLUTE (__AltInterrupt50):DEFINED (__Interrupt50)?ABSOLUTE (__Interrupt50):ABSOLUTE (__DefaultInterrupt)
+                  0x0000fa          0x4 LONG 0x1da DEFINED (__AltInterrupt51)?ABSOLUTE (__AltInterrupt51):DEFINED (__Interrupt51)?ABSOLUTE (__Interrupt51):ABSOLUTE (__DefaultInterrupt)
+                  0x0000fc          0x4 LONG 0x1da DEFINED (__AltInterrupt52)?ABSOLUTE (__AltInterrupt52):DEFINED (__Interrupt52)?ABSOLUTE (__Interrupt52):ABSOLUTE (__DefaultInterrupt)
+                  0x0000fe          0x4 LONG 0x1da DEFINED (__AltInterrupt53)?ABSOLUTE (__AltInterrupt53):DEFINED (__Interrupt53)?ABSOLUTE (__Interrupt53):ABSOLUTE (__DefaultInterrupt)
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -1722,195 +1775,180 @@ userdata
                     0x020c                  UART1 = 0x20c
                     0x020c                  _UART1 = 0x20c
 START GROUP
-LOAD c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a
-LOAD c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a
-LOAD c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a
+LOAD c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfx-elf.a
+LOAD c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a
+LOAD c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a
+LOAD c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a
 END GROUP
 OUTPUT(dist/Pickit/debug/MDU_COMON.X.debug.elf elf32-pic30)
-LOAD FGS
 LOAD jump_table
 LOAD default_isr
 LOAD data_init
-LOAD shared_data_init
 
 .debug_pubtypes
-                  0x000198        0x86e
+                  0x000180        0x834
  .debug_pubtypes
-                  0x000198         0x33 build/Pickit/debug/Driver/driver.o
+                  0x000180         0x33 build/Pickit/debug/Driver/driver.o
  .debug_pubtypes
-                  0x0001cb         0x6e build/Pickit/debug/Driver/eeprom.o
+                  0x0001b3         0x6e build/Pickit/debug/Driver/eeprom.o
  .debug_pubtypes
-                  0x000239         0xb6 build/Pickit/debug/Driver/encoder.o
+                  0x000221         0xb6 build/Pickit/debug/Driver/encoder.o
  .debug_pubtypes
-                  0x0002ef        0x17a build/Pickit/debug/Driver/ports.o
+                  0x0002d7        0x17a build/Pickit/debug/Driver/ports.o
  .debug_pubtypes
-                  0x000469        0x13b build/Pickit/debug/Driver/pwm.o
+                  0x000451        0x13b build/Pickit/debug/Driver/pwm.o
  .debug_pubtypes
-                  0x0005a4        0x126 build/Pickit/debug/Driver/uart.o
+                  0x00058c        0x126 build/Pickit/debug/Driver/uart.o
  .debug_pubtypes
-                  0x0006ca         0x63 build/Pickit/debug/Driver/timer.o
+                  0x0006b2         0x63 build/Pickit/debug/Driver/timer.o
  .debug_pubtypes
-                  0x00072d         0x12 build/Pickit/debug/Setting/configuration.o
+                  0x000715         0x12 build/Pickit/debug/Setting/configuration.o
  .debug_pubtypes
-                  0x00073f         0x12 build/Pickit/debug/main.o
+                  0x000727         0x12 build/Pickit/debug/main.o
  .debug_pubtypes
-                  0x000751         0x12 build/Pickit/debug/Setting/types.o
+                  0x000739         0x12 build/Pickit/debug/Setting/types.o
  .debug_pubtypes
-                  0x000763         0x44 build/Pickit/debug/System/shell.o
+                  0x00074b         0x44 build/Pickit/debug/System/shell.o
  .debug_pubtypes
-                  0x0007a7         0x72 build/Pickit/debug/System/shell_bin.o
+                  0x00078f         0x72 build/Pickit/debug/System/shell_bin.o
  .debug_pubtypes
-                  0x000819         0x8e build/Pickit/debug/System/shell_core.o
+                  0x000801         0x8e build/Pickit/debug/System/shell_core.o
  .debug_pubtypes
-                  0x0008a7         0x12 build/Pickit/debug/System/system.o
+                  0x00088f         0x12 build/Pickit/debug/System/system.o
  .debug_pubtypes
-                  0x0008b9         0x43 build/Pickit/debug/System/motor.o
+                  0x0008a1         0x43 build/Pickit/debug/System/motor.o
  .debug_pubtypes
-                  0x0008fc         0x7e build/Pickit/debug/System/shell_sbin.o
+                  0x0008e4         0x7e build/Pickit/debug/System/shell_sbin.o
  .debug_pubtypes
-                  0x00097a         0x52 build/Pickit/debug/System/file.o
- .debug_pubtypes
-                  0x0009cc         0x3a build/Pickit/debug/System/error.o
+                  0x000962         0x52 build/Pickit/debug/System/file.o
 
 __c30_signature
-                  0x000a06        0x10e
+                  0x0009b4        0x10e
  __c30_signature
-                  0x000a06          0x6 build/Pickit/debug/Driver/driver.o
+                  0x0009b4          0x6 build/Pickit/debug/Driver/driver.o
  __c30_signature
-                  0x000a0c          0x6 build/Pickit/debug/Driver/eeprom.o
+                  0x0009ba          0x6 build/Pickit/debug/Driver/eeprom.o
  __c30_signature
-                  0x000a12          0x6 build/Pickit/debug/Driver/encoder.o
+                  0x0009c0          0x6 build/Pickit/debug/Driver/encoder.o
  __c30_signature
-                  0x000a18          0x6 build/Pickit/debug/Driver/ports.o
+                  0x0009c6          0x6 build/Pickit/debug/Driver/ports.o
  __c30_signature
-                  0x000a1e          0x6 build/Pickit/debug/Driver/pwm.o
+                  0x0009cc          0x6 build/Pickit/debug/Driver/pwm.o
  __c30_signature
-                  0x000a24          0x6 build/Pickit/debug/Driver/uart.o
+                  0x0009d2          0x6 build/Pickit/debug/Driver/uart.o
  __c30_signature
-                  0x000a2a          0x6 build/Pickit/debug/Driver/timer.o
+                  0x0009d8          0x6 build/Pickit/debug/Driver/timer.o
  __c30_signature
-                  0x000a30          0x6 build/Pickit/debug/Setting/configuration.o
+                  0x0009de          0x6 build/Pickit/debug/Setting/configuration.o
  __c30_signature
-                  0x000a36          0x6 build/Pickit/debug/main.o
+                  0x0009e4          0x6 build/Pickit/debug/main.o
  __c30_signature
-                  0x000a3c          0x6 build/Pickit/debug/Setting/types.o
+                  0x0009ea          0x6 build/Pickit/debug/Setting/types.o
  __c30_signature
-                  0x000a42          0x6 build/Pickit/debug/System/shell.o
+                  0x0009f0          0x6 build/Pickit/debug/System/shell.o
  __c30_signature
-                  0x000a48          0x6 build/Pickit/debug/System/shell_bin.o
+                  0x0009f6          0x6 build/Pickit/debug/System/shell_bin.o
  __c30_signature
-                  0x000a4e          0x6 build/Pickit/debug/System/shell_core.o
+                  0x0009fc          0x6 build/Pickit/debug/System/shell_core.o
  __c30_signature
-                  0x000a54          0x6 build/Pickit/debug/System/system.o
+                  0x000a02          0x6 build/Pickit/debug/System/system.o
  __c30_signature
-                  0x000a5a          0x6 build/Pickit/debug/System/motor.o
+                  0x000a08          0x6 build/Pickit/debug/System/motor.o
  __c30_signature
-                  0x000a60          0x6 build/Pickit/debug/System/shell_sbin.o
+                  0x000a0e          0x6 build/Pickit/debug/System/shell_sbin.o
  __c30_signature
-                  0x000a66          0x6 build/Pickit/debug/System/file.o
+                  0x000a14          0x6 build/Pickit/debug/System/file.o
  __c30_signature
-                  0x000a6c          0x6 build/Pickit/debug/System/error.o
+                  0x000a1a          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x000a72          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
+                  0x000a20          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x000a78          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
+                  0x000a26          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a(eedata_helper.eo)
  __c30_signature
-                  0x000a7e          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(eedata_helper.eo)
+                  0x000a2c          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fixsfsi.eo)
  __c30_signature
-                  0x000a84          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fixsfsi.eo)
+                  0x000a32          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(funpack.eo)
  __c30_signature
-                  0x000a8a          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(funpack.eo)
+                  0x000a38          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atof.eo)
  __c30_signature
-                  0x000a90          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atof.eo)
+                  0x000a3e          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(atoi.eo)
  __c30_signature
-                  0x000a96          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(atoi.eo)
+                  0x000a44          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(errno.eo)
  __c30_signature
-                  0x000a9c          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(exit.eo)
+                  0x000a4a          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(exit.eo)
  __c30_signature
-                  0x000aa2          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(itoa.eo)
+                  0x000a50          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(itoa.eo)
  __c30_signature
-                  0x000aa8          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(stdclean.eo)
+                  0x000a56          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(stdclean.eo)
  __c30_signature
-                  0x000aae          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcmp.eo)
+                  0x000a5c          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strcmp.eo)
  __c30_signature
-                  0x000ab4          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcpy.eo)
+                  0x000a62          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strcpy.eo)
  __c30_signature
-                  0x000aba          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strlen.eo)
+                  0x000a68          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strlen.eo)
  __c30_signature
-                  0x000ac0          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strtok.eo)
+                  0x000a6e          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strtok.eo)
  __c30_signature
-                  0x000ac6          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strcspn.eo)
+                  0x000a74          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strcspn.elo)
  __c30_signature
-                  0x000acc          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strspn.eo)
+                  0x000a7a          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strspn.elo)
  __c30_signature
-                  0x000ad2          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strchr.elo)
+                  0x000a80          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strchr.eo)
  __c30_signature
-                  0x000ad8          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libpic30-elf.a(_exit.eo)
+                  0x000a86          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libpic30-elf.a(_exit.eo)
  __c30_signature
-                  0x000ade          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(feqltle.eo)
+                  0x000a8c          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(feqltle.eo)
  __c30_signature
-                  0x000ae4          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fgtge.eo)
+                  0x000a92          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fgtge.eo)
  __c30_signature
-                  0x000aea          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(floatsisf.eo)
+                  0x000a98          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(floatsisf.eo)
  __c30_signature
-                  0x000af0          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(mulsi3.eo)
+                  0x000a9e          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(mulsi3.eo)
  __c30_signature
-                  0x000af6          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fcompare.eo)
+                  0x000aa4          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fcompare.eo)
  __c30_signature
-                  0x000afc          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(floatdisf.eo)
+                  0x000aaa          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(floatdisf.eo)
  __c30_signature
-                  0x000b02          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(floatundisf.eo)
+                  0x000ab0          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(floatundisf.eo)
  __c30_signature
-                  0x000b08          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(fpack.eo)
+                  0x000ab6          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(fpack.eo)
  __c30_signature
-                  0x000b0e          0x6 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libfastm-elf.a(funpack2.eo)
+                  0x000abc          0x6 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libfastm-elf.a(funpack2.eo)
 
-.nbss               0x0850        0x22e
- .nbss              0x0850        0x142 build/Pickit/debug/System/file.o
- .nbss              0x0992         0x8c build/Pickit/debug/Driver/uart.o
- .nbss              0x0a1e         0x46 build/Pickit/debug/Driver/eeprom.o
-                    0x0a1e                  _fb
- .nbss              0x0a64         0x1a build/Pickit/debug/System/shell_core.o
-                    0x0a64                  _current
-                    0x0a66                  _root
-                    0x0a68                  _lst_quick
+.nbss               0x0800        0x22e
+ .nbss              0x0800        0x142 build/Pickit/debug/System/file.o
+ .nbss              0x0942         0x8c build/Pickit/debug/Driver/uart.o
+ .nbss              0x09ce         0x46 build/Pickit/debug/Driver/eeprom.o
+                    0x09ce                  _fb
+ .nbss              0x0a14         0x1a build/Pickit/debug/System/shell_core.o
+                    0x0a14                  _current
+                    0x0a16                  _root
+                    0x0a18                  _lst_quick
 
-.ndata              0x0a7e         0x12
- .ndata             0x0a7e          0xa build/Pickit/debug/Driver/pwm.o
- .ndata             0x0a88          0x8 build/Pickit/debug/Driver/encoder.o
+.ndata              0x0a2e         0x12
+ .ndata             0x0a2e          0xa build/Pickit/debug/Driver/pwm.o
+ .ndata             0x0a38          0x8 build/Pickit/debug/Driver/encoder.o
 
-.nbss               0x0a90          0xc
- .nbss              0x0a90          0x6 build/Pickit/debug/Driver/encoder.o
- .nbss              0x0a96          0x6 build/Pickit/debug/Driver/timer.o
+.nbss               0x0a40          0xc
+ .nbss              0x0a40          0x6 build/Pickit/debug/Driver/encoder.o
+ .nbss              0x0a46          0x6 build/Pickit/debug/Driver/timer.o
 
-.ndata              0x0a9c          0x6
- .ndata             0x0a9c          0x4 build/Pickit/debug/System/shell.o
- .ndata             0x0aa0          0x2 build/Pickit/debug/System/shell_sbin.o
+.ndata              0x0a4c          0x6
+ .ndata             0x0a4c          0x4 build/Pickit/debug/System/shell.o
+ .ndata             0x0a50          0x2 build/Pickit/debug/System/shell_sbin.o
 
-.nbss               0x0aa2          0x2
- .nbss              0x0aa2          0x2 build/Pickit/debug/System/error.o
-                    0x0aa2                  _errno
-
-.bss                0x0aa4          0x2
- .bss               0x0aa4          0x2 c:/program files (x86)/microchip/xc16/v1.26/bin/bin/../../lib\libc-elf.a(strtok.eo)
-
-.ivt._PWMInterrupt
-                  0x000062          0x2
- .ivt._PWMInterrupt
-                  0x000062          0x2 build/Pickit/debug/Driver/encoder.o
-
-.ivt._U1RXInterrupt
-                  0x000026          0x2
- .ivt._U1RXInterrupt
-                  0x000026          0x2 build/Pickit/debug/Driver/uart.o
-
-.ivt._U1TXInterrupt
-                  0x000028          0x2
- .ivt._U1TXInterrupt
-                  0x000028          0x2 build/Pickit/debug/Driver/uart.o
+.bss                0x0a52          0x6
+ .bss               0x0a52          0x2 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(errno.eo)
+                    0x0a52                  _errno
+ .bss               0x0a54          0x2 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(stdclean.eo)
+                    0x0a54                  __atexitptr
+ .bss               0x0a56          0x2 c:/program files (x86)/microchip/xc16/v1.22/bin/bin/../../lib\libc-elf.a(strtok.eo)
 
 .config_ICS       0xf8000c          0x2
  .config_ICS      0xf8000c          0x2 build/Pickit/debug/Setting/configuration.o
+
+.config_GCP       0xf8000a          0x2
+ .config_GCP      0xf8000a          0x2 build/Pickit/debug/Setting/configuration.o
 
 .config_MCLRE     0xf80004          0x2
  .config_MCLRE    0xf80004          0x2 build/Pickit/debug/Setting/configuration.o
@@ -1923,192 +1961,167 @@ __c30_signature
  .config_FCKSMEN
                   0xf80000          0x2 build/Pickit/debug/Setting/configuration.o
 
-_03da506057dc3162
-                    0x8cc2         0x9a load address 0x000cc2  
- _03da506057dc3162
-                    0x8cc2         0x9a build/Pickit/debug/System/error.o
+.const              0x8cfc        0x132 load address 0x000cfc  
+ .const             0x8cfc         0xca build/Pickit/debug/System/shell_bin.o
+ .const             0x8dc6         0x1e build/Pickit/debug/System/shell_sbin.o
+ .const             0x8de4         0x1a build/Pickit/debug/System/shell_core.o
+ .const             0x8dfe         0x18 build/Pickit/debug/Driver/eeprom.o
+ .const             0x8e16          0xa build/Pickit/debug/System/shell.o
+ .const             0x8e20          0x8 build/Pickit/debug/System/motor.o
+ .const             0x8e28          0x4 build/Pickit/debug/Driver/timer.o
+ .const             0x8e2c          0x2 build/Pickit/debug/Driver/encoder.o
+                    0x8e2c                  _pos
 
-_0486e72057dc315e
-                    0x8d5c         0x60 load address 0x000d5c  
- _0486e72057dc315e
-                    0x8d5c         0x60 build/Pickit/debug/System/shell_bin.o
-
-.const              0x8dbc         0x8e load address 0x000dbc  
- .const             0x8dbc         0x3e build/Pickit/debug/System/shell_bin.o
- .const             0x8dfa         0x1a build/Pickit/debug/System/shell_core.o
- .const             0x8e14         0x18 build/Pickit/debug/Driver/eeprom.o
- .const             0x8e2c          0xa build/Pickit/debug/System/shell.o
- .const             0x8e36          0x8 build/Pickit/debug/System/motor.o
- .const             0x8e3e          0x6 build/Pickit/debug/System/shell_sbin.o
- .const             0x8e44          0x4 build/Pickit/debug/Driver/timer.o
- .const             0x8e48          0x2 build/Pickit/debug/Driver/encoder.o
-                    0x8e48                  _pos
-
-_0473ef0057dc3161
-                    0x8e4a         0x10 load address 0x000e4a  
- _0473ef0057dc3161
-                    0x8e4a         0x10 build/Pickit/debug/System/shell_sbin.o
-
-_03da2de057dc3162
-                    0x8e5a          0x8 load address 0x000e5a  
- _03da2de057dc3162
-                    0x8e5a          0x8 build/Pickit/debug/System/error.o
-
-.text             0x000e62       0x158e
- .text            0x000e62        0x558 build/Pickit/debug/System/shell_core.o
-                  0x000e62                  _path_root
-                  0x000e6a                  _path_current
-                  0x000e72                  _path_move
-                  0x000e7e                  _path_init
-                  0x000e90                  _path_insert
-                  0x000ebe                  _path_access_get
-                  0x000ed6                  _path_access_set
-                  0x000ef8                  _path_filetype_get
-                  0x000f12                  _path_filetype_set
-                  0x000f36                  _path_get
-                  0x001038                  _path_get_registor
-                  0x001096                  _path_get_all
-                  0x0010c0                  _directory_create
+.text             0x000e2e       0x17b0
+ .text            0x000e2e        0x5c8 build/Pickit/debug/System/shell_core.o
+                  0x000e2e                  _path_root
+                  0x000e38                  _path_current
+                  0x000e42                  _path_move
+                  0x000e4e                  _path_init
+                  0x000e62                  _path_insert
+                  0x000e92                  _path_access_get
+                  0x000eac                  _path_access_set
+                  0x000ed2                  _path_filetype_get
+                  0x000eee                  _path_filetype_set
+                  0x000f16                  _path_get
+                  0x00102a                  _path_get_registor
+                  0x00108c                  _path_get_all
+                  0x0010bc                  _directory_create
                   0x0010e6                  _directory_insert
-                  0x00112a                  _directory_registor
-                  0x00116a                  _directory_registor_init
-                  0x00118a                  _shell_system
-                  0x00123a                  _shell_system_s
-                  0x001288                  _execute_create
-                  0x0012b0                  _integer_create
-                  0x0012e8                  _float_create
-                  0x001320                  _select_listen_set
-                  0x00132c                  _select_general_set
-                  0x001338                  _select_selected_set
-                  0x001344                  _select_listen
-                  0x001356                  _select_general
-                  0x001368                  _select_selected
-                  0x001380                  _directory_insert_excute
- .text            0x0013ba        0x4b0 build/Pickit/debug/System/shell_bin.o
-                  0x0013ba                  _bin_create
-                  0x0013d0                  _bin_exit
-                  0x0013de                  _bin_echo
-                  0x0013f8                  _bin_ls
-                  0x00149a                  _bin_pwd
-                  0x0014be                  _bin_tree_sub
-                  0x001520                  _bin_tree
-                  0x001536                  _bin_cd
-                  0x001576                  _bin_system
-                  0x0015b8                  _bin_set
-                  0x001674                  _bin_get
-                  0x001728                  _bin_loop
-                  0x0017ac                  _bin_delay
- .text            0x00186a        0x3f8 build/Pickit/debug/Driver/uart.o
-                  0x00186a                  _uart_setup
-                  0x0018f4                  _uart_depth
-                  0x0018fc                  _uart_find
-                  0x00192a                  _uart_seek
-                  0x001942                  _uart_remove
-                  0x00195a                  _uart_remove_all
-                  0x001962                  _uart_getc
-                  0x001998                  _uart_gets
-                  0x0019f4                  _uart_used
-                  0x0019fc                  _uart_full
-                  0x001a12                  _uart_bufc
-                  0x001a3c                  _uart_bufnl
-                  0x001a46                  _uart_bufs
-                  0x001a6a                  _uart_bufl
-                  0x001a7c                  _uart_flush
-                  0x001ace                  _uart_clr
-                  0x001adc                  _uart_stop
-                  0x001ae8                  _uart_begin
-                  0x001af6                  _uart_putc
-                  0x001b14                  _uart_putnl
-                  0x001b1e                  _uart_puts
-                  0x001b46                  _uart_putl
-                  0x001b72                  __U1RXInterrupt
-                  0x001bda                  __U1TXInterrupt
- .text            0x001c62        0x254 build/Pickit/debug/Driver/pwm.o
-                  0x001c62                  _pwm_setup
-                  0x001cfe                  _dt_limit
-                  0x001d20                  _pwm_dt_direct
-                  0x001d5e                  _pwm_dt
-                  0x001d90                  _pwm_dts
-                  0x001db4                  _set_pwm_period
-                  0x001e02                  _get_pwm_period
-                  0x001e0a                  _set_pwm_max
-                  0x001e34                  _get_pwm_max
-                  0x001e3c                  _set_pwm_min
-                  0x001e66                  _get_pwm_min
-                  0x001e6e                  _get_pwm_dt
-                  0x001e94                  _pwm_shutdown
- .text            0x001eb6        0x11a build/Pickit/debug/Driver/ports.o
-                  0x001eb6                  _ports_setup
-                  0x001ef4                  _port_address
-                  0x001f36                  _led_rx
-                  0x001f4c                  _port_get
-                  0x001f88                  _pin_encode_idx
-                  0x001fa0                  _pin_encode_x
-                  0x001fb8                  _pin_encode_y
- .text            0x001fd0        0x114 build/Pickit/debug/Driver/encoder.o
-                  0x001fd0                  _encoder_setup
-                  0x002036                  _encoder_raw
-                  0x00203e                  _encoder_speed_raw
-                  0x002046                  _encoder_spin_raw
-                  0x002056                  _encoder_direction
-                  0x00206e                  _encoder_period
-                  0x00209a                  _timer_flag
-                  0x0020a2                  __PWMInterrupt
-                  0x0020da                  _get_encoder_period
- .text            0x0020e4         0xf4 build/Pickit/debug/System/file.o
-                  0x0020e4                  _file_init
-                  0x002140                  _file_free
-                  0x00216e                  _file_used
-                  0x00217a                  _file_memory
-                  0x002182                  _file_create
-                  0x0021c2                  _file_delete
- .text            0x0021d8         0xc0 build/Pickit/debug/Driver/eeprom.o
-                  0x0021d8                  _eeprom_setup
-                  0x0021f2                  _eeprom_open
-                  0x00220e                  _eeprom_close
-                  0x002218                  _eeprom_putc
-                  0x00224a                  _eeprom_puts
-                  0x002270                  _eeprom_flush
- .text            0x002298         0x7e build/Pickit/debug/System/shell.o
-                  0x002298                  build/Pickit/debug/System/shell.o:_shell_listen
-                  0x0022b2                  build/Pickit/debug/System/shell.o:_shell_selected
-                  0x002302                  _shell_init
- .text            0x002316         0x70 build/Pickit/debug/Driver/timer.o
-                  0x002316                  _timer23_setup
-                  0x00233a                  _timer23_period
-                  0x00235e                  _timer23_enable
-                  0x00237e                  _timer23_check
- .text            0x002386         0x6a build/Pickit/debug/System/shell_sbin.o
-                  0x002392                  _sbin_create
-                  0x0023a8                  _sbin_rst
-                  0x0023b6                  _sbin_sel
+                  0x00112c                  _directory_registor
+                  0x00116e                  _directory_registor_init
+                  0x00118e                  _shell_system
+                  0x00124c                  _shell_system_s
+                  0x0012a8                  _execute_create
+                  0x0012d4                  _integer_create
+                  0x001314                  _float_create
+                  0x001354                  _select_listen_set
+                  0x001360                  _select_general_set
+                  0x00136c                  _select_selected_set
+                  0x001378                  _select_listen
+                  0x00138a                  _select_general
+                  0x00139c                  _select_selected
+                  0x0013b4                  _directory_insert_excute
+ .text            0x0013f6        0x570 build/Pickit/debug/System/shell_bin.o
+                  0x0013f6                  _bin_create
+                  0x001410                  _bin_exit
+                  0x00141e                  _bin_echo
+                  0x00143c                  _bin_ls
+                  0x0014f8                  _bin_pwd
+                  0x001522                  _bin_tree_sub
+                  0x00158a                  _bin_tree
+                  0x0015a4                  _bin_cd
+                  0x0015ee                  _bin_system
+                  0x001644                  _bin_set
+                  0x00171a                  _bin_get
+                  0x0017f0                  _bin_loop
+                  0x001882                  _bin_delay
+ .text            0x001966        0x438 build/Pickit/debug/Driver/uart.o
+                  0x001966                  _uart_setup
+                  0x0019f8                  _uart_depth
+                  0x001a02                  _uart_find
+                  0x001a32                  _uart_seek
+                  0x001a4c                  _uart_remove
+                  0x001a64                  _uart_remove_all
+                  0x001a6e                  _uart_getc
+                  0x001aa8                  _uart_gets
+                  0x001b06                  _uart_used
+                  0x001b10                  _uart_full
+                  0x001b28                  _uart_bufc
+                  0x001b54                  _uart_bufnl
+                  0x001b62                  _uart_bufs
+                  0x001b8a                  _uart_bufl
+                  0x001b9e                  _uart_flush
+                  0x001bf0                  _uart_clr
+                  0x001c02                  _uart_stop
+                  0x001c0e                  _uart_begin
+                  0x001c1c                  _uart_putc
+                  0x001c3c                  _uart_putnl
+                  0x001c4a                  _uart_puts
+                  0x001c76                  _uart_putl
+                  0x001ca6                  __U1RXInterrupt
+                  0x001d12                  __U1TXInterrupt
+ .text            0x001d9e        0x292 build/Pickit/debug/Driver/pwm.o
+                  0x001d9e                  _pwm_setup
+                  0x001e46                  _dt_limit
+                  0x001e6a                  _pwm_dt_direct
+                  0x001eb2                  _pwm_dt
+                  0x001ee8                  _pwm_dts
+                  0x001f0c                  _set_pwm_period
+                  0x001f66                  _get_pwm_period
+                  0x001f70                  _set_pwm_max
+                  0x001fa0                  _get_pwm_max
+                  0x001faa                  _set_pwm_min
+                  0x001fda                  _get_pwm_min
+                  0x001fe4                  _get_pwm_dt
+                  0x00200e                  _pwm_shutdown
+ .text            0x002030        0x12a build/Pickit/debug/Driver/encoder.o
+                  0x002030                  _encoder_setup
+                  0x002096                  _encoder_raw
+                  0x0020a0                  _encoder_speed_raw
+                  0x0020aa                  _encoder_spin_raw
+                  0x0020bc                  _encoder_direction
+                  0x0020d6                  _encoder_period
+                  0x002104                  _timer_flag
+                  0x00210e                  __PWMInterrupt
+                  0x00214e                  _get_encoder_period
+ .text            0x00215a        0x12a build/Pickit/debug/Driver/ports.o
+                  0x00215a                  _ports_setup
+                  0x002198                  _port_address
+                  0x0021dc                  _led_rx
+                  0x0021f4                  _port_get
+                  0x002236                  _pin_encode_idx
+                  0x002250                  _pin_encode_x
+                  0x00226a                  _pin_encode_y
+ .text            0x002284        0x100 build/Pickit/debug/System/file.o
+                  0x002284                  _file_init
+                  0x0022e2                  _file_free
+                  0x002312                  _file_used
+                  0x002322                  _file_memory
+                  0x00232c                  _file_create
+                  0x00236e                  _file_delete
+ .text            0x002384         0xce build/Pickit/debug/Driver/eeprom.o
+                  0x002384                  _eeprom_setup
+                  0x0023a0                  _eeprom_open
+                  0x0023be                  _eeprom_close
+                  0x0023ca                  _eeprom_putc
+                  0x0023fe                  _eeprom_puts
+                  0x002426                  _eeprom_flush
+ .text            0x002452         0x94 build/Pickit/debug/System/shell.o
+                  0x002452                  build/Pickit/debug/System/shell.o:_shell_listen
+                  0x002470                  build/Pickit/debug/System/shell.o:_shell_selected
+                  0x0024cc                  _shell_init
+ .text            0x0024e6         0x7c build/Pickit/debug/Driver/timer.o
+                  0x0024e6                  _timer23_setup
+                  0x002510                  _timer23_period
+                  0x002534                  _timer23_enable
+                  0x002558                  _timer23_check
+ .text            0x002562         0x7c build/Pickit/debug/System/shell_sbin.o
+                  0x002572                  _sbin_create
+                  0x00258c                  _sbin_rst
+                  0x00259c                  _sbin_sel
 
-.dinit            0x0023f0         0x5e
- .dinit           0x0023f0         0x5e data_init
+.dinit            0x0025de         0x64
+ .dinit           0x0025de         0x64 data_init
 
-.text             0x00244e        0x102
- .text            0x00244e         0x4e build/Pickit/debug/Driver/timer_asm.o
-                  0x00244e                  _delay_ns
-                  0x002460                  _delay_us
-                  0x00247e                  _delay_ms
- .text            0x00249c         0x4a build/Pickit/debug/System/motor.o
-                  0x00249c                  _motor_create
-                  0x0024b6                  _motor_dt
- .text            0x0024e6         0x22 build/Pickit/debug/Driver/driver.o
-                  0x0024e6                  _driver_setup
- .text            0x002508         0x20 build/Pickit/debug/System/system.o
-                  0x002508                  _system_setup
-                  0x002510                  _system_process
- .text            0x002528         0x1e build/Pickit/debug/System/error.o
-                  0x002528                  _error_print
- .text            0x002546          0xa build/Pickit/debug/main.o
-                  0x002546                  _main
+.text             0x002642         0xfc
+ .text            0x002642         0x5e build/Pickit/debug/System/motor.o
+                  0x002642                  _motor_create
+                  0x002662                  _motor_dt
+ .text            0x0026a0         0x4e build/Pickit/debug/Driver/timer_asm.o
+                  0x0026a0                  _delay_ns
+                  0x0026b2                  _delay_us
+                  0x0026d0                  _delay_ms
+ .text            0x0026ee         0x24 build/Pickit/debug/Driver/driver.o
+                  0x0026ee                  _driver_setup
+ .text            0x002712         0x22 build/Pickit/debug/System/system.o
+                  0x002712                  _system_setup
+                  0x00271a                  _system_process
+ .text            0x002734          0xa build/Pickit/debug/main.o
+                  0x002734                  _main
 
-.shared.dinit     0x002550          0x2
- .shared.dinit    0x002550          0x2 shared_data_init
-
-_0485496057dc315e
+_047DF8A05959f85a
                     0xfc00         0x80 load address 0x7ffc00  
- _0485496057dc315e
+ _047DF8A05959f85a
                     0xfc00         0x80 build/Pickit/debug/Driver/eeprom.o
                     0xfc00                  _system_file

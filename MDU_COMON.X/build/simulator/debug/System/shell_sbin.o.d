@@ -7,4 +7,6 @@ System/../Setting/types.h  \
 System/../Driver/uart.h  \
  System/../Driver/../Setting/types.h  \
 System/shell_core.h  \
- System/../Driver/ports.h 
+ System/../Driver/ports.h  \
+System/../Setting/configuration.h  \
+ System/../Setting/p30F4012.h 
