@@ -45,10 +45,10 @@ void ports_setup(){
 }
 
 inline uint16_t port_address(){
-    return  ((!PORTEbits.RE0)<<0)+
-            ((!PORTEbits.RE1)<<3)+
-            ((!PORTBbits.RB0)<<2)+
-            ((!PORTBbits.RB1)<<1);   
+    return  ((!SEL1())<<0)+
+            ((!SEL2())<<3)+
+            ((!SEL4())<<2)+
+            ((!SEL8())<<1);   
 }
 
 inline void led_rx(bool fag){
