@@ -1,2 +1,5 @@
 *.o
 *.d
+MDU_COMON.X/dist/Pickit/production/MDU_COMON.X.production.map
+MDU_COMON.X/dist/Pickit/production/MDU_COMON.X.production.elf
+MDU_COMON.X/dist/Pickit/production/MDU_COMON.X.production.hex
