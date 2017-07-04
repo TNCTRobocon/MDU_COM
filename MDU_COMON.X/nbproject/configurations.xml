@@ -12,6 +12,7 @@
         <itemPath>Driver/pwm.h</itemPath>
         <itemPath>Driver/uart.h</itemPath>
         <itemPath>Driver/timer.h</itemPath>
+        <itemPath>Driver/adc.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="Helper" projectFiles="true">
         <itemPath>Helper/dsp_helper.h</itemPath>
@@ -36,6 +37,11 @@
                    displayName="Linker Files"
                    projectFiles="true">
     </logicalFolder>
+    <logicalFolder name="f1" displayName="Reference" projectFiles="true">
+      <logicalFolder name="f1" displayName="New Folder 1" projectFiles="true">
+      </logicalFolder>
+      <itemPath>Reference/dsPIC30F4011,4012.pdf</itemPath>
+    </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
@@ -48,6 +54,7 @@
         <itemPath>Driver/uart.c</itemPath>
         <itemPath>Driver/timer.c</itemPath>
         <itemPath>Driver/timer_asm.s</itemPath>
+        <itemPath>Driver/adc.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="Setting" projectFiles="true">
         <itemPath>Setting/configuration.c</itemPath>
@@ -72,6 +79,10 @@
     <itemPath>../echo_test.txt</itemPath>
     <itemPath>../sel.txt</itemPath>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>Driver</Elem>
+    <Elem>Reference</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="simulator" type="2">
@@ -82,7 +93,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>Simulator</platformTool>
         <languageToolchain>XC16</languageToolchain>
-        <languageToolchainVersion>1.26</languageToolchainVersion>
+        <languageToolchainVersion>1.31</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -97,6 +108,8 @@
           <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
+        <subordinates>
+        </subordinates>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
@@ -598,7 +611,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC16</languageToolchain>
-        <languageToolchainVersion>1.26</languageToolchainVersion>
+        <languageToolchainVersion>1.31</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -613,6 +626,8 @@
           <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
+        <subordinates>
+        </subordinates>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
