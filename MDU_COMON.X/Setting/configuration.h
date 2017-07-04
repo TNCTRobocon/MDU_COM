@@ -20,8 +20,8 @@
 //10MHz*8(PLL)/4(divsion))
 
 //デバイスを選択する
-//#define DEVICE_COMMON
-#define DEVICE_DRAGON
+#define DEVICE_COMMON
+//#define DEVICE_DRAGON
 
 #if defined(DEVICE_COMMON)
 #define PORT_TYPE_A
