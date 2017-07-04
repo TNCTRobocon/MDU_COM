@@ -38,9 +38,25 @@
                    projectFiles="true">
     </logicalFolder>
     <logicalFolder name="f1" displayName="Reference" projectFiles="true">
-      <logicalFolder name="f1" displayName="New Folder 1" projectFiles="true">
+      <logicalFolder name="f2" displayName="データシート" projectFiles="true">
+        <itemPath>Reference/dsPIC30F4011,4012.pdf</itemPath>
+        <itemPath>Reference/dsPIC30F_Family.pdf</itemPath>
+        <itemPath>Reference/ir2104.pdf</itemPath>
+        <itemPath>Reference/irfi3205pbf.pdf</itemPath>
+        <itemPath>Reference/コンパイラーガイド.pdf</itemPath>
+        <itemPath>Reference/ライブラリ.pdf</itemPath>
       </logicalFolder>
-      <itemPath>Reference/dsPIC30F4011,4012.pdf</itemPath>
+      <logicalFolder name="f1" displayName="回路図" projectFiles="true">
+        <itemPath>Reference/Circuit/DcmotorBasicV2.CE3</itemPath>
+        <itemPath>Reference/Circuit/DcmotorBasicV3.CE3</itemPath>
+        <itemPath>Reference/Circuit/DcmotorBasicV4.CE3</itemPath>
+        <itemPath>Reference/Circuit/DcmotorBasicV5.CE3</itemPath>
+        <itemPath>Reference/Circuit/DcmotorBasicV5_breach.CE3</itemPath>
+        <itemPath>Reference/Circuit/DcmotorBasicV6.CE3</itemPath>
+        <itemPath>Reference/Circuit/DcmotorBasicV7.CE3</itemPath>
+        <itemPath>Reference/Circuit/DcmotorBasicV8.CE3</itemPath>
+        <itemPath>Reference/Circuit/DcmotorBasicV8_2.CE3</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
