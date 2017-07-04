@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/Pickit/production/MDU_COMON.X.production.elf">
+  <executable name="dist/simulator/production/MDU_COMON.X.production.elf">
     <memory name="data">
       <units>bytes</units>
       <length>2048</length>
@@ -11,8 +11,8 @@
     <memory name="program">
       <units>bytes</units>
       <length>48768</length>
-      <used>13713</used>
-      <free>35055</free>
+      <used>13977</used>
+      <free>34791</free>
     </memory>
   </executable>
 </project>

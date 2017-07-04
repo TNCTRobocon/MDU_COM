@@ -31,6 +31,7 @@
         <itemPath>System/motor.h</itemPath>
         <itemPath>System/shell_sbin.h</itemPath>
         <itemPath>System/file.h</itemPath>
+        <itemPath>System/error.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -85,6 +86,7 @@
         <itemPath>System/motor.c</itemPath>
         <itemPath>System/shell_sbin.c</itemPath>
         <itemPath>System/file.c</itemPath>
+        <itemPath>System/error.c</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -98,6 +100,7 @@
   <sourceRootList>
     <Elem>Driver</Elem>
     <Elem>Reference</Elem>
+    <Elem>System</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -625,7 +628,7 @@
         <targetDevice>dsPIC30F4012</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PICkit3PlatformTool</platformTool>
+        <platformTool>Simulator</platformTool>
         <languageToolchain>XC16</languageToolchain>
         <languageToolchainVersion>1.31</languageToolchainVersion>
         <platform>3</platform>
