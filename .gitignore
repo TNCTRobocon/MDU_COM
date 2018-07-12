@@ -1,5 +1,9 @@
 *.o
 *.d
-MDU_COMON.X/dist/Pickit/production/MDU_COMON.X.production.map
-MDU_COMON.X/dist/Pickit/production/MDU_COMON.X.production.elf
-MDU_COMON.X/dist/Pickit/production/MDU_COMON.X.production.hex
+*.hex
+/MDU_COMON.X/dist/
+/MDU_COMON.X/debug/
+/MDU_COMON.X/nbproject/private/
+/MDU_COMON.X/build/
+/MDU_COMON.X/nbproject/*.mk
+/MDU_COMON.X/nbproject/Makefile-*
