@@ -94,7 +94,7 @@
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>../.gitignore</itemPath>
+    <itemPath>.gitignore</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>..</Elem>
